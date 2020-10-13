@@ -37,9 +37,9 @@ round-avatar: true
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
   email: "mail@digitalskills.info"
-  facebook: deanattali
-  github: https://github.com/digitalskills-info
-  twitter: daattali
+# facebook: 
+  github: digitalskills-info
+#  twitter: danforth-restorative
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -60,15 +60,15 @@ social-network-links:
 
 # If you want to show a link to an RSS in the footer, add the site description here.
 # If you don't want to show an RSS link, remove the following line.
-rss-description: Dedicated to proliferating knowledge and use of Fundamental Digital Skills.
+rss-description: Dedicated to proliferating the knowledge and use of Fundamental Digital Skills.
 
 # --- General options --- #
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
-  facebook: true
-  linkedin: true
+  twitter: false
+  facebook: false
+  linkedin: false
   vk: false
 
 # How to display the link to your website in the footer
