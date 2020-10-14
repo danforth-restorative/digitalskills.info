@@ -8,8 +8,8 @@ tags: [org]
 comments: true
 ---
 
-<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/digitalskills-info/master/subscribe">
-  <input name="options[redirect]" type="hidden" value="https://github.com/danforth-restorative/digitalskills-info/pulls">
+<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/digitalskills.info/master/subscribe">
+  <input name="options[redirect]" type="hidden" value="https://github.com/danforth-restorative/digitalskills.info/pulls">
   <input name="options[slug]" type="hidden" value="restofus">
   <input name="fields[name]" type="text" placeholder="Name">
   <input name="fields[email]" type="email" placeholder="Email">
