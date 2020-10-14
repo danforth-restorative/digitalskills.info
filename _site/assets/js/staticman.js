@@ -6,9 +6,9 @@
 
     $(form).addClass('disabled');
 
-    var endpoint = 'https://staticman3.herokuapp.com/v3/entry/github/';
-    var repository = '';
-    var branch = '';
+    var endpoint = 'https://identosphere.net/staticman/v2/entry/';
+    var repository = 'digitalskills-info/digitalskills-info.github.io';
+    var branch = 'master';
 
     $.ajax({
       type: $(this).attr('method'),

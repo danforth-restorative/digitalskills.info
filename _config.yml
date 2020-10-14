@@ -144,7 +144,7 @@ footer-link-col: "#404040"
 staticman:
   repository : digitalskills-info/digitalskills-info.github.io 
   branch     : master 
-  endpoint   : https://identosphere.net/staticman/v2/entry/
+  endpoint   : https://digitalskills.info/staticman/v2/entry/
   reCaptcha:
     siteKey  : 6LcfMNcZAAAAAAeI-Ex7EXPDTxPhCZ0AGtfVIvvj
     secret   : rmaN37RkbS8P5Abp+mVYyUJAn3h/VLWDcPNLP/9aCGHf2LZwcvtQKMIPJQjz0sPesrpLVj/hH1f7CuHYGuOWxFcH17qoP1qRncgfR0sWexnzOrnAiaypiDoWxh/L46nmsx0pJu0sGiD9v7ctU1uvRl1e1RPz9j49Ls6KkFztuq18DsOYJZzlVLZ5T6Verxl5WvxePRZwi9qJR7fiQJe3naM577Dd7tLx1ZeWGxOLo2eOJMPgs9/hVrg/HGuFOeMYMV5s7ya5Zmv0sKtjCcQew9VohkvD4iIhMX2VQh4vPL8Hgb4D1I9ciZ2tMlg153kB/sv/svPJoF4uno8gpLIVPhZ/h0B9VMTxWIHEpjI2h/xLANp1XWxJkqYRJc1hWXR/HHLulaPw7TUdd/gj5iug1iuy0nDovuu0c8q2KjBkwtzr34xmzVWN9+KB+P4STxjTnUs2rrO2m9gr/0WmnFVfs2OwSaqUJpBFogmwJ3NgxBLBW22AnKgSS4T6aWXtr3VQRhReEw8eU+GFNtXW0dqdMdmEqSlk5HsbywPglVf4keIQmTMJj3mqeRGJ9QpQRv5O3BrJ8fdLKn/szUZmvqpR1uiXaUUtW6kZg6H4wO94akaXBfYDy629leM/h6508ngV3b2EQ218z8Zlyi7nzTPsj1LsMTG29oCha7z3/5f/FYo= 
