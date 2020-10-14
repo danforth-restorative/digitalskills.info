@@ -24,7 +24,7 @@ if (!empty($_POST)) {
 
 
     if (empty($errors)) {
-        $toEmail = 'forms@digitalskills.info';
+        $toEmail = 'david';
         $emailSubject = 'New email from your contant form';
         $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=iso-8859-1'];
 
