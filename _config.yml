@@ -38,7 +38,7 @@ round-avatar: true
 social-network-links:
   email: "mail@digitalskills.info"
 # facebook: 
-  github: digitalskills-info
+  github: danforth-restorative/digitalskills-info
 #  twitter: danforth-restorative
 #  reddit: yourname
 #  linkedin: daattali
@@ -142,7 +142,7 @@ footer-link-col: "#404040"
 # --- Comments --- #
 
 staticman:
-  repository : digitalskills-info/digitalskills-info.github.io 
+  repository : danforth-restorative/digitalskills-info
   branch     : master 
   endpoint   : https://digitalskills.info/staticman/v2/entry/
   reCaptcha:
