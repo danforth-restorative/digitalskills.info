@@ -21,7 +21,7 @@
 
   
 
-  <link rel="alternate" type="application/rss+xml" title="DigitalSkills.Info" href="http://localhost:4000/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="DigitalSkills" href="/feed.xml">
 
   
 
@@ -71,18 +71,18 @@
   
 
   
-  <meta property="og:site_name" content="DigitalSkills.Info">
+  <meta property="og:site_name" content="DigitalSkills">
   <meta property="og:title" content="Tag Index">
   <meta property="og:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
-  <meta property="og:image" content="http://localhost:4000/assets/img/digital-tools-digital-transformation.png">
+  <meta property="og:image" content="/assets/img/digital-tools-digital-transformation.png">
   
 
   
   <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost:4000/tags/">
-  <link rel="canonical" href="http://localhost:4000/tags/">
+  <meta property="og:url" content="/tags/">
+  <link rel="canonical" href="/tags/">
   
 
   
@@ -95,7 +95,7 @@
   <meta property="twitter:description" content="{% assign date_format = site.date_format | default: &quot;%B %-d, %Y&quot; %} {%- capture site_tags -%} {%- for tag in site.tags -%} {{- tag | first -}}{%- unless forloop.last -%},{%- endunless -%} {%- endfor -%} {%- endcapture -%} {%- assign tags_list = site_tags | split:',' | sort -%} {%- for tag...">
 
   
-  <meta name="twitter:image" content="http://localhost:4000/assets/img/digital-tools-digital-transformation.png">
+  <meta name="twitter:image" content="/assets/img/digital-tools-digital-transformation.png">
   
 
   
@@ -113,14 +113,14 @@
   
 
 
-  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="http://localhost:4000/">DigitalSkills.Info</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="">DigitalSkills</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="/aboutme">About Me</a>
+            <a class="nav-link" href="/aboutme">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://danforth-restorative.com">Danforth Restorative</a>
@@ -132,7 +132,7 @@
   
     <div class="avatar-container">
       <div class="avatar-img-border">
-        <a href="http://localhost:4000/">
+        <a href="">
           <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/digital-tools-digital-transformation.png" />
         </a>
       </div>
@@ -177,7 +177,7 @@
     <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
       
 
-      <a href="#books" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;books&nbsp;(1)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(2)</a><div id="full-tags-list"><h2 id="books" class="linked-section">
+      <a href="#books" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;books&nbsp;(1)</a><a href="#org" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;org&nbsp;(1)</a><a href="#test" class="btn btn-primary tag-btn"><i class="fas fa-tag" aria-hidden="true"></i>&nbsp;test&nbsp;(1)</a><div id="full-tags-list"><h2 id="books" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
         &nbsp;books&nbsp;(1)
     </h2>
@@ -186,16 +186,20 @@
                 <div class="entry-date">
                     <time datetime="2020-02-26T00:00:00-05:00">February 26, 2020</time>
                 </div>
-            </div></div><h2 id="test" class="linked-section">
+            </div></div><h2 id="org" class="linked-section">
         <i class="fas fa-tag" aria-hidden="true"></i>
-        &nbsp;test&nbsp;(2)
+        &nbsp;org&nbsp;(1)
     </h2>
     <div class="post-list"><div class="tag-entry">
-                <a href="/2020-02-28-test-markdown/">Sample blog post</a>
+                <a href="/2020-10-13-digital-transformation-for-the-rest-of-us/">Digital transformation for the rest of us</a>
                 <div class="entry-date">
-                    <time datetime="2020-02-28T00:00:00-05:00">February 28, 2020</time>
+                    <time datetime="2020-10-13T00:00:00-04:00">October 13, 2020</time>
                 </div>
-            </div><div class="tag-entry">
+            </div></div><h2 id="test" class="linked-section">
+        <i class="fas fa-tag" aria-hidden="true"></i>
+        &nbsp;test&nbsp;(1)
+    </h2>
+    <div class="post-list"><div class="tag-entry">
                 <a href="/2020-02-26-flake-it-till-you-make-it/">Flake it till you make it</a>
                 <div class="entry-date">
                     <time datetime="2020-02-26T00:00:00-05:00">February 26, 2020</time>
@@ -253,7 +257,7 @@
       
         &nbsp;&bull;&nbsp;
         <span class="author-site">
-          <a href="http://localhost:4000/">DigitalSkills.Info</a>
+          <a href="">DigitalSkills.Info</a>
         </span>
       
 
@@ -293,6 +297,11 @@
     <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
     
       <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/validate.min.js"></script>
     
   
 
