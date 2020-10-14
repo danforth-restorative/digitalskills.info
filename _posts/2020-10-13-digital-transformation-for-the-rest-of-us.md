@@ -9,7 +9,7 @@ comments: true
 ---
 
 
-<form action="/assets/mailform.php" method="post" id="contact-form">
+<form action="https://digitalskills.info/assets/mailform.php" method="post" id="contact-form">
   <h2>Contact us</h2>
 
   <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
