@@ -102,6 +102,15 @@ img {
 
 /* Comments */
 
+.subscribe {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  input {
+    text-align: center;
+  }
+}
+
 .disqus-comments {
   margin-top: 1.875rem;
 }
