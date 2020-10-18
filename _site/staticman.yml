@@ -1,6 +1,7 @@
 subscribe:
   allowedFields: ["name", "email", "url", "message"]
   branch: "master"   #  use "master" for user page or "gh-pages" for project pages
+  allowedOrigins: ["https://digitalskills.info"]
   commitMessage: "New Subscription {fields.name}"
   filename: "sub-{@timestamp}"
   format: "yaml"
@@ -9,7 +10,7 @@ subscribe:
       type: "date"
       options:
         format: "iso8601" # "iso8601" (default), "timestamp-seconds", "timestamp-milliseconds"
-  moderation: false
+  moderation: true
   # Name of the site. Used in notification emails.
   name: "DigitalSkills.Info"
   # Destination path (directory) for the data files. Accepts placeholders.
@@ -21,7 +22,7 @@ subscribe:
 
 comments:
   allowedFields: ["name", "email", "url", "message"]
-  # allowedOrigins: ["https://digitalskills.info"]
+  allowedOrigins: ["https://digitalskills.info"]
   branch: "master"   #  use "master" for user page or "gh-pages" for project pages
   commitMessage: "New comment by {fields.name}"
   filename: "comment-{@timestamp}"
