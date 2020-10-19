@@ -33,6 +33,8 @@ I could see, also, just as clearly, that *the potential is greater than ever*, a
 
 ### The sky's the limit
 
+![](/assets/img/12019_iceland-2111811_1920.jpg)
+
 In the beginning, I started out in the same places most people do: micro jobs and click work (think surveys and random small web tasks) with [Amazon's Mechanical Turk](https://www.mturk.com/), freelance sites like [Fiverr](https://fiverr.com/) and [Upwork](https://www.upwork.com/), and (growing massively, in demand) [audio\video transcriptions](https://www.grandviewresearch.com/industry-analysis/us-transcription-market). 
 
 I've always loved to read, so I thought writing might be a good fit for me. I began advertising my services writing articles on tech trends like AI and Blockchain. I didn't know anything about those subjects, but I was willing to accept low paying gigs to learn. 
@@ -43,7 +45,7 @@ Where most people are trying to write as quickly as possible, I pushed the other
 
 That's when I began collecting sources for a variety of subjects and thinking about how to make it easier for people to share their internet research with each-other, to make it easier for everyone to create quality content.
 
-From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've discovered I could earn a better income from transcribing podcasts than I ever could in the same amount of time spent writing. 
+From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've discovered I could earn a better income from transcribing podcasts than I could with the same amount of time spent writing. 
 
 It gradually became clear that people were making good money from my efforts, and that there was far more potential in putting that energy towards a venture of my own.
 
@@ -76,7 +78,7 @@ While there's a lot of educational resources online, much of the content is publ
 
 One of the biggest problems people face is all of the time required to figure this stuff out. Especially if they're not getting paid for their considerable efforts, during the earliest parts of the learning curve.
 
-## DigitalSkills.Info
+## A not for profit educational organization
 
 ![](/assets/img/digitalskills_inline.png)
 
