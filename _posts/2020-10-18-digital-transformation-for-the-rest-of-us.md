@@ -28,13 +28,13 @@ Since the creation of the World Wide Web in 1990, and the introduction of electr
 
 ## Opportunity knocks
 
-I grew up with computers, as the world wide web was taking flight. I've always been able to make a computer do what I needed, but I had no profitable ambitions, and never got serious about tech. I didn't recognize the massive opportunities that were slipping through my fingers.
+I grew up with computers, in the early days of the web. I've always been good with computers, but I had no profitable ambitions. I couldn't comprehend what massive opportunities that were slipping through my fingers.
 
-A few years ago, I quit drinking and gave up a freewheeling lifestyle. I needed to create a new life for myself, and decided to get serious about working with computers. 
+A few years ago, I quit drinking and gave up a freewheeling lifestyle. I needed to create a new life for myself, and decided to get serious about tech. 
 
 I could see clearly, how if I had been focused growing up – if I had consistently created and worked towards almost anything online – by now I would have likely found my way into a number of profitable ventures. 
 
-I could see, also, just as clearly, that *the potential is greater than ever*, and **I'm not letting that opportunity pass by**, anymore. 
+I could see, also, just as clearly, that *the potential is greater than ever*, and **I refused to let that opportunity keep passing me by**. 
 
 ### The sky's the limit
 
@@ -50,7 +50,7 @@ Where most people are trying to write as quickly as possible, I pushed the other
 
 That's when I began collecting sources for a variety of subjects and thinking about how to facilitate people sharing their internet research with each-other, to **make it easier for everyone to create quality content**.
 
-From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've discovered I could earn a better income from transcribing podcasts than I could with the same amount of time spent writing. 
+From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've found that transcribing podcasts is an efficient use of my time.
 
 It gradually became clear that people were making good money from my efforts, and that there was far more potential in putting that energy towards a venture of my own.
 
@@ -150,7 +150,7 @@ I'm sure this list is not exhaustive, but gives an idea of the type of informati
 - Web search and digital curation
 - Digital etiquette and social awareness
 - Cognitive behavioral therapy (CBT) and Mindfulness
-- Sexual harassment and rape prevention for men
+- Positive masculinity and sexual consent
 - Anti-racist allyship curriculum
 - Benefits of the varieties of social networks 
 - Content creation
