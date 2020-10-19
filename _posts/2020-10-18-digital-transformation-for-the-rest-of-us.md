@@ -48,7 +48,7 @@ While doing research for the articles, I was constantly irritated by the mass qu
 
 Where most people are trying to write as quickly as possible, I pushed the other way, with the aim of creating **detail rich articles**, with plenty of references, so the readers could easily continue exploring, and check the source of essential information. 
 
-That's when I began collecting sources for a variety of subjects and thinking about how to make it easier for people to share their internet research with each-other, to make it easier for everyone to create quality content.
+That's when I began collecting sources for a variety of subjects and thinking about how to facilitate people sharing their internet research with each-other, to **make it easier for everyone to create quality content**.
 
 From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've discovered I could earn a better income from transcribing podcasts than I could with the same amount of time spent writing. 
 
@@ -64,7 +64,7 @@ In that way, I've learned how people in various industries communicate and how t
 
 I've learned to use Linux, OSX, and how to use tools written in a variety of different programming languages. I learned to publish websites [for free on GitHub](https://guides.github.com/features/pages/), deploy [web applications in the cloud](https://github.com/awesome-selfhosted/awesome-selfhosted), and used services such as [AWS Free Tier](https://aws.amazon.com/free/) for tasks including automatic transcriptions, running a server in the cloud, and setting up my own vpn. 
 
-While I didn't need to do all of that to be employable online, concentrating my attention on these difficult subjects also helped me through the most difficult years of my early recovery. *Looking back, there are a number of more direct routes I could have taken towards a sustainable income*, if I had some reasonably concise map of the territory to begin with.
+While I didn't need to do all of that to be employable online, concentrating my attention on these difficult subjects also helped me through the most difficult years of my early recovery. **Looking back, there are a number of more direct routes I could have taken towards a sustainable income**, if I had some reasonably concise map of the territory to begin with.
 
 ### The hardest parts of learning online
 
@@ -83,13 +83,13 @@ While there's a lot of educational resources online, much of the content is publ
 
 One of the biggest problems people face is all of the time necessary to figure this stuff out. Especially if they're not getting paid for the considerable efforts required, during the earliest parts of the learning curve.
 
-## A not for profit educational organization
+## A not-for-profit educational organization
 
 ![](/assets/img/digitalskills_inline.png)
 
 None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Besides that, the incentives of legacy educational institutions rarely seem aligned with the interests of their students.
 
-These are the experiences which led me to the idea of creating a not for profit educational institution who's **students will teach each other digital skills**. Members of this organization get the opportunity to learn digital fundamentals by building the organization, creating it curriculum, knowledge base, and ultimately educational products like online courses. 
+These are the experiences which led me to the idea of creating a not-for-profit educational institution who's **students will teach each other digital skills**. Members of this organization get the opportunity to learn digital fundamentals by building the organization, creating it curriculum, knowledge base, and ultimately educational products like online courses. 
 
 ### Getting paid to learn
 
@@ -159,7 +159,7 @@ I'm sure this list is not exhaustive, but gives an idea of the type of informati
 - Deploying and maintaining web-servers
 - The use of valuable web applications
 
-Above is only an initial outline, but no matter what subject we're working on, digital tools will play a lead roll. 
+No matter what subject we're working on, digital tools will play a starring roll. 💫
 
 ### Digital Tools make the Digital Transformation
 
