@@ -30,7 +30,7 @@ social-network-links:
   email: "mail@digitalskills.info"
 # facebook: 
   github: danforth-restorative/digitalskills.info
-#  twitter: danforth-restorative
+  twitter: DavidDanforth12
 #  reddit: yourname
 #  linkedin: daattali
 #  xing: yourname
@@ -57,9 +57,9 @@ rss-description: Dedicated to proliferating the knowledge and use of Fundamental
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: false
-  facebook: false
-  linkedin: false
+  twitter: true
+  facebook: true
+  linkedin: true
   vk: false
 
 # How to display the link to your website in the footer
@@ -85,7 +85,7 @@ feed_show_tags: true
 navbar-col: "#EAEAEA"
 navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
-page-col: "#FFFFFF"
+page-col: "#F0F0F0"
 text-col: "#404040"
 link-col: "#008AFF"
 hover-col: "#0085A1"
