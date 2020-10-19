@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Digital Skills Info
-subtitle: Digital transformation for the rest of us.
+subtitle: A Not-For-Profit Educational Organization
 gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: [org]
@@ -25,6 +25,10 @@ Since the creation of the World Wide Web in 1990, and the introduction of electr
 
 <sub><a style="float: right;" href="https://thenounproject.com/term/knocking/2696200/">knocking by Adrien Coquet: Noun Project</a></sub><br>
 <img style="float: right;" src="/assets/img/noun_knocking_2696200.png" alt-text="knocking by Adrien Coquet from the Noun Project"/>
+
+This is a long article, if you want to skip my story and go straight to the idea, click here:
+
+* [A not-for-profit educational organization](#a-not-for-profit-educational-organization)
 
 ## Opportunity knocks
 
@@ -58,9 +62,9 @@ It gradually became clear that people were making good money from my efforts, an
 
 ![](/assets/img/amanshu-raikwar-nZv1QdQ8vwM-unsplash.jpg)
 
-In that time, I've listened to thousand of podcasts (currently my favorite educational medium) listening on every topic that catches my interest. I've put in time reading [hacker news](https://news.ycombinator.com) and following accounts from various technical industries, on twitter, all day every day. 
+In that time, I've listened to thousand of podcasts (my favorite educational medium) listening for countless hours on everything from [philosophy](https://historyofphilosophy.net/) to [complexity theory](https://podcasts.apple.com/us/podcast/complexity/id1482984603). I've put in time reading [hacker news](https://news.ycombinator.com) and following accounts from various technical industries, on twitter, all day every day. 
 
-In that way, I've learned how people in various industries communicate and how they look at world, seeking to discover the scope and boundaries of various technical domains, and their intersections with more traditional realms like government, finance, and journalism. 
+In that way, I've learned how people in various industries communicate and how they look at world, seeking to discover the scope and boundaries of various technical domains, and their intersections with more traditional domains. 
 
 I've learned to use Linux, OSX, and how to use tools written in a variety of different programming languages. I learned to publish websites [for free on GitHub](https://guides.github.com/features/pages/), deploy [web applications in the cloud](https://github.com/awesome-selfhosted/awesome-selfhosted), and used services such as [AWS Free Tier](https://aws.amazon.com/free/) for tasks including automatic transcriptions, running a server in the cloud, and setting up my own vpn. 
 
