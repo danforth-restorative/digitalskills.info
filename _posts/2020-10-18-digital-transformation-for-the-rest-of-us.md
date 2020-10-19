@@ -6,18 +6,20 @@ gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: [org]
 comments: true
+thumbnail-img: /assets/img/noun_Management Skills_1327063.png
+share-img: /assets/img/digitalskills_og.png
 ---
-
-> Digital transformation is all about becoming a digital enterprise—an organization that uses technology to continuously evolve all aspects of its business models (what it offers, how it interacts with customers and how it operates). - [Digital transformation: A PRIMER](https://www.wired.com/brandlab/2019/10/deloitte-digital-transformation-a-primer/)
 
 **Digital transformation** is a popular buzzword used to describe the practices that corporations and government bodies, around the world, use [seeking to remain relevant in the digital age](https://www.linkedin.com/pulse/digital-transformation-versus-disruption-what-means-michael-alf).
 
 The leaders in legacy institutions know that you have the power to displace their empires from your livingroom, and are spending billions to update their practices, *before* you get around to doing that.
 
-<center><a href="https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/"><img src="/assets/img/digital-transformation-2014-25_statistica.png"></a>
-<sup>a href="https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/">Digital transformation market size in the U.S. 2014-2025</a></sup></center>
-
 Since the creation of the World Wide Web in 1990, and the introduction of electronic payments a few years later, megalithic industries have been brought to their knees, and the **opportunities for anyone with an internet connection have been rapidly on the rise**.
+
+> Digital transformation is all about becoming a digital enterprise—an organization that uses technology to continuously evolve all aspects of its business models (what it offers, how it interacts with customers and how it operates). - [Digital transformation: A PRIMER](https://www.wired.com/brandlab/2019/10/deloitte-digital-transformation-a-primer/)
+
+[**Digital transformation market size in the U.S. 2014-2025**](https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/)
+[![](/assets/img/digital-transformation-2014-25_statistica.png)](https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/)
 
 ## Opportunity is knocking
 
@@ -27,7 +29,7 @@ A few years ago, I quit drinking and gave up a freewheeling lifestyle. I needed 
 
 I could see clearly, how if I had been focused growing up – if I had consistently created and worked towards almost anything online – by now I would have likely found my way into a number of profitable ventures. 
 
-I could see also, just as clearly, that *the potential is greater than ever*, and **I'm not letting that opportunity pass by**, anymore. 
+I could see, also, just as clearly, that *the potential is greater than ever*, and **I'm not letting that opportunity pass by**, anymore. 
 
 ### The sky's the limit
 
@@ -45,9 +47,9 @@ From there, I became far more interested in [curation](https://github.com/learn-
 
 It gradually became clear that people were making good money from my efforts, and that there was far more potential in putting that energy towards a venture of my own.
 
-![](/assets/img/amanshu-raikwar-nZv1QdQ8vwM-unsplash.jpg)
-
 ### The shortest distance between two points 
+
+![](/assets/img/amanshu-raikwar-nZv1QdQ8vwM-unsplash.jpg)
 
 In that time, I've listened to thousand of podcasts (currently my favorite educational medium) listening on every topic that catches my interest. I've put in time reading [hacker news](https://news.ycombinator.com) and following accounts from various technical industries, on twitter, all day every day. 
 
@@ -57,10 +59,10 @@ I've learned to use Linux, OSX, and how to use tools written in a variety of dif
 
 While I didn't need to do all of that to be employable online, concentrating my attention on these difficult subjects also helped me through the most difficult years of my early recovery. Looking back, there are a number of more direct routes I could have taken towards a sustainable income, if I had some reasonably concise map of the territory to begin with.
 
+### The hardest parts of learning online
+
 <center><a href="https://www.freecodecamp.org/news/the-hard-thing-about-learning-hard-things-168e655ac7f2/"><img src="https://cdn-media-1.freecodecamp.org/images/8dxHi80FK5xIl770LNpezFfU-clTclwihAIq"/></a><br>
 <sup><a href="https://www.freecodecamp.org/news/the-hard-thing-about-learning-hard-things-168e655ac7f2/">The Hard Thing About Learning Hard Things</a></sup></center>
-
-### The hardest parts of learning online
 
 One problem with all of this is that there isn't a strong consciousness around what are the fundamental digital skills? What are the basics you should know to be conversant in the digital sphere? What should you work on first, when trying to make a living on the web? 
 
@@ -76,15 +78,17 @@ One of the biggest problems people face is all of the time required to figure th
 
 ## DigitalSkills.Info
 
+![](/assets/img/digitalskills_inline.png)
+
 None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Besides that, the incentives of legacy educational institutions rarely seem aligned with the interests of their students.
 
 That's why I'm creating a Not for Profit Educational Organization, [DigitalSkills.Info](https://digitalskills.info) who's **students will teach each other digital skills**. Members of this organization get the opportunity to learn digital fundamentals by building the organization, creating it curriculum, knowledge base, and ultimately educational products like online courses. 
 
-### You can get paid to learn
-
-> Learning isn't always the highest paid job in the world, but the benefits are great.
+### Getting paid to learn
 
 You can learn basically anything for free online, but from where I'm sitting, getting paid to learn is even better! 
+
+> Learning isn't always the highest paid job in the world, but the benefits are fantastic.
 
 That's why the bulk of our membership fees will be payed back to members for helping eachother in chat, answering questions in a forum, creating wiki entries, content, courses and other organizational structures.
 
@@ -102,6 +106,9 @@ Some clusters among our membership may decide to play off eachother's strengths 
 
 ### Not Only a Technical Education
 
+<center><img src="/assets/img/CBwordcloud.png"/><br>
+<sup><a href="https://commons.wikimedia.org/wiki/File:CBwordcloud.png">CC-BY-SA Cristinapilataxi</a></sup></center>
+
 The purpose of this organization is, not only, to create a community of people who teach each other digital skills, while learning to build an online business by building [DigitalSkills.Info](https://digitalskills.info). It's also to empower people to learn deeply on subjects they are passionate about, and to make valuable information more accessible to the masses.
 
 Our wiki will include, not only, technical how-to guides and curated lists of tools and information on a variety of subjects. It will also focus deeply on information related to [Cognitive Behavioral Therapy (CBT)](https://www.youtube.com/watch?v=POYXzA-gS4U), [emotional intelligence](https://web.sonoma.edu/users/s/swijtink/teaching/philosophy_101/paper1/goleman.htm), [mindfulness](https://dharmaseed.org/talks/?search=foundations+mindfulness),  [restorative practices](https://www.iirp.edu/restorative-practices/defining-restorative/), the [biology](https://www.fi.edu/sites/default/files/4-neuroscience-society-curriculum-drugs-addiction.pdf) and [psychology](https://ohiostate.pressbooks.pub/swk3805coursebook/chapter/ch-1-introduction-to-psychological-models-of-addiction/) behind addiction, [social dynamics](https://www.hubspot.com/sales/how-to-win-friends-and-influence-people-summary), [personal development](https://thelifecoachschool.com/podcasts/) and working actively to repair damage and turn the tide against [racism](https://www.sceneonradio.org/seeing-white/) and [sexism](https://solvingmetoo.com/).
@@ -116,9 +123,9 @@ At the same time, the idea is to support recognition of the internet as a place 
 
 ### The long tail
 
-<quoteblock>long tail is a business strategy that allows companies to realize significant profits by selling low volumes of hard-to-find items to many customers, instead of only selling large volumes of a reduced number of popular items. - [investopedia](https://www.investopedia.com/terms/l/long-tail.asp)</quoteblock>
-
 [![](https://miro.medium.com/max/1400/0*7icMcrpJlpcBaxlN)](https://medium.com/briq-bookings/how-will-long-tail-affect-the-leisure-branch-dec45338a5a)
+
+> long tail is a business strategy that allows companies to realize significant profits by selling low volumes of hard-to-find items to many customers, instead of only selling large volumes of a reduced number of popular items. - [investopedia](https://www.investopedia.com/terms/l/long-tail.asp)
 
 My take on the long tail is that, as an individual, you could choose the even most obscure niche subject or product. You've got the entire internet as a market. If you need 2000 bucks a month, you only need 20 customers to pay you 100 bucks a month, 40 customers to pay you 50 bucks a month, or 200 subscribers to give you 10 dollars a month.
 
@@ -126,25 +133,30 @@ It's just a matter of finding your market, and figuring out some product they wi
 
 This turns upside down the old argument of pursuing your passion because there's no work available. In todays world, you really can make a living focused on philosophy, latin, or other pursuits you may have thought necessary to leave behind behind for the sake of a career.
 
-## A Curriculum for the Digital Age
+## Curriculum for the Digital Age
+
+I'm sure this list is not exhaustive, but gives an idea of the type of information I'd like to make more easily accessible.
 
 - Optimizing slow computers
 - Computer security fundamentals
-- How to buy affordable used tech 
-- Web search and curation
-- Digital etiquette and social skills training
+- How to acquire affordable used tech 
+- Web search and digital curation
+- Digital etiquette and social awareness
+- Cognitive behavioral therapy (CBT) and Mindfulness
 - Sexual harassment and rape prevention for men
-- Cultural awareness
-- Benefits in the varieties of social networks 
+- Anti-racist allyship curriculum
+- Benefits of the varieties of social networks 
 - Content creation
-- Web publishing
+- Website publishing
 - SEO fundamentals
 - Deploying and maintaining web-servers
-- Running web applications at a fraction of the retail price.
+- The use of valuable web applications
 
-Above is an Initial outline of subject areas I'd like to cover, but no matter what subject we're working on, digital tools will take a lead roll. 
+Above is only an initial outline, but no matter what subject we're working on, digital tools will play a lead roll. 
 
 ### Digital Tools make the Digital Transformation
+
+![](/assets/img/carlos-irineu-da-costa-eMc0lpn1P60-unsplash.jpg)
 
 > More than 70% of all SMBs report revenue growth and attribute some of this growth to the use of digital tools. More digitalized SMBs have a higher likelihood of experiencing revenue growth than their less digital peers. - [Performance of Small and Medium Sized Businesses in a digital world](https://www2.deloitte.com/content/dam/Deloitte/es/Documents/Consultoria/The-performance-of-SMBs-in-digital-world.pdf)
 
@@ -160,9 +172,9 @@ After running other peoples code for long enough, eventually I could understand 
 
 It was a transformational moment where I realized the power of the web is really at my fingertips, and that I have what it takes to create any number of tools I need on this journey.
 
-![](/assets/img/communication-2805785_1280_ptra.jpg)
+## Starting out with a new idea
 
-## A valuable tool when starting out with a new idea
+![](/assets/img/communication-2805785_1280_ptra.jpg)
 
 One valuable tool when starting any enterprise online is to develop a mailing list. If I could go back three years ago, one thing I'd do is start building an email list from the start. You don't need any special skills to create a landing page, when you're getting started, but there are plenty of ways to set that up [for free with the click of a button](https://mailchimp.com/features/landing-pages/).
 
