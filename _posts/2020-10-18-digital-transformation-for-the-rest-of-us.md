@@ -222,7 +222,9 @@ In the mean-time, please do **subscribe here for updates**, and share what's mos
   <center><button type="submit">Subscribe</button></center>
 </form>
 
-<a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+#### Feel free to support me on Patreon
+
+<center><a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></center>
 
 #### One last shout out 
 
