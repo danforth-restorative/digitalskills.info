@@ -23,12 +23,12 @@ Since the creation of the World Wide Web in 1990, and the introduction of electr
 <center><img src="/assets/img/digital-transformation-2014-25_statistica.png"/></center>
 <sup><a href="https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/">Digital transformation market size in Billions. U.S. 2014-2025</a></sup><br>
 
-<sub><a style="float: right;" href="https://thenounproject.com/term/knocking/2696200/">knocking by Adrien Coquet: Noun Project</a></sub><br>
-<img style="float: right;" src="/assets/img/noun_knocking_2696200.png" alt-text="knocking by Adrien Coquet from the Noun Project"/>
-
-This is a long article, if you want to skip my story and go straight to the idea, click here:
+<strong>This is a long article, click here if you want to skip ahead to my idea about the org:</strong>
 
 * [A not-for-profit educational organization](#a-not-for-profit-educational-organization)
+
+<sub><a style="float: right;" href="https://thenounproject.com/term/knocking/2696200/">knocking by Adrien Coquet: Noun Project</a></sub><br>
+<img style="float: right;" src="/assets/img/noun_knocking_2696200.png" alt-text="knocking by Adrien Coquet from the Noun Project"/>
 
 ## Opportunity knocks
 
@@ -42,7 +42,8 @@ I could see, also, just as clearly, that *the potential is greater than ever*, a
 
 ### The sky's the limit
 
-![](/assets/img/12019_iceland-2111811_1920.jpg)
+<img src="/assets/img/12019_iceland-2111811_1920.jpg"/>
+<sup><a href="https://pixabay.com/users/12019-12019/">by 12019</a></sup>
 
 In the beginning, I started out in the same places most people do: micro jobs and click work (think surveys and random small web tasks) with [Amazon's Mechanical Turk](https://www.mturk.com/), freelance sites like [Fiverr](https://fiverr.com/) and [Upwork](https://www.upwork.com/), and (growing massively, in demand) [audio\video transcriptions](https://www.grandviewresearch.com/industry-analysis/us-transcription-market). 
 
@@ -54,21 +55,22 @@ Where most people are trying to write as quickly as possible, I pushed the other
 
 That's when I began collecting sources for a variety of subjects and thinking about how to facilitate people sharing their internet research with each-other, to **make it easier for everyone to create quality content**.
 
-From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've found that transcribing podcasts is an efficient use of my time.
+From there, I became far more interested in [curation](https://github.com/learn-anything/curated-lists) than writing, and eventually got into some contract based research work. More recently, I've found that transcribing podcasts to be an efficient use of my time.
 
-It gradually became clear that people were making good money from my efforts, and that there was far more potential in putting that energy towards a venture of my own.
+It gradually became clear that people were making good money from my efforts, and there's far more potential in putting that energy towards a venture of my own.
 
 ### The shortest distance between two points 
 
-![](/assets/img/amanshu-raikwar-nZv1QdQ8vwM-unsplash.jpg)
+<img src="/assets/img/amanshu-raikwar-nZv1QdQ8vwM-unsplash.jpg"/>
+<sup><a href="https://unsplash.com/@amanshuraikwar">by @amanshuraikwar</a></sup>
 
 In that time, I've listened to thousand of podcasts (my favorite educational medium) listening for countless hours on everything from [philosophy](https://historyofphilosophy.net/) to [complexity theory](https://podcasts.apple.com/us/podcast/complexity/id1482984603). I've put in time reading [hacker news](https://news.ycombinator.com) and following accounts from various technical industries, on twitter, all day every day. 
 
 In that way, I've learned how people in various industries communicate and how they look at world, seeking to discover the scope and boundaries of various technical domains, and their intersections with more traditional domains. 
 
-I've learned to use Linux, OSX, and how to use tools written in a variety of different programming languages. I learned to publish websites [for free on GitHub](https://guides.github.com/features/pages/), deploy [web applications in the cloud](https://github.com/awesome-selfhosted/awesome-selfhosted), and used services such as [AWS Free Tier](https://aws.amazon.com/free/) for tasks including automatic transcriptions, running a server in the cloud, and setting up my own vpn. 
+I've learned to use Linux, OSX, and how to use tools written in a variety of different programming languages. I learned to publish websites [for free on GitHub](https://guides.github.com/features/pages/), deploy [web applications in the cloud](https://github.com/awesome-selfhosted/awesome-selfhosted), and used services such as [AWS Free Tier](https://aws.amazon.com/free/) for tasks including automatic transcriptions, running a server in the cloud, and [setting up my own vpn](https://www.comparitech.com/blog/vpn-privacy/how-to-make-your-own-free-vpn-using-amazon-web-services/). 
 
-While I didn't need to do all of that to be employable online, concentrating my attention on these difficult subjects also helped me through the most difficult years of my early recovery. **Looking back, there are a number of more direct routes I could have taken towards a sustainable income**, if I had some reasonably concise map of the territory to begin with.
+While I didn't need to do all that to be employable online, concentrating my attention on difficult subjects also helped me through the most difficult years of my early recovery. **Looking back, there are a number of more direct routes I could have taken towards a sustainable income**.
 
 ### The hardest parts of learning online
 
@@ -81,9 +83,9 @@ One problem with all of this is that there isn't a strong consciousness around w
 
 The answer to those questions will depend on your interests, and what are your pre-existing skills and talents. Not that we always immediately recognize where our personal value lies. 
 
-Even having a strong digital literacy, starting out, I had no clues how to go about building a sustainable income online, and spent a lot of effort grinding away and figuring things out the hard way. 
+Even having a strong digital literacy, starting out, I had no clues how to go about building a sustainable income online, and spent a lot of effort figuring things out the hard way. 
 
-While there's a lot of educational resources online, much of the content is published with the intent of bringing in sales leads, not necessarily to inform and edify the masses. Especially starting out, it can be exceedingly difficult to determine the best places to learn what you need to know.
+While there's a lot of educational resources online, much of the content is published in misguided attempts to rank with shady SEO practices, not to edify the masses. Especially in the beginning, it was exceedingly difficult to find the information I needed to know.
 
 One of the biggest problems people face is all of the time necessary to figure this stuff out. Especially if they're not getting paid for the considerable efforts required, during the earliest parts of the learning curve.
 
@@ -91,44 +93,46 @@ One of the biggest problems people face is all of the time necessary to figure t
 
 ![](/assets/img/digitalskills_inline.png)
 
-None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Besides that, the incentives of legacy educational institutions rarely seem aligned with the interests of their students.
+None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Moreover, the incentives of legacy educational institutions don't always seem aligned with the interests of their students.
 
-These are the experiences which led me to the idea of creating a not-for-profit educational institution who's **students will teach each other digital skills**. Members of this organization get the opportunity to learn digital fundamentals by building the organization, creating it curriculum, knowledge base, and ultimately educational products like online courses. 
+These are the experiences which led me to the idea of creating a not-for-profit educational organization who's **students teach each other digital skills**. Members of this organization get the opportunity to learn digital fundamentals by building the organization, creating it's curriculum, knowledge base, and ultimately educational products like online courses. 
 
 ### Getting paid to learn
 
 You can learn basically anything for free online, but from where I'm sitting, getting paid to learn is even better! 
 
-> Learning isn't always the highest paid job in the world, but the benefits are fantastic.
+> Learning isn't always the highest paid job in the world, but the benefits are incredible.
 
-That's why the bulk of our membership fees will be payed back to members for helping eachother in chat, answering questions in a forum, creating wiki entries, content, courses and other organizational structures.
+That's why the bulk of our membership fees will be payed back to members for helping each other in chat, answering questions in a forum, creating wiki entries, content, courses and other organizational structures.
 
-Besides getting paid out of members fees, for helping with the organization, once our wiki is sufficiently developed, there will be opportunities to create paid newsletters, building and selling courses, and any other product ideas that we come up with.
+Besides being paid a bit for helping with the organization, once our wiki is sufficiently developed, there will be opportunities to create paid newsletters, building and selling courses, and any other product ideas that we come up with.
 
-A lot of work will be required before members can expect to earn any significant amount from working at the organization, but we will have a system to keep track of contributions made through various channels. This way, the efforts of early adopters can be paid back, once we're actually bringing in revenue from products the organization creates.
+A lot of work will be required before members can expect to earn any significant amount from the organization, but we will have a system to keep track of contributions made through various channels. This way, the efforts of early adopters will be rewarded, once we're bringing in revenue from products the organization creates.
 
-We will also coach people through the process of finding work on freelance platforms. Once you have an a couple active freelance gigs, and stack up some 5 star ratings, it's very easy to get more work than you can handle, and difficult to find someone reliable to help out with your workload. This community would enable people to easily source and qualify candidates for helping with freelance gigs, creating more opportunity for all.
+We'll also coach people through the process of finding work on freelance platforms. Once you have an a couple active gigs, and stack up some 5 star reviews, it's very easy to get more work than you can handle, and difficult to find someone reliable to help out with your workload. This community would enable people to easily source and qualify candidates for helping with freelance gigs, creating more opportunity for all.
 
 It would really only take a few dedicated souls to make a significant impact on those goals, and get the flywheel turning. From there, in the digital marketplace, the potential for exponential growth is always present.
 
-I like to think that [DigitalSkills.Info](https://digitalskills.info) could become something like a start up incubator for the uninitiated. It will support members in the most difficult early stages of learning to think and grow digitally. By the time members have developed skills from among each of our learning tiers, they will also have the benefit of a supportive community, nurtured by their work in building out the organization. 
+I like to think that [DigitalSkills.Info](https://digitalskills.info) could become something like a start up incubator for the uninitiated. It will support members in the most difficult early stages of learning to think and grow digitally. 
 
-At this point, some clusters among our membership would be likely to form, where they decide to play off each other's strengths and start a new venture together. The plan is to turn out students who are well prepared to launch their own ventures with an unlimited potential for growth.
+By the time members have developed skills from among each of our learning tiers, they will also have the benefit of a supportive community, nurtured by their work in building out the organization. 
+
+At this point, some clusters among our membership would be likely to form, where they decide to play off each other's strengths and start a new venture together. The plan is to turn out students who are well prepared to work at anything they'd prefer.
 
 ### Not only a technical education
 
 <center><img src="/assets/img/CBwordcloud.png"/><br>
 <sup><a href="https://commons.wikimedia.org/wiki/File:CBwordcloud.png">CC-BY-SA Cristinapilataxi</a></sup></center>
 
-The purpose of this organization is, not only, to create a community of people who teach each other digital skills, while learning to build an online business by building [DigitalSkills.Info](https://digitalskills.info). It's also to empower people to learn deeply on subjects they are passionate about, and to make valuable information more accessible to the masses.
+The purpose of this organization is, not only, to create a community of people who teach each other digital skills, while learning to build an online business by building [DigitalSkills.Info](https://digitalskills.info). It's also to empower people to learn deeply on subjects they are passionate about, and make valuable information more accessible to the masses.
 
 Our wiki will include, not only, technical how-to guides and curated lists of tools and information on a variety of subjects. It will also focus deeply on information related to [Cognitive Behavioral Therapy (CBT)](https://www.youtube.com/watch?v=POYXzA-gS4U), [emotional intelligence](https://web.sonoma.edu/users/s/swijtink/teaching/philosophy_101/paper1/goleman.htm), [mindfulness](https://dharmaseed.org/talks/?search=foundations+mindfulness),  [restorative practices](https://www.iirp.edu/restorative-practices/defining-restorative/), the [biology](https://www.fi.edu/sites/default/files/4-neuroscience-society-curriculum-drugs-addiction.pdf) and [psychology](https://ohiostate.pressbooks.pub/swk3805coursebook/chapter/ch-1-introduction-to-psychological-models-of-addiction/) behind addiction, [social dynamics](https://www.hubspot.com/sales/how-to-win-friends-and-influence-people-summary), [personal development](https://thelifecoachschool.com/podcasts/) and working actively to repair damage and turn the tide against [racism](https://www.sceneonradio.org/seeing-white/) and [sexism](https://solvingmetoo.com/).
 
-If we disagree on any of these topics, the research and curation skills we're developing will come into play and we can battle it out in the wiki with research articles and curated lists. 
+If we disagree on any of these topics, the research skills we're developing will come in handy, and we can battle it out in the wiki with research articles and curated lists. 
 
-The most fundamental digital skills, in my estimation, are web search and curation. It's simple enough to type a question or a few keywords into google search, but if you really want to excel in the digital world, learning how to get the most out of search engines is invaluable.
+The most fundamental digital skills, in my estimation, are web search and curation. It's simple enough to type a question or a few keywords into google search, but if you really want to excel in the digital world, learning how to get the most out of your search engine is invaluable.
 
-The idea of this is not necessarily for the organization to promote it's favorite propaganda, but for the members to create their own curriculum and pursue the topics they find valuable. Our members will be exploring digital tools and skills within the framework of their own interests. 
+The idea isn't for the organization to focus only on my favorite propaganda, but for the members to create their own curriculum and make messages important to them more accessible. Our members will be exploring digital tools and skills within the framework of their own interests. 
 
 At the same time, the idea is to support recognition of the internet as a place where people can earn an income, even a living, while pursuing their passions.
 
@@ -140,9 +144,9 @@ At the same time, the idea is to support recognition of the internet as a place 
 
 My take on the long tail is that, as an individual, you could choose the even most obscure niche subject or product. You've got the entire world as a market. If you need 2000 bucks a month, you only need 20 customers to pay you 100 bucks a month, 40 customers to pay you 50 bucks a month, or 200 subscribers to give you 10 dollars a month. 
 
-It's just a matter of finding your market, and figuring out some product they will be happy to pay for because it meets their needs. If you start with something you really care about, that you would even do for free, that can help to make sure you don't succumb to burn out and give up before finding success.
+It's just a matter of finding your market, and figuring out some product they will be happy to pay for because it meets their needs. If you start with something you really care about, that you would even do for free, that will help to ensure you don't give into burn out before finding success.
 
-This turns upside down the old argument of pursuing your passion because there's no work available. In todays world, you really can make a living focused on philosophy, latin, and any other pursuits you may have thought necessary to leave behind behind for the sake of a career.
+The age old argument against pursuing your passion because you can't make a living with it is officially obsolete. In the digital age, you really can make a living focused on philosophy, latin, and any other pursuits you may have thought would never pay your bills.
 
 ## Curriculum for the Digital Age
 
@@ -155,7 +159,7 @@ I'm sure this list is not exhaustive, but gives an idea of the type of informati
 - Digital etiquette and social awareness
 - Cognitive behavioral therapy (CBT) and Mindfulness
 - Positive masculinity and sexual consent
-- Anti-racist allyship curriculum
+- Allyship and Anti-racism
 - Benefits of the varieties of social networks 
 - Content creation
 - Website publishing
@@ -175,7 +179,7 @@ There are powerful tools available for people of every level of experience, and 
 
 While there are a multitude of tools you can use right from your web-browser, the vast majority of tools online that you have to pay for, you can get for free or at a fraction of the cost, if can learn how to use some developer tools and spin up a web-server. 
 
-If you like the idea of potentially learning to actually code, it's a lot easier to start by learning to use dev tools, and work your way from there. All the same, there are a lot of super valuable skills between "I can use a computer" and knowing how to code, and plenty more in less technical directions.
+If do you like the idea of learning to write code, I think it's easier to start by using dev tools, to figure out which tools and languages are most useful in the areas you enjoy.
 
 The important thing is to **start out with some achievable goals**, and get some **positive feedback loops** working in your favor. That's where having a community like this can be invaluable, to help people get over the initial hump of doing something useful with their burgeoning skill set.
 
@@ -185,9 +189,10 @@ It was a transformational moment where I realized the power of the web is really
 
 ## Starting out with a new idea
 
-![](/assets/img/communication-2805785_1280_ptra.jpg)
+<img src="/assets/img/communication-2805785_1280_ptra.jpg"/>
+<sup><a href="https://pixabay.com/users/ptra-359668/">by ptra</a></sup>
 
-One valuable tool when starting any enterprise online is to [begin growing a mailing list](https://wpforms.com/why-you-should-start-building-an-email-list/). If I could go back to when I started and do one thing different, I'd start building e-mail lists for my favorite ideas.
+One valuable tool when starting any enterprise online is to [begin growing a mailing list](https://wpforms.com/why-you-should-start-building-an-email-list/). If I could go back and do one thing different, I'd start building e-mail lists for my favorite ideas, from the beginning.
 
 You don't need any special skills to [create a landing page](https://blog.hubspot.com/blog/tabid/6307/bid/7177/what-is-a-landing-page-and-why-should-you-care.aspx), there are plenty of ways to set that up [for free with the click of a button](https://mailchimp.com/features/landing-pages/).
 
@@ -195,9 +200,7 @@ If you have an idea you're excited about, before you spend the next year buildin
 
 Once you create a couple landing pages, and share them in a few venues, you'll be [collecting data](https://blog.hubspot.com/service/customer-data-collection), and learning more about your audience. Then you can work at your own pace, collecting subscribers and creating a market for your future offerings.
 
-Then, once you've created something worth sharing, you have a list of warm leads for relevant product offerings.
-
-It doesn't matter if you aren't the kind of person who signs up for e-mail lists. The people who give you their e-mail addresses have already told you they're interested, and are among your first potential customers.
+It doesn't matter if you aren't the kind of person who signs up for e-mail lists. The people who give you their e-mail addresses have already told you they're interested, once you've created something worth sharing, you have a list of warm leads for relevant product offerings.
 
 You'll get instant feedback on how others think about your idea, if at all, and should you get a lot of inquiries, then you'll really know you're onto something.
 
@@ -218,3 +221,7 @@ In the mean-time, please do **subscribe here for updates**, and share what's mos
   <textarea type="text" rows="5" cols="33" placeholder="Your interest in this project." name="fields[message]" tabindex="1"></textarea>  
   <center><button type="submit">Subscribe</button></center>
 </form>
+
+#### One last shout out 
+
+I just gotta say, real quick, I've been binge listening to [IndieHackers](https://www.indiehackers.com/), lately, which has tons of interviews with solo-founders going into all kinda detail about how they started their business, and has definitely been an inspiration for me while coming up with this idea. 
