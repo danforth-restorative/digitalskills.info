@@ -21,7 +21,7 @@ Since the creation of the World Wide Web in 1990, and the introduction of electr
 > Digital transformation is all about becoming a digital enterprise—an organization that uses technology to continuously evolve all aspects of its business models (what it offers, how it interacts with customers and how it operates). - [Digital transformation: A PRIMER](https://www.wired.com/brandlab/2019/10/deloitte-digital-transformation-a-primer/)
 
 <center><img src="/assets/img/digital-transformation-2014-25_statistica.png"/></center>
-<sup><a href="https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/">Digital transformation market size in the U.S. 2014-2025</a></sup><br>
+<sup><a href="https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/">Digital transformation market size in Billions. U.S. 2014-2025</a></sup><br>
 
 <sub><a style="float: right;" href="https://thenounproject.com/term/knocking/2696200/">knocking by Adrien Coquet: Noun Project</a></sub><br>
 <img style="float: right;" src="/assets/img/noun_knocking_2696200.png" alt-text="knocking by Adrien Coquet from the Noun Project"/>
