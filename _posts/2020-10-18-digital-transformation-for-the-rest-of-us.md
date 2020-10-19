@@ -222,6 +222,8 @@ In the mean-time, please do **subscribe here for updates**, and share what's mos
   <center><button type="submit">Subscribe</button></center>
 </form>
 
+<a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
+
 #### One last shout out 
 
-I just gotta say, real quick, I've been binge listening to [IndieHackers](https://www.indiehackers.com/), lately, which has tons of interviews with solo-founders going into all kinda detail about how they started their business, and has definitely been an inspiration for me while coming up with this idea. 
+Real quick, before I go. I've been binge listening to [IndieHackers](https://www.indiehackers.com/), lately, which has tons of interviews with solo-founders going into all kinda detail about how they started their business. It's definitely been an inspiration for me while coming up with this post. Highly Recommend.
