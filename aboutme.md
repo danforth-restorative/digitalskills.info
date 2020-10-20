@@ -1,16 +1,12 @@
 ---
 layout: page
 title: About
-subtitle: Why you'd want to go on a date with me
+subtitle: Digital Skills Open Education
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+DigitalSkills.Info is a not for profit organization who's members teach each other digital skills, being created, initially, by [David Danforth](https://danforth-restorative.com).
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+### Social
 
-What else do you need?
-
-### My story
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+GitHub: [danforth-restorative/digital-skills.info/](https://github.com/danforth-restorative/digitalskills.info)
+Facebook: [@digitalskills.info](https://www.facebook.com/digitalskills.info)

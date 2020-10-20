@@ -214,7 +214,7 @@ In the mean-time, please do **subscribe here for updates**, and share what's mos
 
 <p><center><b>E-mail Subscription Form</b></center></p>
 <form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/digitalskills.info/master/subscribe">
-  <input name="options[redirect]" type="hidden" value="https://github.com/danforth-restorative/digitalskills.info/pulls">
+  <input name="options[redirect]" type="hidden" value="https://digitalskills.info/thank-you/">
   <input name="options[slug]" type="hidden" value="restofus">
   <input name="fields[name]" type="text" placeholder="Name">
   <input name="fields[email]" type="email" placeholder="Email">
