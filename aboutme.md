@@ -8,5 +8,6 @@ DigitalSkills.Info is a not for profit organization who's members teach each oth
 
 ### Social
 
-GitHub: [danforth-restorative/digital-skills.info/](https://github.com/danforth-restorative/digitalskills.info)
+GitHub: [danforth-restorative/digital-skills.info](https://github.com/danforth-restorative/digitalskills.info)
+
 Facebook: [@digitalskills.info](https://www.facebook.com/digitalskills.info)
