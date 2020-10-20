@@ -4,7 +4,7 @@ title: Subscribe for Updates
 subtitle: Stay up to date with our journey.
 ---
 
-<center><b>Subscribe here for updates on DigitalSkills.Info</b></center>
+<p><center><b>Subscribe here for updates on DigitalSkills.Info</b></center></p>
 
 <form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/digitalskills.info/master/subscribe">
   <input name="options[redirect]" type="hidden" value="https://digitalskills.info/thank-you/">
