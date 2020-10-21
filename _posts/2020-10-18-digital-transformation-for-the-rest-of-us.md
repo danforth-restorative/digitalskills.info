@@ -23,9 +23,12 @@ Since the creation of the World Wide Web in 1990, and the introduction of electr
 <center><img src="/assets/img/digital-transformation-2014-25_statistica.png"/></center>
 <sup><a href="https://www.statista.com/statistics/784122/digital-transformation-market-size-in-the-us/">Digital transformation market size in Billions. U.S. 2014-2025</a></sup><br>
 
-<strong>This is a long article, click here if you want to skip ahead to my idea about the org:</strong>
+---
 
-* [A not-for-profit educational organization](#a-not-for-profit-educational-organization)
+<center><h5>This is a long article</h5>
+<strong><a href="#a-not-for-profit-educational-organization">Click here to skip my story and learn about DigitalSkills.Info</a></strong></center>
+
+---
 
 <sub><a style="float: right;" href="https://thenounproject.com/term/knocking/2696200/">knocking by Adrien Coquet: Noun Project</a></sub><br>
 <img style="float: right;" src="/assets/img/noun_knocking_2696200.png" alt-text="knocking by Adrien Coquet from the Noun Project"/>
@@ -171,7 +174,8 @@ No matter what subject we're working on, digital tools will play a starring roll
 
 ### Digital Tools make the Digital Transformation
 
-![](/assets/img/carlos-irineu-da-costa-eMc0lpn1P60-unsplash.jpg)
+<center><img src="/assets/img/carlos-irineu-da-costa-eMc0lpn1P60-unsplash.jpg"/>
+<sup><a href="https://unsplash.com/@carlosirineu">by @carlosirineu</a></sup></center>
 
 > More than 70% of all SMBs report revenue growth and attribute some of this growth to the use of digital tools. More digitalized SMBs have a higher likelihood of experiencing revenue growth than their less digital peers. - [Performance of Small and Medium Sized Businesses in a digital world](https://www2.deloitte.com/content/dam/Deloitte/es/Documents/Consultoria/The-performance-of-SMBs-in-digital-world.pdf)
 
@@ -189,8 +193,8 @@ It was a transformational moment where I realized the power of the web is really
 
 ## Starting out with a new idea
 
-<img src="/assets/img/communication-2805785_1280_ptra.jpg"/>
-<sup><a href="https://pixabay.com/users/ptra-359668/">by ptra</a></sup>
+<center><img src="/assets/img/communication-2805785_1280_ptra.jpg"/>
+<sup><a href="https://pixabay.com/users/ptra-359668/">by ptra</a></sup></center>
 
 One valuable tool when starting any enterprise online is to [begin growing a mailing list](https://wpforms.com/why-you-should-start-building-an-email-list/). If I could go back and do one thing different, I'd start building e-mail lists for my favorite ideas, from the beginning.
 
@@ -228,4 +232,4 @@ In the mean-time, please do **subscribe here for updates**, and share what's mos
 
 #### One last shout out 
 
-Real quick, before I go. I've been binge listening to [IndieHackers](https://www.indiehackers.com/), lately, which has tons of interviews with solo-founders going into all kinda detail about how they started their business. It's definitely been an inspiration for me while coming up with this post. Highly Recommend.
+Real quick, before I go. I've been binge listening to [IndieHackers](https://www.indiehackers.com/), lately, which has tons of interviews with solo-founders going into all kinda detail about how they started their business. It's definitely been an been an inspiration for me while working on this idea. Highly Recommend.
