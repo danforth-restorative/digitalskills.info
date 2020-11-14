@@ -187,7 +187,7 @@ If do you like the idea of learning to write code, I think it's easier to start 
 
 The important thing is to **start out with some achievable goals**, and get some **positive feedback loops** working in your favor. That's where having a community like this can be invaluable, to help people get over the initial hump of doing something useful with their burgeoning skill set.
 
-After running other peoples code for long enough, eventually I could understand enough to change a single parameter, slightly altering the code to suit my purpose. One day I went to create a [quote bot for twitter](https://github.com/danforth-restorative/Quote-Bot-Template), in the Python programming language, and found that I could write my own script from start to finish, and set it up to run on a schedule for free with GitHub actions.
+After running other peoples code for long enough, eventually I could understand enough to change a single parameter, slightly altering the code to suit my purpose. One day I went to create a [quote bot for twitter](https://github.com/danforth-restorative/GitHub-Actions-Quote-Bot), in the Python programming language, and found that I could write my own script from start to finish, and set it up to run on a schedule for free with GitHub actions.
 
 It was a transformational moment where I realized the power of the web is really at my fingertips, and that I have what it takes to use the tools I'll require on this journey.
 
