@@ -2,11 +2,12 @@
 layout: post
 title: Digital Skills Info
 subtitle: A Not-For-Profit Educational Organization
+excerpt: None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Moreover, the incentives of legacy educational institutions don't always seem aligned with the interests of their students.
 gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: [org]
 comments: true
-thumbnail-img: /assets/img/Management_Skills_1327063.png
+thumbnail-img: /assets/img/noun_Management_Skills_1327063.png
 share-img: /assets/img/digitalskills_og.png
 ---
 

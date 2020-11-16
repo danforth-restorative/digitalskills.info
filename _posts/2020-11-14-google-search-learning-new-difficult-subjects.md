@@ -2,13 +2,13 @@
 layout: post
 title: How I use Google to Learn New or Difficult Subjects 
 permalink: google-search-learning-new-difficult-subjects/
-subtitle: Collecting and Organizing Search Results for your own benefit, and Sharing your Findings to get Digital Clout
+subtitle: Collect and Organizing Search Results for your own Benefit, and Share your Findings to get Digital Clout
 excerpt: If you know how to search the web, you can learn anything. It's not always as fast as other learning techniques, and doesn't necessarily result in any authoritative certification. However, searching the web is free, full of opportunities, and draws upon a wealth of knowledge amassed across the globe, recently become available to anyone with a mobile phone.
 gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: ["Google Search","Search Operators"]
 comments: true
-thumbnail-img: /assets/img/
+thumbnail-img: /assets/img/learn-complicated-subjects-google-magnifying.png
 share-img: /assets/img/
 ---
 

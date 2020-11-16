@@ -7,19 +7,19 @@
     
     <description>Dedicated to proliferating the knowledge and use of Fundamental Digital Skills.</description>
     
-    <link></link>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
     
     
       <item>
         <title>How I use Google to Learn New or Difficult Subjects</title>
         <description>
-          Collecting and Organizing Search Results for your own benefit, and Sharing your Findings to get Digital Clout - 
+          Collect and Organizing Search Results for your own Benefit, and Share your Findings to get Digital Clout - 
           The most powerful skill I’ve developed is using Google Search to learn difficult subjects, discovering much more information than I can find anywhere else. I’ve been meaning to write and learn more about the subject of searching the web, for a while. Once I came up with the idea of...
         </description>
         <pubDate>Sat, 14 Nov 2020 00:00:00 -0500</pubDate>
-        <link>/google-search-learning-new-difficult-subjects/</link>
-        <guid isPermaLink="true">/google-search-learning-new-difficult-subjects/</guid>
+        <link>http://localhost:4000/google-search-learning-new-difficult-subjects/</link>
+        <guid isPermaLink="true">http://localhost:4000/google-search-learning-new-difficult-subjects/</guid>
       </item>
     
       <item>
@@ -29,8 +29,8 @@
           Digital transformation is a popular buzzword used to describe the practices that corporations and government bodies, around the world, use seeking to remain relevant in the digital age. The leaders in legacy institutions know that you have the power to displace their empires from your living room, and are spending...
         </description>
         <pubDate>Sun, 18 Oct 2020 00:00:00 -0400</pubDate>
-        <link>/2020-10-18-digital-transformation-for-the-rest-of-us/</link>
-        <guid isPermaLink="true">/2020-10-18-digital-transformation-for-the-rest-of-us/</guid>
+        <link>http://localhost:4000/2020-10-18-digital-transformation-for-the-rest-of-us/</link>
+        <guid isPermaLink="true">http://localhost:4000/2020-10-18-digital-transformation-for-the-rest-of-us/</guid>
       </item>
     
   </channel>
