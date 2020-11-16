@@ -6,7 +6,7 @@
 
     $(form).addClass('disabled');
 
-    var endpoint = 'https://digitalskills.info/staticman/v3/entry/github/';
+    var endpoint = 'https://digitalskills.info/staticman/v2/entry/';
     var repository = 'danforth-restorative/digitalskills.info';
     var branch = 'master';
 

@@ -450,7 +450,3 @@ Once you've published, you can share your work on Reddit forums, add your link t
   <textarea type="text" rows="5" cols="33" placeholder="Your interest in this project." name="fields[message]" tabindex="1"></textarea>  
   <center><button type="submit">Subscribe</button></center>
 </form>
-
-### Support me on Patreon
-
-<center><a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></center>
