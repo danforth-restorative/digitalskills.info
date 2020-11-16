@@ -2,6 +2,7 @@
 layout: page
 title: Thank You
 subtitle: You've subscribed to DigitalSkills.Info
+permalink: thank-you/
 ---
 
 Thanks for signing up!

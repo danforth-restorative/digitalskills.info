@@ -6,7 +6,7 @@ subtitle: Stay up to date with our journey.
 
 <p><center><b>Subscribe here for updates on DigitalSkills.Info</b></center></p>
 
-<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/digitalskills.info/master/subscribe">
+<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/subscribe/master/subscribe">
   <input name="options[redirect]" type="hidden" value="https://digitalskills.info/thank-you/">
   <input name="options[slug]" type="hidden" value="devto/rest">
   <input name="fields[name]" type="text" placeholder="Name">
