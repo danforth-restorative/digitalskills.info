@@ -60,6 +60,14 @@ hr.small {
   border-radius: 0.1875rem;
 }
 
+
+.info {
+  padding: 20px;
+  background-color: #398be2fe; 
+  color: white;
+  margin-bottom: 15px;
+}
+
 /* fix in-page anchors to not be behind fixed header */
 :target:before {
   content: "";
@@ -110,6 +118,7 @@ img {
     text-align: center;
   }
 }
+
 
 .disqus-comments {
   margin-top: 1.875rem;

@@ -6,7 +6,7 @@ gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: [org]
 comments: true
-thumbnail-img: /assets/img/noun_Management Skills_1327063.png
+thumbnail-img: /assets/img/Management_Skills_1327063.png
 share-img: /assets/img/digitalskills_og.png
 ---
 
