@@ -439,3 +439,18 @@ But that's a subject for another day :D
 
 Once you've published, you can share your work on Reddit forums, add your link to an [Awesome Lists](https://github.com/topics/awesome), or other places online where similar information is found. I would recommend opening a GitHub account, even before you get your own website, and [create your own awesome-list](https://github.com/sindresorhus/awesome/blob/main/create-list.md) there, which can be included on the original awesome list at [sindresorhus/awesome](https://github.com/sindresorhus/awesome).
 
+### Subscribe for Updates
+
+<p><center><b>E-mail Subscription Form</b></center></p>
+<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/subscribe/master/subscribe">
+  <input name="options[redirect]" type="hidden" value="https://digitalskills.info/thank-you/">
+  <input name="options[slug]" type="hidden" value="google-search">
+  <input name="fields[name]" type="text" placeholder="Name">
+  <input name="fields[email]" type="email" placeholder="Email">
+  <textarea type="text" rows="5" cols="33" placeholder="Your interest in this project." name="fields[message]" tabindex="1"></textarea>  
+  <center><button type="submit">Subscribe</button></center>
+</form>
+
+### Support me on Patreon
+
+<center><a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></center>

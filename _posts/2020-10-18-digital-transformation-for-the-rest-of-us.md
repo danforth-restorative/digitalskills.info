@@ -217,7 +217,7 @@ I have a personal knowledge base where I've been curating deeply on all of above
 In the mean-time, please do **subscribe here for updates**, and share what's most interesting to you about this project. If you're ready to get started learning and building with me, right away, be sure to let me know!
 
 <p><center><b>E-mail Subscription Form</b></center></p>
-<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/digitalskills.info/master/subscribe">
+<form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/subscribe/master/subscribe">
   <input name="options[redirect]" type="hidden" value="https://digitalskills.info/thank-you/">
   <input name="options[slug]" type="hidden" value="restofus">
   <input name="fields[name]" type="text" placeholder="Name">
