@@ -1,6 +1,6 @@
 comments:
   allowedFields: ["name", "email", "message"]
-  allowedOrigins: ["https://digitalskills.info"]
+  #allowedOrigins: []
   branch: "master"   #  use "master" for user page or "gh-pages" for project pages
   commitMessage: "New comment by {fields.name}"
   filename: "comment-{@timestamp}"
