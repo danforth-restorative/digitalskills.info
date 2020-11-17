@@ -1,17 +1,18 @@
 ---
 layout: post
 title: How I use Google to Learn New or Difficult Subjects 
-subtitle: Collect and Organizing Search Results for your own Benefit, and Share your Findings to get Digital Clout
-excerpt: If you know how to search the web, you can learn anything. It's not always as fast as other learning techniques, and doesn't necessarily result in any authoritative certification. However, searching the web is free, full of opportunities, and draws upon a wealth of knowledge amassed across the globe, recently become available to anyone with a mobile phone.
+subtitle: Collect and Organize Search Results for your own Benefit, and Share your Findings to get Digital Clout
+excerpt: If you know how to search the web, you can learn anything. It's not always as fast as other learning techniques, and doesn't necessarily result in an authoritative certification. However, searching the web is free, full of opportunities, and draws upon a wealth of knowledge amassed across the globe, recently become available to anyone with a mobile phone.
 gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: ["Google Search","Search Operators"]
 comments: true
 thumbnail-img: /assets/img/learn-complicated-subjects-google-magnifying.png
-share-img: /assets/img/
+share-img: /assets/img/google-4393694_deep-search.png
 redirect_from: /google-search-learning-new-difficult-subjects/
 ---
 
+![](/assets/img/google-4393694_deep-search.png)
 
 The most powerful skill I've developed is using Google Search to learn difficult subjects, discovering much more information than I can find anywhere else.
 
@@ -68,7 +69,7 @@ Ultimately, there are a variety of applications you could use for collecting sou
 
 [HackMD](https://hackmd.io) is a collaborative [markdown](https://www.markdownguide.org/cheat-sheet/) editor. You can create an account simply using your google account, and create a document with a funny looking address like the link to this post I'm writing:
 
-https://hackmd.io/p6mEJJztQdWE1cmLSHHOrA
+[https://hackmd.io/p6mEJJztQdWE1cmLSHHOrA](https://hackmd.io/p6mEJJztQdWE1cmLSHHOrA)
 
 By default, anyone can see your work by following that link, and if they're logged in, you can both edit at the same time. You can also configure your content to be private, or to allow anonymous editing. It keeps version history so you won't lose any of your work.
 
@@ -450,3 +451,7 @@ Once you've published, you can share your work on Reddit forums, add your link t
   <textarea type="text" rows="5" cols="33" placeholder="Your interest in this project." name="fields[message]" tabindex="1"></textarea>  
   <center><button type="submit">Subscribe</button></center>
 </form>
+
+### Support this work on Patreon
+
+<center><a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></center>

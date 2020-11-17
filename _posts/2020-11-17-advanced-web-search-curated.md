@@ -11,6 +11,8 @@ thumbnail-img: /assets/img/cobweb-921039_ClaudiaWollesen.jpg
 share-img: /assets/img/cobweb-921039_ClaudiaWollesen.png
 ---
 
+![](/assets/img/cobweb-921039_ClaudiaWollesen.png)
+
 This curated list is part of a demonstration created as a part of [How I use Google to Learn New or Difficult Subjects](https://hackmd.io/p6mEJJztQdWE1cmLSHHOrA): Collect and Organize Search Results for your own Benefit, and Share your Findings to get Digital Clout.
 
 ## Google Search
