@@ -310,10 +310,10 @@ This page has awesome **charts with the search operators *and* URL parameters**.
 
 You can see I've taken what was an unorganized list and broken it up into sections, while looking for the best guides on Google Search operators.
 
-![](https://i.imgur.com/962ChWj.png)
+[![](https://i.imgur.com/962ChWj.png)](https://hackmd.io/RoiESvORTMOpnFgPtJzYSw)
 
 
-I'm not going to share every screenshot showing process along the way, however, if you visit the document above, you can click the [hamburger menu](https://www.computerhope.com/jargon/h/hamburger-menu.htm), and select "Versions and GitHub Sync" to follow my journey every step of the way.
+I'm not going to share every screenshot showing process along the way, however, if you [visit the document](https://hackmd.io/RoiESvORTMOpnFgPtJzYSw) above, you can click the [hamburger menu](https://www.computerhope.com/jargon/h/hamburger-menu.htm), and select "Versions and GitHub Sync" to follow my journey every step of the way.
 
 ![](https://i.imgur.com/QMrWvc6.png)
 
