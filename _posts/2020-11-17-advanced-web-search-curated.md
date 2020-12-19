@@ -7,11 +7,11 @@ gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: ["Google Search","Search Operators"]
 comments: true
-thumbnail-img: /assets/img/cobweb-921039_ClaudiaWollesen.jpg
-share-img: /assets/img/cobweb-921039_ClaudiaWollesen.png
+thumbnail-img: /assets/img/cobweb-921039_ClaudiaWollesen-teaser.webp
+share-img: /assets/img/cobweb-921039_ClaudiaWollesen.webp
 ---
 
-![](/assets/img/cobweb-921039_ClaudiaWollesen.png)
+![](/assets/img/cobweb-921039_ClaudiaWollesen.webp)
 
 This curated list is part of a demonstration created as a part of [How I use Google to Learn New or Difficult Subjects](https://hackmd.io/p6mEJJztQdWE1cmLSHHOrA): Collect and Organize Search Results for your own Benefit, and Share your Findings to get Digital Clout.
 
@@ -62,7 +62,7 @@ Third-party guides to using advanced features of google search.
 When using search operators google has a specific order it uses giving preference to different operations.
 
 * [Search Protocol Reference](https://support.google.com/gsa/answer/6329265#436b47a9-affc-48a8-869c-fff1dbd1abe0)
-  > Boolean operators are left associative with equal precedence. You can use parentheses to change the order of precedence. For example, A . (B | C | D) evaluates the OR (|) operators in the parentheses before the AND (.) operator. It is advisable to use brackets, braces, or parenthesis to clarify the precedence in complex queries.
+  > Boolean operators are left associative with equal precedence. You can use parentheses to change the order of precedence. For example, A . (B \| C \| D) evaluates the OR (\|) operators in the parentheses before the AND (.) operator. It is advisable to use brackets, braces, or parenthesis to clarify the precedence in complex queries.
 
 ### SEO
 
@@ -111,7 +111,7 @@ Some of these guides go far beyond google, providing examples using other popula
   * [Research Beyond Google: 56 Authoritative, Invisible, and Comprehensive Resources](https://oedb.org/ilibrarian/research-beyond-google/)
     > Topics Covered in this Article
     >
-    > Deep Web Search Engines | Art | Books Online | Business | Consumer | Economic and Job Data | Finance and Investing | General Research | Government Data | International | Law and Politics | Library of Congress | Medical and Health | STEM | Transportation
+    > Deep Web Search Engines • Art • Books Online • Business • Consumer • Economic and Job Data • Finance and Investing • General Research • Government Data • International • Law and Politics • Library of Congress • Medical and Health • STEM • Transportation
 * [The 12 Best Search Engines to Explore the Invisible Web](https://www.makeuseof.com/tag/10-search-engines-explore-deep-invisible-web/)
 * [Awesome Search](https://awesomelists.top/) - Search Awesome (curated) Lists, like this one 
 * [Class Central](https://www.classcentral.com/)
@@ -139,6 +139,6 @@ Some of these guides go far beyond google, providing examples using other popula
   <center><button type="submit">Subscribe</button></center>
 </form>
 
-### Support this work on Patreon
+### Support this project on Patreon
 
-<center><a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></center>
+<a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>

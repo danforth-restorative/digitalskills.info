@@ -1,18 +1,15 @@
 ---
 layout: post
 title: How I use Google to Learn New or Difficult Subjects 
-subtitle: Collect and Organize Search Results for your own Benefit, and Share your Findings to get Digital Clout
+subtitle: Collect and organize search results for your own benefit, share your findings, and get clout
 excerpt: If you know how to search the web, you can learn anything. It's not always as fast as other learning techniques, and doesn't necessarily result in an authoritative certification. However, searching the web is free, full of opportunities, and draws upon a wealth of knowledge amassed across the globe, recently become available to anyone with a mobile phone.
-gh-repo: danforth-restorative/digitalskills-info
-gh-badge: [star, fork, follow]
 tags: ["Google Search","Search Operators"]
-comments: true
-thumbnail-img: /assets/img/learn-complicated-subjects-google-magnifying.png
-share-img: /assets/img/google-4393694_deep-search.png
+thumbnail-img: /assets/img/learn-complicated-subjects-google-magnifying.webp
+share-img: /assets/img/google-4393694_deep-search.webp
 redirect_from: /google-search-learning-new-difficult-subjects/
 ---
 
-![](/assets/img/google-4393694_deep-search.png)
+![](/assets/img/google-4393694_deep-search.webp)
 
 The most powerful skill I've developed is using Google Search to learn difficult subjects, discovering much more information than I can find anywhere else.
 
@@ -346,7 +343,7 @@ Some of these have alternative expressions, as is the case for `AND`, `OR`, and 
   * The parentheses group operators together, so you can be sure google knows you want 'google OR duckduckgo' also containing advanced, rather than 'google OR duckduckgo advanced'. 
   * Parentheses also "controls the order in which they execute"   
     * [Search Protocol Reference](https://support.google.com/gsa/answer/6329265#436b47a9-affc-48a8-869c-fff1dbd1abe0)
-      > Boolean operators are left associative with equal precedence. You can use parentheses to change the order of precedence. For example, A . (B | C | D) evaluates the OR (|) operators in the parentheses before the AND (.) operator. It is advisable to use brackets, braces, or parenthesis to clarify the precedence in complex queries.
+      > Boolean operators are left associative with equal precedence. You can use parentheses to change the order of precedence. For example, A . (B \| C \| D) evaluates the OR (\|) operators in the parentheses before the AND (.) operator. It is advisable to use brackets, braces, or parenthesis to clarify the precedence in complex queries.
 * `*` **_Example_** – `"search * parameters"`
   * The asterisk is a wildcard, finding results with any word between the search and parameters. This example would include results containing 'search url parameters' or 'search advanced parameters'
 * `#..#` **_Example_** – `Google "40..100 search operators"`
@@ -440,7 +437,7 @@ But that's a subject for another day :D
 
 Once you've published, you can share your work on Reddit forums, add your link to an [Awesome Lists](https://github.com/topics/awesome), or other places online where similar information is found. I would recommend opening a GitHub account, even before you get your own website, and [create your own awesome-list](https://github.com/sindresorhus/awesome/blob/main/create-list.md) there, which can be included on the original awesome list at [sindresorhus/awesome](https://github.com/sindresorhus/awesome).
 
-### Subscribe for Updates
+## Subscribe for Updates
 
 <p><center><b>E-mail Subscription Form</b></center></p>
 <form method="POST" class="subscribe" action="https://digitalskills.info/staticman/v2/entry/danforth-restorative/subscribe/master/subscribe">
@@ -452,6 +449,6 @@ Once you've published, you can share your work on Reddit forums, add your link t
   <center><button type="submit">Subscribe</button></center>
 </form>
 
-### Support this work on Patreon
+### Support this project on Patreon
 
-<center><a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script></center>
+<a href="https://www.patreon.com/bePatron?u=44125162" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
