@@ -4,9 +4,9 @@ title: "How to buy second-hand laptops online, for cheap! ($100-$400)"
 subtitle: I bought one for $70 while making this post.
 description: Buy a used computer online! Why buy used, What to look for, where to buy, how to price them.
 excerpt: You can get a lot more bang for your buck, buying used. Especially if you don't want to spend a lot of money. A cheap new computer will have cheap parts, but an old top-of-the-line laptop will be both durable and reliable.
-cover-img: /assets/img/Lenovo-BIOS.jpg
-thumbnail-img: /assets/img/used-computers-thumb.png
-share-img: #/assets/img/path.jpg
+cover-img: /assets/img/Lenovo-BIOS.webp
+thumbnail-img: /assets/img/used-laptop-thumb.webp
+share-img: /assets/img/Buy-Used-Laptop-Online-Cheap-og.webp
 tags: [begin]
 ---
 
