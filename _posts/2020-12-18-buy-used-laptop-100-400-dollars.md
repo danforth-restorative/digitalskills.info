@@ -75,7 +75,7 @@ I created a few custom search urls for a couple sites, so you can get some ideas
 
 ## What to Look for
 
-At the very core, as long as you can see the BIOS screen, the computer should work. The BIOS provides core instructions so your computer can run an operating system like Windows or Linux. 
+At the very core, as long as you can see the BIOS screen, or the computer is running, you can feel pretty confident the computer works. The BIOS provides core instructions so your computer can run an operating system like Windows or Linux. 
 
 Make sure it's not *BIOS Locked*. That means there's a boot password. However, there might be some good deals here if you do some research, since bios lock brings down the buy price and may not be too difficult to bypass. 
 
@@ -105,7 +105,7 @@ However, [Consumer Reports suggests these extended warranties might not be worth
 
 > For Apple laptop owners [...] median cost for an out-of-pocket repair was $165, which is less than the $177 median cost for an AppleCare plan.
 
-### Specs
+## Specs
 
 Search by serial number is the best way to learn about a machine you have your eyes on. You can also find specs by product name, model, but specs may vary among computers with the same name or model number.
 
@@ -118,7 +118,7 @@ If the BIOS screen is showing, you can look for a serial number there, and often
 
 For my own personal use, I would look for something no older than 2012\2013. There are plenty of affordable computers starting from those years. You could go older than that, but results may vary.
 
-#### Hard Drive 
+### Hard Drive 
 
 This is the most important part in getting the most out of any computer new or old. You absolutely want a solid state drive (SSD). That doesn't mean you have to purchase with one installed, since you can often find better deals on computers sold with old fashioned mechanical hard drives, or even without a hard drive.
 
@@ -126,18 +126,18 @@ Both new and used computers often ship with the old fashioned mechanical drive (
 
 128 gig is really the smallest that are worth buying, if you're really on a budget but still plan to download some music and video. It's easy to buy more storage later, so you don't have to splurge for a terabyte straightaway.
 
-#### Ram \ Memory
+### Ram \ Memory
 
 Obviously, more is better. You don't have to immediately max out your ram, but it's nice if you can add at least 16g total. If you max 8 ram, that's ok, you can still get plenty of work done with 8gigs of ram. Even with only 4 gigs of ram, you can survive. People even buy rasberry pi with only 2 gigs of ram and get lots use out of it, but 4 is really the minimum for a personal computer.
 
-#### Processor
+### Processor
 
 Ideally you want 4th-gen or newer Intel Core processor i3, i5, or i7. The generation can be determined by the number immediately after its i number. Fourth gen would be i3-4000 i5-4000 i7-4000 and up. 
 
 * [Intel Core i3 vs. i5 vs. i7: Which CPU Should You Buy?](https://www.makeuseof.com/tag/intel-core-i3-vs-i5-vs-i7-one-really-need/)
 * [ELI5: What's the difference between the Intel I3, I5, and I7 processors?](https://www.reddit.com/r/explainlikeimfive/comments/2yek6t/eli5_whats_the_difference_between_the_intel_i3_i5/)
 
-#### Battery \ Power
+### Battery \ Power
 
 You want to be sure it has a replaceable battery. Some Macbooks, for instance have batteries glued into the casing. Professionals often replace these when refurbishing, but it's not for the faint of heart. Some batteries are really expensive.
 
@@ -145,17 +145,23 @@ It's good to look up ahead of time how much a battery costs, since they are usua
 
 Of course you want to be aware of the battery life. This is a good place where reddit reviews come in handy.
 
-#### Size \ Weight
+Battery life may not be the most important factor on this list, but it's worth knowing what you are getting into, ahead of time.
+
+### Size \ Weight
 
 It's nice to have a lightweight compact computer, but these aren't always the easiest to repair. Larger \ heavier machines might also be more durable.
 
-#### Screen 
+### Screen 
 
 To me this is not the most important factor, but something I use to weigh the options after I've searched by other specs.
 
 High resolution can make the most out of smaller screens. While large screens with lower resolution don't perform as well as the smaller screen with higher res.
 
 At least 1920×1080 resolution (1080p or Full HD) is ideal. 
+
+### Ports
+
+It's good to consider how many USB ports, and whether any of them support USB 3.0 (which is much faster and important for certain peripherals). Some models will have a slot for SD cards so you can easily add images from your camera, or move files to\from your phone. HDMI is nice if you want to plug into a tv, or other external screen. 
 
 ## Upgrades and Repairs
 
@@ -176,7 +182,7 @@ All you usually need for most upgrades is a phillips head screwdriver with a sma
 
 After you've found all the screws Sometimes you pull the bottom case off, sometimes you pull out the keyboard. 
 
-Hardrives are and ram are usually easy to replace, they can be found on the side of the machine, behind the battery, or underneath.
+Hardrives are and ram are usually easy to replace, they can be found on the side of the machine, behind the battery, or underneath. 
 
 ### Shopping list
 
@@ -189,6 +195,10 @@ Unless your purchase comes with **SSD**, add that to your list. [$70 for 240 gig
 Its easy to cut corners on memory and get more when you need it. Be sure to figure out exactly which type, they come in different shapes and sizes.
 
 I've upgraded wifi a few times, not really sure if it made a difference. Besides that, a wireless mouse and keyboard can be good if you work a lot and need to be able to change your work station and posture.
+
+If you buy a machine without a hard-drive or operating system, or you plan to upgrade the hard-drive yourself, you'll need to get an operating system. I recommend [Ubuntu](https://ubuntu.com/), because it's free and not designed to spy on you. You can also find a pre-activated Windows 10 torrent, which should run on most machines.
+
+I'll cover more details on installing an operating system and a beginners guide to Ubuntu in some future posts.
 
 ## Subscribe for Updates
 
