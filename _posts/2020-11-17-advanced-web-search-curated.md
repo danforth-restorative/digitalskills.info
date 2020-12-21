@@ -2,7 +2,7 @@
 layout: post
 title: Advanced Web Search - Curated List - Google and Beyond
 subtitle: Search Operators, URL Parameters, Order of Operations and More
-excerpt: "This curated list is part of a demonstration created as a part of 'How I use Google to Learn New or Difficult Subjects: Collect and Organize Search Results for your own Benefit, and Share your Findings to get Digital Clout'"
+share-description: "This curated list is part of a demonstration created as a part of 'How I use Google to Learn New or Difficult Subjects: Collect and Organize Search Results for your own Benefit, and Share your Findings to get Digital Clout'"
 gh-repo: danforth-restorative/digitalskills-info
 gh-badge: [star, fork, follow]
 tags: ["Google Search","Search Operators"]

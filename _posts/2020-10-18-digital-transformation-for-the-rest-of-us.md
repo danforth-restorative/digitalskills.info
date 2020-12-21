@@ -1,7 +1,7 @@
 ---
 title: Digital Skills Info
 subtitle: A Not-For-Profit Educational Organization
-excerpt: None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Moreover, the incentives of legacy educational institutions don't always seem aligned with the interests of their students.
+share-description: None of the problems around learning digital skills are particularly hard, but this is an entirely new educational paradigm who's infrastructure is simply under-developed. Moreover, the incentives of legacy educational institutions don't always seem aligned with the interests of their students.
 tags: [org]
 # <a href="https://pixabay.com/users/12019-12019/">by 12019</a>
 cover-img: /assets/img/12019_iceland-2111811_1920.webp

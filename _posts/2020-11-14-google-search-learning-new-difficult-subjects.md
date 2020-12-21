@@ -2,7 +2,7 @@
 layout: post
 title: How I use Google to Learn New or Difficult Subjects 
 subtitle: Collect and organize search results for your own benefit, share your findings, and get clout
-excerpt: If you know how to search the web, you can learn anything. It's not always as fast as other learning techniques, and doesn't necessarily result in an authoritative certification. However, searching the web is free, full of opportunities, and draws upon a wealth of knowledge amassed across the globe, recently become available to anyone with a mobile phone.
+share-description: If you know how to search the web, you can learn anything. It's not always as fast as other learning techniques, and doesn't necessarily result in an authoritative certification. However, searching the web is free, full of opportunities, and draws upon a wealth of knowledge amassed across the globe, recently become available to anyone with a mobile phone.
 tags: ["Google Search","Search Operators"]
 thumbnail-img: /assets/img/learn-complicated-subjects-google-magnifying.webp
 share-img: /assets/img/google-4393694_deep-search.webp
