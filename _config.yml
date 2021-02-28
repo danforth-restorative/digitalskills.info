@@ -177,7 +177,6 @@ defaults:
       comments: true  # add comments to all blog posts
       gh-repo: danforth-restorative/digitalskills-info
       gh-badge: [star, fork, follow]
-      comments: true
   -
     scope:
       path: "" # any file that's not a post will be a "page" layout by default
