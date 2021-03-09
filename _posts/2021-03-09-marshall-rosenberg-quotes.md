@@ -36,10 +36,12 @@ Here are the steps that will be detailed in this walk through.
     - [YAML Extension](#yaml-extension)
   - [Get a twitter developer account](#get-a-twitter-developer-account)
     - [Apply](#apply)
-      - [How are you planning to use the Twitter API](#how-are-you-planning-to-use-the-twitter-api)
-      - [Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?](#will-your-app-use-tweet-retweet-like-follow-or-direct-message-functionality)
-      - [Developer agreement](#developer-agreement)
+    - [How are you planning to use the Twitter API?](#how-are-you-planning-to-use-the-twitter-api)
+    - [Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?](#will-your-app-use-tweet-retweet-like-follow-or-direct-message-functionality)
+    - [Developer agreement](#developer-agreement)
     - [Twitter developer account application [ ref:_00DAAK018._5005e26SSlh:ref ]](#twitter-developer-account-application--ref_00daak018_5005e26sslhref-)
+    - [Getting your api keys](#getting-your-api-keys)
+    - [How do I generate the access tokens to read/write direct messages?](#how-do-i-generate-the-access-tokens-to-readwrite-direct-messages)
 - [Making an auto-posting twitter bot](#making-an-auto-posting-twitter-bot)
   - [Python Twitter Script for Publishing Text Quotes](#python-twitter-script-for-publishing-text-quotes)
   - [Dependencies](#dependencies)
@@ -51,6 +53,10 @@ Here are the steps that will be detailed in this walk through.
 - [Using VSCode to manage your project](#using-vscode-to-manage-your-project)
   - [Save your twitter credentials as environment variables](#save-your-twitter-credentials-as-environment-variables)
     - [On your computer](#on-your-computer)
+    - [Set up workflow file for GitHub Actions](#set-up-workflow-file-for-github-actions)
+    - [The Workflow file](#the-workflow-file)
+    - [Customizations](#customizations)
+  - [Have Fun!](#have-fun)
   
 
 ## Prep
@@ -89,13 +95,15 @@ It would have worked just as well to put each quote on a new line, and there are
 
 #### Introduction to VSCode
 
-We're going to use [VSCode](https://code.visualstudio.com/) for preparing the quote material. It's easy to use, but also has tons of advanced features that deserve an article of their own.
+In this guide, we're going to use [VSCode](https://code.visualstudio.com/) for preparing the quote material. It's easy to use, but also has tons of advanced features that deserve an article of their own.
 
 VSCode or Code allows you to search\replace text within files of entire directories, and there are extensions for different languages and data-types that help you avoid errors. 
 
 VSCode also integrates very nicely with GitHub, which will save you from having to use `git` manually. If you aren't familiar with `git` already, VSCode will prove invaluable.
 
 ![](https://i.imgur.com/e3tIXgZ.png)
+
+If you don't care for VS Code, or its too resource intensive, you may prefer [Notepad++](https://notepad-plus-plus.org), which is a little less resource intensive, but offers comparable features.
 
 **Start by opening VSCode and create a new file.**
 
@@ -191,8 +199,10 @@ If you have any questions about this process, beyond the scope of this article, 
 Once I had some quotes formatted, I used this guide to get started with the code:
 
 * [How to write a Twitter Bot with Python and Tweepy](https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/)
- 
-It instructed me to login to [dev.twitter.com](https://dev.twitter.com/) with the account I want to tweet from.
+
+You may want to try out that script first, to see how this works. All it will do is post a single tweet, so it's easier to proceed with the later parts of this guide if you've tried that first.
+
+It instructs us, login to [dev.twitter.com](https://dev.twitter.com/) with the account I want to auto-tweet from.
 
 ![](https://i.imgur.com/ql3VyhW.png)
 
@@ -204,7 +214,7 @@ On the next page, click "Hobbyist", "Making a Bot" and then "Get Started".
 
 Fill out what you want them to call you and verify that you are requesting.
 
-##### How are you planning to use the Twitter API
+#### How are you planning to use the Twitter API?
 
 After you fill out basic info, you will be asked "**How are you planning to use the Twitter API or Twitter Data**". It suggests your application will be easier to approve the more descriptive you are, so try to make a few sentences about how you are using the API.
 
@@ -218,7 +228,7 @@ I filled out something like this:
 
 Next it asks if you are analyzing twitter data, in this case we are not.
 
-##### Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?
+#### Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?
 
 Yes it will, and so the next form we go into a little more detail what the app will do.
 
@@ -228,7 +238,7 @@ Yes it will, and so the next form we go into a little more detail what the app w
 
 the rest of the questions I click "No" and go to the next page which reviews the information already submitted, so we can click next again.
 
-##### Developer agreement
+#### Developer agreement
 
 Yes, we agree to the developer agreement. Like I said, for a simple tweet bot, this is not a concern. When you develop more complex bots for twitter, it's important to really read the developers agreement and understand how you are expected to use it. Especially if you want to automate some of the use of your personal twitter account, not just a new account to try out some code.
 
@@ -236,11 +246,9 @@ Be sure to verify your e-mail address, and you will see this message:
 
 ![](https://i.imgur.com/x5cabsn.png)
 
-When I was making the [@MBR_Quotes](https://twitter.com/MBR_Quotes) bot, I got the developers account almost immediately. When I tried to make a different re-tweet bot, there was a lot of back and forth with the developers support, in which I had to re-describe the intended behavior of my app until it fit within [Developer Agreement and Policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy.html), [Automation Rules](https://help.twitter.com/en/rules-and-policies/twitter-automation), and/or the [Twitter Rules](https://help.twitter.com/en/rules-and-policies/twitter-rules).
-
 #### Twitter developer account application [ ref:_00DAAK018._5005e26SSlh:ref ]
 
-Ok, I filled out my application last night, and today I got this message:
+After I filled out my application I got this message, the next day.
 
 > Before we can finish our review of your developer account application, we need some more details about your use case. 
 >
@@ -248,44 +256,60 @@ Ok, I filled out my application last night, and today I got this message:
 > 
 >     The core use case, intent, or business purpose for your use of the Twitter APIs.
 >     If you intend to analyze Tweets, Twitter users, or their content, share details about the analyses you plan to conduct, and the methods or techniques. 
->     If your use involves Tweeting, Retweeting, or liking content, share how you’ll interact with Twitter accounts, or their content.
+>     **If your use involves Tweeting, Retweeting, or liking content, share how you’ll interact with Twitter accounts, or their content.**
 >     If you’ll display Twitter content off of Twitter, explain how, and where, Tweets and Twitter content will be displayed with your product or service, including whether Tweets and Twitter content will be displayed at row level, or aggregated.
 > 
 > Just reply to this email with these details. Once we’ve received your response, we’ll continue our review. We appreciate your help! 
 
-Here's my response:
+I revised my answer a couple times before they accepted it. Each time, they patiently pointed me to the [Developer Agreement and Policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy.html), [Automation Rules](https://help.twitter.com/en/rules-and-policies/twitter-automation) & [Twitter Rules](https://help.twitter.com/en/rules-and-policies/twitter-rules), requesting me to re-write your use-case in accordance with the policies.
 
-_My core use-case for the Twitter API is to develop my tech skills, share valuable knowledge, and support community growth. I do not intent to make money with this project, but in the future I may apply these skills to profitable ventures._
+Notice the section in bold, above, about tweeting, retweeting, and liking content. I had to read the various policy links and figure out exactly what the rules are for each.
 
-_I do not intend to analyze tweets, twitter users, or their content. The greatest extent of analyzing twitter data would include keyword\hashtag search, to find other content related to this project._
+After a few tries, back and forth with the developer support, here's my final response that they accepted:
 
-_The script I'm working on is only for tweeting quotes from a pre-defined list of content. All other interaction with other user and\or their content will be manual._
-
-_If I display content outside of twitter, I would use [publish.twitter.com](https://publish.twitter.com/#)_
-
-_Let me know if you need anything else._
-
-_Regards,_
-_David Danforth_
-
-If you give a wrong answer, they will patiently point you to the [Developer Agreement and Policy](https://developer.twitter.com/en/developer-terms/agreement-and-policy.html), [Automation Rules](https://help.twitter.com/en/rules-and-policies/twitter-automation) & [Twitter Rules](https://help.twitter.com/en/rules-and-policies/twitter-rules), requesting you to re-write your use-case in accordance with the policies.
-
-This is the response I got:
-
-> Thanks for your response. We still need some more details for our review of your Twitter developer account application. 
+> _My core use-case for the Twitter API is to develop my tech skills, share valuable knowledge, and support community growth. I do not intent to make money with this project, but in the future I may apply these skills to profitable ventures._
 > 
-> The information we still need includes: 
+> _This account is made to share quotes that help people understand whiteness as a social construct, and its role in shaping society throughout the history of the world, particularly the united states._
 > 
-> * The core use case, intent, or business purpose for your use of the Twitter APIs.
->  * Please note, “business purpose” in this context includes uses not necessarily connected to a commercial business. We require information about the problem, user story, or the overall goal your use of Twitter content is intended to address.
->   * If you are a student, learning to code, or just getting started with the Twitter APIs, please provide details about potential projects, or areas of focus.
-> * If you intend to analyze Tweets, Twitter users, or their content, please share details about the analyses you plan to conduct, and the methods or techniques.
->   * Note that “analyze” in this context includes any form of processing performed on Twitter content. Please provide as detailed and exhaustive an explanation as possible of your intended use case.
-> * **If your use involves Tweeting, Retweeting, or liking content, share how you will interact with Twitter users or their content.**
-> * If you’ll display Twitter content off of Twitter, please explain how, and where, Tweets and Twitter content will be displayed to users of your product or service, including whether Tweets and Twitter content will be displayed at row level, or aggregated.
+> _I do not intend to analyze tweets, twitter users, or their content. The greatest extent of analyzing twitter data would include keyword\hashtag search, to find other content related to this project._
 > 
-> To provide the information, please respond to this email. Where possible, please share links to illustrations, or sample work products. 
+> _The script I'm working on is only for tweeting quotes from a pre-defined list of content._
+> 
+> _I may sometimes browse and manually like responses to my tweets or retweets. I will manually follow accounts I believe are sympathetic to the type of content I'm creating based on their tweets and who they follow. When I come across educational or otherwise informative content that that aligns with the quotes I'm sharing, I may like and retweet those using tweet-deck. I won't message users unless they message me first._
+> 
+> _If I display content outside of twitter, I would use publish.twitter.com_
 
+#### Getting your api keys
+
+> Your Twitter developer account application has been approved!
+>
+> Thanks for applying for access. We’ve completed our review of your application, and are excited to share that your request has been approved.
+>
+> Sign in to your [developer account](https://developer.twitter.com/en/portal/register/welcome) to get started.
+
+Follow that link, name your app and get your **API Key**, **API Secret Key**, and **Bearer Token**.
+
+![](https://i.imgur.com/acbeWKo.png)
+
+I recommend using a password manager such as [keepassxc](https://keepassxc.org/) or [lastpass](https://www.lastpass.com/) for storing these keys.
+
+However you decide to manage this do try to keep them safe.
+
+Now you can click "skip to dashboard".
+
+It shows you your keys one last time, its a good time to double check the values you copied are correct.
+
+I double check that the first and last 4 digits of each string matches, then proceed to the dashboard.
+
+Click the "Keys and Tokens" tab of your settings, and generate your **Access Token** & **Access Secret**. 
+
+The first keys we got let the Twitter API know who you are, these access keys let your app read and publish tweets.
+
+![](https://i.imgur.com/y66FjpI.png)
+
+#### How do I generate the access tokens to read/write direct messages?
+
+> User owns the app / Single User - If the user is the owner of the app, they can generate access tokens on the “Keys and Tokens” tab in an app's "Details" section within the Twitter app dashboard. Click the “Create” button in the "Access token & access token secret" section. – [Twitter Developers Documentation](https://developer.twitter.com/en/docs/twitter-api/enterprise/account-activity-api/guides/authenticating-users#:~:text=User%20owns%20the%20app%20%2F%20Single,%26%20access%20token%20secret"%20section.)
 
 ## Making an auto-posting twitter bot
 
@@ -295,12 +319,12 @@ Without any further ado, lets review this script!
 
 There it is, 23 lines of python (minus comments). I've tried to explain each line as thoroughly as possible. You should be able to copy this script and set a few variables and be ready to roll. 
 
-First read the script and its comments (all lines starting with `#` are comment lines). After that, we'll walk through the steps to test it out locally and deploy to github.
+First read the script and its comments. All lines starting with `#` are comment lines that explain what each line does. After that, we'll walk through the steps to test it out locally and deploy to github.
 
 ```python
 # Tweet Quotes from Yaml
 
-### This next bit tells the computer how to understand your code
+### This next bit is python telling your computer how to interpret your code
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -309,7 +333,7 @@ import tweepy, yaml, random, os
 ## Tweepy helps talk to twitter. 
 ## Yaml helps process our YAML structured quotes. 
 ## Random is a "random" number generator. 
-## OS lets the script access your local shell environment where we'll be storing our keys, both for local deployment and on GitHub.
+## OS lets the script access your shell environment where we'll be storing our keys, both for local deployment and on GitHub.
 
 # os.environ.get() requests the credentials stored in environment variables (we'll be setting in a moment) and saves them in a python variable.
 CONSUMER_KEY = os.environ.get('CONSUMER_KEY')
@@ -399,20 +423,24 @@ and the output should look something like this.
 git version 2.29.0
 ```
 
-Git is a tough customer, and takes a little time to get used to, but since we're using VSCode, we shouldn't have to worry too much about it, once set up. 
+Git is a tough customer, and takes time to get used to and begin to understand, but since we're using VSCode, we shouldn't have to worry too much about that, once set up. 
+
+The way Git works is it keeps a copy of the entire project directory, for every change you "commit" to the repository. (you'll see how to do that momentarily). It gives people a system to manage changes across multiple versions of a project, in a distributed fashion. Whether that's multiple people working on it or a single person working on it.
+
+It's basically like a blockchain where nobody *has* to agree, but it helps them agree when they choose to. :-P
 
 #### Set Git User\Email
 
-If you don't set this then VSCode won't know how to use the GitHub account you're about to open (with the email address you set here). The user name is not as critical but the email should be the same one you open your github account with.
+If you don't set your Git user name and e-mail, then VSCode won't know how to talk to GitHub account you're about to open (with the same email address you set here). The user name is not as critical but the email should be the same one you open your github account with.
 
 `git config --local user.name "GitHub Actions Tester"`
 `git config --local user.email github-testing@danforth-restorative.com`
 
 ### Make a copy of this project on GitHub
 
-I have the entire project this article is based on stored in a GitHub template repository, to make it as easy as possible for people brand new to this type of technical work.
+This project is stored as a GitHub Template Repository, making it easy for anyone make a copy of this project.
 
-Creating a GitHub account is straight-forward, once you are logged in, go to this address:
+Creating a GitHub account is straight-forward. Use the e-mail you just configured with git config and, once you are logged in, go to this address:
 
 [https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot](https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot)
 
@@ -426,19 +454,19 @@ Creating a GitHub account is straight-forward, once you are logged in, go to thi
 
 ![](https://i.imgur.com/QiHUljm.png)
 
-Click the copy button in the smaller red circle.
+Click the copy button in the smaller red circle. Notice you are getting the HTTPS version of the link.
 
 Now you need to decide where to work on this project. Navigate to whatever folder you have quotes saved in or create a new space to work.
 
-I don't know on windows where the command prompt default opens to, but you can get to your users home directory by typing:
+**On Windows**:
 
 `cd C:\%HOMEPATH%\Documents` 
 
-on Mac\Linux
+**On Mac\Linux**:
 
 `cd ~/Documents`
 
-**Paste the command you copied to clone (download) your copy of this project**
+**Type 'git clone' plus the URL you just copied to clone (download) your copy of this Git repository**
 
 `git clone https://github.com/trying-github-actions/quote-bot.git`
 
@@ -451,11 +479,13 @@ Now you can install two packages this script depends upon:
 
 I'm pretty sure you have to install these python packages on a project by project basis, that's why we navigated to our working directory before installing.
 
-Now you can also move the quotes file, that you made earlier, to this directory. Of course, you could also clone the project first and work on it from there.
+Now you can also move the quotes file, that you made earlier, to this directory.
 
 ## Using VSCode to manage your project
 
-Go ahead and open VSCode, then select "open folder"
+If you don't care for VS Code, you might like to try [GitHub Desktop](https://desktop.github.com). It isn't as powerful as VS Code, but it's more user-friendly. You may also choose to [sync the changes with Git manually](https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html).
+
+Otherwise, go ahead and open VSCode, then select "open folder"
 
 ![](https://i.imgur.com/ZN9H9NE.png)
 
@@ -501,5 +531,156 @@ If you've succeeded in authenticating with GitHub, your sync button shouldn't ha
 
 ### Save your twitter credentials as environment variables
 
+An environment variable allows a program to access a value (in this case your developers credentials), without storing those values directly in the code.
+
+We're going to set environment variables on your computer first, then on github, so the code can be run either place without a security risk or the trouble of making two versions of the same code, one for local testing and one for GitHub.
+
 #### On your computer
 
+**[Windows Instructions](https://superuser.com/questions/79612/setting-and-getting-windows-environment-variables-from-the-command-prompt)**
+
+> To make the environment variable accessible globally you need to set it in the registry. As you've realised by just using:
+>
+>```
+>    set NEWVAR=SOMETHING
+>``` 
+> 
+> you are just setting it in the current process space.
+> 
+> According to this page you can use the [setx](https://ss64.com/nt/) command:
+>
+>```
+>    setx NEWVAR SOMETHING
+>```
+>
+> setx is built into Windows 7, but for older versions may only be available if you install the Windows Resource Kit
+
+To be clear, that means `set` saves your variable only for this session, `setx` saves it 'permanently'.
+
+**Mac \ Linux**
+
+`export KEY=value` is the formula we're following.
+
+You can use the following commands to save your keys in the shell environment.
+
+```
+export CONSUMER_KEY=XXXYourAPIKeyXXX
+export CONSUMER_SECRET=XXXYourAPISecretXXX
+export ACCESS_KEY=XXXYourAccessKeyXXX
+export ACCESS_SECRET=XXXYourAccessSecretXXX
+````
+
+To save them in a lasting fashion, add those lines to your `.bashrc` or `.zshrc` file (which may be a hidden file) in your home directory.
+
+Now type `source ~/.bashrc` to reload your shell with those settings, and then `echo $CONSUMER_KEY` to be sure you've succeeded.
+
+If you're going to create multiple apps that have different keys, then your variables need to have different names. Or you could use a [`.env`](https://pypi.org/project/python-dotenv/) file, but then you would need a different copy of the script (with hardcoded keys) for local use, which defeats the purpose.
+
+Now you should be able to run `python quotes.py` and see a quote published to twitter.
+
+#### Set same environment variables on GitHub
+
+Now we're getting ready to tie this experience together with a bow. 
+
+Head over to your copy of this project on github, that you made earlier in this guide. Click settings, then click `secrets` on the side-bar, and then click `New Repository Secret` on the right.
+
+![](https://i.imgur.com/lerflZW.png)
+
+```
+CONSUMER_KEY=XXXYourAPIKeyXXX
+CONSUMER_SECRET=XXXYourAPISecretXXX
+ACCESS_KEY=XXXYourAccessKeyXXX
+ACCESS_SECRET=XXXYourAccessSecretXXX
+````
+
+![](https://i.imgur.com/X7c97HY.png)
+
+You set these repository secrets for each of the above keys, just like we saved in our local environment earlier. 
+
+![](https://i.imgur.com/1wbKhQa.png)
+
+#### Set up workflow file for GitHub Actions
+
+Open your local version of this project in VS Code.
+
+The workflow files are in `.github/workflows.disabled`. If you don't see those files, they may be hidden, so check the settings of your directory. 
+
+![](https://i.imgur.com/wP3VpCZ.png)
+
+#### The Workflow file
+
+```yaml
+# Use any name you like. Once you have a few actions running, its really helpful to have descriptive names.
+name: quotebot
+
+# Triggers the workflow on push or pull request
+# https://crontab.guru/ helps to figure out this scheduling syntax works.
+# I scheduled two tweets a day for this workflow.
+on:
+  schedule:
+    - cron:  '11 11 * * *'
+    - cron:  '22 19 * * *'
+  # It also runs the workflow when the python script or the workflow file is changed.
+  push:
+    paths:
+    - 'quotes.py'
+    - '.github/workflows/quote.yml'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of operating system the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, to run the script and save updates
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8.5' # Version range or exact, using SemVer's version range syntax
+        # Installs dependencies listed in requirements.txt
+      - uses: py-actions/py-dependency-install@v2   
+        with:
+          path: requirements.txt
+      - shell: bash
+        env: # Saves our secrets where the script can access them
+          CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+          CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
+          ACCESS_KEY: ${{ secrets.ACCESS_KEY }}
+          ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+        # Post random quote to twitter
+        run: python quotes.py
+        # remove quote from yaml as posted.
+      - name: Save updated quotes.yml
+        run: |
+          git remote add gh-token "https://github.com/danforth-restorative/MBR_Quotes.git"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --ff-only
+          git commit -a -m "de-dupe"
+          git push gh-token main
+```
+
+Now you can move quote.yml to the workflows directory.
+
+![](https://i.imgur.com/4cqqkwP.png)
+
+Go ahead and commit that change, then push that change to GitHub. If all goes well, it will run the action and post a quote when you do.
+
+#### Customizations
+
+GitHub cron syntax is slightly different from [crontab.guru](https://crontab.guru), if you're having any trouble, go to the workflows folder of your project on GitHub, and edit that file there.
+
+In that editor, if you hover over the cron expression, a pop-up tells you exactly how its interpreted.
+
+![](https://i.imgur.com/CtICkLy.png)
+
+Notice that I've made a backup of the `quotes.yaml` file called `quotes.bak`. To avoid duplicate tweets, we're removing the quote from `quotes.yaml` at the time its posted. Be sure to make a backup of your quotes file, although the nature of Git ensures that even if you don't, you can still retrieve the original.
+
+### Have Fun!
+
+You may notice there are also scripts for posting image tweets, as well as facebook text\image tweets, in this walkthrough's template repo you're using.
+
+There are also tools and scripts for bulk cropping images, printing text onto images, and other associated tools.
