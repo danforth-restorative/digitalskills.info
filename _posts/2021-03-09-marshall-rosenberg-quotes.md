@@ -1,30 +1,35 @@
 ---
 layout: post
-title: Make an Auto-Posting Social Media Quote-bot with Python and GitHub Actions. [1]Text-Quotes
+title: Make an Auto-Posting Social Media Quote-bot with Python and GitHub Actions. Part 1 Text-Quotes
 subtitle: Creating a social media quote-bot isn't very hard and can expand the reach of life serving messages
 share-description: First, I gathered quotes from transcripts of Marshall Rosenberg. Then I made a bot to automatically post those quotes to Twitter (and Facebook) using GitHub Actions and Python.
 cover-img: 
 thumbnail-img: 
-share-img: 
+share-img: /assets/img/making-social-media-quote-bot_python-twitter-API-github-actions.webp
 tags: [intermediate,python]
-published: false
 ---
 
 This post will describe my process for creating a twitter quote-bot, including step-by-step instructions, complete with the code I'm currently using to run [@MBR_Quotes](https://twitter.com/MBR_Quotes).
 
-I've become a Marshall Rosenberg enthusiast over the past year. I'm convinced that the world can greatly benefit from becoming familiar with his message.
+--- 
 
-During my studies, I found some great trainings and Nonviolent Communication workshop recordings, [including transcripts for some of them](https://github.com/cognitivetech/Marshall-Rosenberg-NVC).
+I've become a Marshall Rosenberg enthusiast over the past year, and have become convinced that the world can greatly benefit from becoming familiar with [his teaching](https://danforth-restorative.com/2020/07/22/nonviolent-communication.html).
 
-I decided it would be great to make a twitter quote-bot to share his message, and become more familiar with it myself.
+I was inspired to make a twitter quote-bot, to share his message with others who find it meeting their needs, while becoming much more intimate with it myself, and developing my technical skills. 
 
-Of course, creating a social media quote-bot is also marketable skill, that could be put to use in a variety of ways both personally and professionally.
+During my studies, I found a [podcast with nonviolent communication trainings and interviews with Marshall Rosenberg](https://anchor.fm/nvc-archive), which directed me to [transcripts for some of them](https://github.com/cognitivetech/Marshall-Rosenberg-NVC) that made a perfect foundation for this project.
 
-This first post describes gathering and preparing quotes, getting a developer account on twitter, the source code used to publish these quotes, and the steps necessary to automate that on GitHub.
+Of course, the ability to create a social media quote-bot is also marketable skill, that could be useful for a variety of purposes, both personally and professionally.
+
+This walk-through strings together a handful of fundamental skills, so that once you've completed each step, you'll be able to apply this knowledge towards a variety of domains and have come a long way toward being a coder. 
+
+I had to learn each skill individually just figuring things out on my own, over a couple years, so you should feel very lucky to get this all on a single page! 🤣
 
 ## How to create a social media quote-bot
 
-Here are the steps that will be detailed in this walk through. 
+This guide walks the reader through each step in my process, explaining what tools I use, and how I use them.
+
+The process begins with gathering and preparing quotes. Then getting a developer account on twitter, reviewing each line of the Python code used to publish these quotes, and the steps necessary to automate that on GitHub.
 
 - [How to create a social media quote-bot](#how-to-create-a-social-media-quote-bot)
 - [Prep](#prep)
@@ -39,11 +44,11 @@ Here are the steps that will be detailed in this walk through.
     - [How are you planning to use the Twitter API?](#how-are-you-planning-to-use-the-twitter-api)
     - [Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?](#will-your-app-use-tweet-retweet-like-follow-or-direct-message-functionality)
     - [Developer agreement](#developer-agreement)
-    - [Twitter developer account application [ ref:_00DAAK018._5005e26SSlh:ref ]](#twitter-developer-account-application--ref_00daak018_5005e26sslhref-)
-    - [Getting your api keys](#getting-your-api-keys)
-    - [How do I generate the access tokens to read/write direct messages?](#how-do-i-generate-the-access-tokens-to-readwrite-direct-messages)
-- [Making an auto-posting twitter bot](#making-an-auto-posting-twitter-bot)
-  - [Python Twitter Script for Publishing Text Quotes](#python-twitter-script-for-publishing-text-quotes)
+    - [Post application e-mail exchange](#post-application-e-mail-exchange)
+    - [Get your API keys](#get-your-api-keys)
+    - [Generate access tokens](#generate-access-tokens)
+- [Making the quote bot](#making-the-quote-bot)
+  - [Python Script for Publishing Text Quotes to Twitter](#python-script-for-publishing-text-quotes-to-twitter)
   - [Dependencies](#dependencies)
     - [Install Python](#install-python)
     - [Install Git](#install-git)
@@ -58,18 +63,15 @@ Here are the steps that will be detailed in this walk through.
     - [Customizations](#customizations)
   - [Have Fun!](#have-fun)
   
-
 ## Prep
 
 ### Gathering Source Material
 
-There are many resources online that can be used as a foundation for a quote-bot. You could use the lyrics of your favorite band, transcripts of podcasts or videos online.
+There are many resources online that could be used as the raw materials for a quote-bot. You could use the lyrics of your favorite band, transcripts of podcasts, or videos online.
 
-If you only have audio, it's possible to auto-generate transcriptions for them. They'll still require some manual editing, but you can quickly create plenty of fodder for your quotebot. 
+If you begin with audio, it's possible to auto-generate transcriptions for them. They'll still require some manual editing, but you can quickly create plenty of fodder for your quotebot. [FreeTranscriptions.com](https://www.freetranscriptions.com/) offers 300 minutes of free auto-transcriptions, each month. 
 
-[FreeTranscriptions.com](https://www.freetranscriptions.com/) offers 300 minutes of free auto-transcriptions, each month. Sometime, I'll write a post on using the [Google Api to generate auto-transcriptions](https://cloud.google.com/speech-to-text) but that's getting pretty technical and beyond the scope of this article..
-
-YouTube automatically transcribes its videos.
+YouTube automatically transcribes its videos, but older videos may not have auto-generated transcripts. I've even uploaded content to youtube for its transcription services, before.
 
 ![](https://i.imgur.com/zcfmPvd.png)
 
@@ -81,35 +83,29 @@ Click Toggle Timestamps and you can copy the whole thing, and manually extract y
 
 [![](https://i.imgur.com/4JR6BFA.png)](https://www.gutenberg.org/ebooks/bookshelf/24)
 
-Those ideas are just to get you started. There are many uses for a twitter quote-bot, but if you just want to learn how to make the bot, and worry about a use-case later, these ideas for source material should get you started.
-
 You could also take the easy route, and get quotes from [Goodreads](https://www.goodreads.com/quotes), or [other quotes sites online](http://www.quotationspage.com/collections.html).
 
-If you're wondering how many quotes you want, just think about how often you'd like to tweet. I wanted to publish 4 tweets a day, and have enough quotes to get me through a year without needing to repeat. I don't think I got that many, maybe I only got enough for 6 months, to give me enough time to recover from the hard work of quote collection :D.
+If you're wondering how many quotes you want, just think about how often you'd like to tweet. I wanted to publish 4 tweets a day, and have enough quotes to get me through a year without needing to repeat. I don't think I got that many, maybe I only got enough for 6 months. But I wanted to gather enough tweet sized quotes so I wouldn't have to worry about getting more for a while.
 
 ### Preparing the Quotes
 
-For this exercise, we're going to use [YAML](https://yaml.org/spec/1.2/spec.html), a simple data structure that makes it easy for a programming language to read your file. 
-
-It would have worked just as well to put each quote on a new line, and there are plenty of data formats that could also be used for this purpose. This is just the way I did it.
+For this exercise, we're going to use [YAML](https://yaml.org/spec/1.2/spec.html), a simple data structure that makes it easy for a programming language to read your quotes. 
 
 #### Introduction to VSCode
 
-In this guide, we're going to use [VSCode](https://code.visualstudio.com/) for preparing the quote material. It's easy to use, but also has tons of advanced features that deserve an article of their own.
+I use [VSCode](https://code.visualstudio.com/) all of the time for editing large documents, and working on projects with multiple directories of files I may need to edit. It's easy to use, but also has tons of advanced features that would take a long time to learn all of.
 
 VSCode or Code allows you to search\replace text within files of entire directories, and there are extensions for different languages and data-types that help you avoid errors. 
 
 VSCode also integrates very nicely with GitHub, which will save you from having to use `git` manually. If you aren't familiar with `git` already, VSCode will prove invaluable.
 
-![](https://i.imgur.com/e3tIXgZ.png)
-
 If you don't care for VS Code, or its too resource intensive, you may prefer [Notepad++](https://notepad-plus-plus.org), which is a little less resource intensive, but offers comparable features.
 
-**Start by opening VSCode and create a new file.**
+**Open VSCode and create a new file.**
 
 ![](https://i.imgur.com/UXgiYLb.png)
 
-Go to *File > Save as...* you can save it in your Documents directory for now, and name it `quotes.yml`. 
+Go to *File > Save as...* you can save it in your Documents directory, for now, and name it `quotes.yml`. 
 
 #### Our quotes are going to be structured like this
 
@@ -127,13 +123,15 @@ YAML is pretty straightforward.
 * Each line begins with a dash `-`
 * The text is surrounded by "Double Quotes"
 
-`\n` is a newline character, which is automatically turned into an actual new-line by the python interpreter. Be careful if there are quotation-marks in your quote. You could also surround text with a single quote if there are double quotes inside, like so:
+`\n` is a newline character, which is automatically turned into an actual new-line by the python interpreter. 
+
+Be careful if there are quotation-marks in your quote. You could also surround text with a single quote if there are double quotes inside, like so:
 
 ```yaml
-- 'Single Quote "can contain" double quotes.'
+- 'Single Quote can "contain" double quotes.'
 ```
 
-It might work to use double quotes instead of single-quotes altogether (as long as you use an even number of quotation marks), however, this is less confusing for the computer.
+I'm not 100% this is necessary, but its less ambiguous.
 
 #### Transforming a plain list of quotes into a YAML list of quotes
 
@@ -147,9 +145,7 @@ The blue asterisk activates regular expression in your search query. In the top 
 
 As you type your RegEx query, the matching selection is automatically highlighted on the page.
 
-Then in the replace box `$1` provides the value captured in parentheses above, and if you have multiple expressions surrounded with parentheses, in the same search query, you can reference them sequentially, left to right, like so:
-
-`Results: "$1" and "$2" are my search selections`
+Then in the replace box `$1` provides the value captured in parentheses above, and if you have multiple expressions surrounded with parentheses, in the same search query, you can reference them sequentially, left to right.
 
 Hopefully you get the idea that this expression will do most of the work turning a file with quotes on each line to a yaml file.
 
@@ -174,15 +170,16 @@ Search for ` "` and replace with `"` to fix both at the same time.
 #### YAML Extension
 
 Click the extensions tab circled in red, and get the YAML Language Support by Red Hat.
+
 ![](https://i.imgur.com/DzuKH9H.png)
 
-If you have a lot of quotes, especially, this will come in handy.
+If you have a lot of quotes, this will especially come in handy.
 
-For an example, I removed the closing quotation mark from a line, circled in red. You'll notice that the filename turns red on our side panel, and there is a red mark on the scrollbar. 
+For an example, I removed the closing quotation mark from a line, circled in red. You'll notice that the filename turns red on our side panel, and there is a red mark on the scrollbar, that lets me notice there is a formatting error.
 
 A grey line goes through the middle of the scrollbar, showing where your cursor is in context with the rest of the document. 
 
-I scrolled down the page until my scrollbar reached the redmark pointing out our YAML error. 
+I scrolled down the page until my scrollbar reached the red mark pointing out our YAML error. (Note the bottom right of the picture below with a red arrow)
 
 Once I clicked the line where the error occurs, that grey line jumped to the red mark on the scrollbar.
 
@@ -190,9 +187,9 @@ Once I clicked the line where the error occurs, that grey line jumped to the red
 
 ### Get a twitter developer account
 
-Now that you've collected and prepared quote material, you can apply for a twitter developer account. You may like to actually apply for the account first, in case you run into any snags, so its ready when you are ready. However, in my experience, it takes more time to gather and prepare quotes than to get the developer account.
+Now that you've collected and prepared quote material, go ahead and apply for a twitter developer account. 
 
-If you have any questions about this process, beyond the scope of this article, or questions about using your twitter developer account more generally, you can check out the [Twitter Developer Forums](https://twittercommunity.com/)
+If you have any questions about this process, have any trouble or questions about using your twitter developer account more generally, you can check out the [Twitter Developer Forums](https://twittercommunity.com/).
 
 #### Apply 
 
@@ -206,13 +203,11 @@ It instructs us, login to [dev.twitter.com](https://dev.twitter.com/) with the a
 
 ![](https://i.imgur.com/ql3VyhW.png)
 
-Click the Apply button to begin. On the next page you'll click "Apply for a twitter developers account". This process will be simple, because we're only making a quote bot. The rules are a bit more complicated if you want to re-tweet, for example.
+Click the Apply button to begin. On the next page you'll click "Apply for a twitter developers account". 
 
 ![](https://i.imgur.com/GTZnKMw.png)
 
 On the next page, click "Hobbyist", "Making a Bot" and then "Get Started".
-
-Fill out what you want them to call you and verify that you are requesting.
 
 #### How are you planning to use the Twitter API?
 
@@ -220,9 +215,7 @@ After you fill out basic info, you will be asked "**How are you planning to use 
 
 I filled out something like this:
 
-> In the first iteration, I want to schedule post from a collection of quotes and images with quotes printed onto them.
-> 
-> Later, I plan to also 'auto-like' when users re-tweet or quote-re-tweet.
+> I want to schedule post from a collection of quotes and images with quotes printed onto them.
 > 
 > I'm making this bot as a learning experience with python and writing each step of the process.
 
@@ -246,7 +239,7 @@ Be sure to verify your e-mail address, and you will see this message:
 
 ![](https://i.imgur.com/x5cabsn.png)
 
-#### Twitter developer account application [ ref:_00DAAK018._5005e26SSlh:ref ]
+#### Post application e-mail exchange
 
 After I filled out my application I got this message, the next day.
 
@@ -254,10 +247,10 @@ After I filled out my application I got this message, the next day.
 >
 > The types of information that are valuable for our review include:
 > 
->     The core use case, intent, or business purpose for your use of the Twitter APIs.
->     If you intend to analyze Tweets, Twitter users, or their content, share details about the analyses you plan to conduct, and the methods or techniques. 
->     **If your use involves Tweeting, Retweeting, or liking content, share how you’ll interact with Twitter accounts, or their content.**
->     If you’ll display Twitter content off of Twitter, explain how, and where, Tweets and Twitter content will be displayed with your product or service, including whether Tweets and Twitter content will be displayed at row level, or aggregated.
+> - The core use case, intent, or business purpose for your use of the Twitter APIs.
+> - If you intend to analyze Tweets, Twitter users, or their content, share details about the analyses you plan to conduct, and the methods or techniques.
+> - **If your use involves Tweeting, Retweeting, or liking content, share how you’ll interact with Twitter accounts, or their content.**
+> - If you’ll display Twitter content off of Twitter, explain how, and where, Tweets and Twitter content will be displayed with your product or service, including whether Tweets and Twitter content will be displayed at row level, or aggregated.
 > 
 > Just reply to this email with these details. Once we’ve received your response, we’ll continue our review. We appreciate your help! 
 
@@ -279,7 +272,7 @@ After a few tries, back and forth with the developer support, here's my final re
 > 
 > _If I display content outside of twitter, I would use publish.twitter.com_
 
-#### Getting your api keys
+#### Get your API keys
 
 > Your Twitter developer account application has been approved!
 >
@@ -291,9 +284,9 @@ Follow that link, name your app and get your **API Key**, **API Secret Key**, an
 
 ![](https://i.imgur.com/acbeWKo.png)
 
-I recommend using a password manager such as [keepassxc](https://keepassxc.org/) or [lastpass](https://www.lastpass.com/) for storing these keys.
+I'd recommend using a password manager such as [keepassxc](https://keepassxc.org/) or [lastpass](https://www.lastpass.com/) for storing these keys (and all of your passwords).
 
-However you decide to manage this do try to keep them safe.
+However you decide to manage this, try to keep them safe.
 
 Now you can click "skip to dashboard".
 
@@ -301,25 +294,35 @@ It shows you your keys one last time, its a good time to double check the values
 
 I double check that the first and last 4 digits of each string matches, then proceed to the dashboard.
 
-Click the "Keys and Tokens" tab of your settings, and generate your **Access Token** & **Access Secret**. 
+#### Generate access tokens
 
-The first keys we got let the Twitter API know who you are, these access keys let your app read and publish tweets.
+First thing to do on the dashboard, is scroll down below your "App Details" to "App Permissions"
+
+![](https://i.imgur.com/mKu7kkk.png)
+
+Be sure to give your app both read and write permissions.
+
+Next, click the "Keys and Tokens" tab of your settings, and generate your **Access Token** & **Access Secret**. 
 
 ![](https://i.imgur.com/y66FjpI.png)
 
-#### How do I generate the access tokens to read/write direct messages?
+The first keys we got let the Twitter API know who you are, these access keys determine what permissions the app has, according to the setting where you just enabled read and write permissions.
 
-> User owns the app / Single User - If the user is the owner of the app, they can generate access tokens on the “Keys and Tokens” tab in an app's "Details" section within the Twitter app dashboard. Click the “Create” button in the "Access token & access token secret" section. – [Twitter Developers Documentation](https://developer.twitter.com/en/docs/twitter-api/enterprise/account-activity-api/guides/authenticating-users#:~:text=User%20owns%20the%20app%20%2F%20Single,%26%20access%20token%20secret"%20section.)
+> Click the “Create” button in the "Access token & access token secret" section. – [Twitter Developers Documentation](https://developer.twitter.com/en/docs/twitter-api/enterprise/account-activity-api/guides/authenticating-users#:~:text=User%20owns%20the%20app%20%2F%20Single,%26%20access%20token%20secret"%20section.)
 
-## Making an auto-posting twitter bot
+Once you've saved the keys, the page you'll be brought back to should indicate that your access keys have both read and write permissions. Otherwise, you can go back to the Settings page, adjust the permissions, and then regenerate the access tokens.
 
-### Python Twitter Script for Publishing Text Quotes
+![](https://i.imgur.com/HamxUjP.png)
 
-Without any further ado, lets review this script!
+## Making the quote bot
 
-There it is, 23 lines of python (minus comments). I've tried to explain each line as thoroughly as possible. You should be able to copy this script and set a few variables and be ready to roll. 
+### Python Script for Publishing Text Quotes to Twitter
 
-First read the script and its comments. All lines starting with `#` are comment lines that explain what each line does. After that, we'll walk through the steps to test it out locally and deploy to github.
+Without any further ado, lets check out the script!
+
+There it is, 23 lines of python (minus comments). I've tried to explain each line as thoroughly as possible. You should be able to copy this script, set a few variables, and be ready to roll. 
+
+First read the script and its comments. All lines starting with `#` are comment lines that explain what each line does. After that, we'll walk through the steps to test it out locally, and then deploy to github.
 
 ```python
 # Tweet Quotes from Yaml
@@ -433,7 +436,7 @@ It's basically like a blockchain where nobody *has* to agree, but it helps them 
 
 If you don't set your Git user name and e-mail, then VSCode won't know how to talk to GitHub account you're about to open (with the same email address you set here). The user name is not as critical but the email should be the same one you open your github account with.
 
-`git config --local user.name "GitHub Actions Tester"`
+`git config --local user.name "GitHub Actions Tester"`\
 `git config --local user.email github-testing@danforth-restorative.com`
 
 ### Make a copy of this project on GitHub
@@ -447,7 +450,7 @@ Creating a GitHub account is straight-forward. Use the e-mail you just configure
 **Click 'Use this Template'**
 ![](https://i.imgur.com/HHjg49n.png)
 
-**Choose a name for your repository, 'quote-bot' works or anything you like**
+**Choose a descriptive name for your repository**
 ![](https://i.imgur.com/heZogsx.png)
 
 ### Create a local clone of your brand-new github repository
@@ -507,12 +510,12 @@ Click `+` and enter a message like "My first Commit". The plus lets Code know yo
 
 **Click the circle at the bottom** (this command syncs your local version with the version on GitHub. It first pulls any changes from your github version, and then "pushes" your commit)
 
-**The Extension 'GitHub' wants to sign in using GitHub**
+**The Extension 'GitHub' wants to sign in using GitHub**\
 Click allow, to sign into your GitHub account.
 
 ![](https://i.imgur.com/aToRcJM.png)
 
-**Make sure you are using the same browser where you are logged into github**
+**Make sure you are using the same browser where you are logged into github**\
 ![](https://i.imgur.com/6YOf6iT.png)
 
 Click continue:
@@ -521,7 +524,7 @@ Click continue:
 
 **If you see a message like this, you've succeeded in linking VSCode to GitHub**
 
-![](https://i.imgur.com/jIHnbP3.png)
+![](https://i.imgur.com/pb33RQt.png)
 
 Otherwise, close code, then re-open your folder and try again. 
 
@@ -610,7 +613,8 @@ The workflow files are in `.github/workflows.disabled`. If you don't see those f
 #### The Workflow file
 
 ```yaml
-# Use any name you like. Once you have a few actions running, its really helpful to have descriptive names.
+{% raw %}
+# Name it whatever you like
 name: quotebot
 
 # Triggers the workflow on push or pull request
@@ -620,13 +624,13 @@ on:
   schedule:
     - cron:  '11 11 * * *'
     - cron:  '22 19 * * *'
-  # It also runs the workflow when the python script or the workflow file is changed.
+  # It also runs whenever the script or the workflow files are changed.
   push:
     paths:
     - 'quotes.py'
     - '.github/workflows/quote.yml'
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# A workflow run is made of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   build:
@@ -635,11 +639,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, to run the script and save updates
+      # Checkout makes a local copy for the script
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: '3.8.5' # Version range or exact, using SemVer's version range syntax
+          python-version: '3.8.5' # Range or exact, using SemVer syntax
         # Installs dependencies listed in requirements.txt
       - uses: py-actions/py-dependency-install@v2   
         with:
@@ -661,6 +665,7 @@ jobs:
           git pull --ff-only
           git commit -a -m "de-dupe"
           git push gh-token main
+{% endraw %}
 ```
 
 Now you can move quote.yml to the workflows directory.
@@ -681,6 +686,8 @@ Notice that I've made a backup of the `quotes.yaml` file called `quotes.bak`. To
 
 ### Have Fun!
 
-You may notice there are also scripts for posting image tweets, as well as facebook text\image tweets, in this walkthrough's template repo you're using.
+You may notice [this project's repository on GitHub](https://github.com/danforth-restorative/MBR_Quotes/) contains scripts for posting image tweets, as well as facebook text\image tweets.
 
-There are also tools and scripts for bulk cropping images, printing text onto images, and other associated tools.
+It also has scripts for bulk cropping images, printing text onto images, and other associated tools.
+
+After a while, I'll write about using the rest of it.
