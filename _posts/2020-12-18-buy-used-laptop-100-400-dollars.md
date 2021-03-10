@@ -6,7 +6,7 @@ share-description: You can get a lot more bang for your buck, buying used. Espec
 cover-img: /assets/img/Lenovo-BIOS.webp
 thumbnail-img: /assets/img/used-laptop-thumb.webp
 share-img: /assets/img/Buy-Used-Laptop-Online-Cheap-og.webp
-tags: [begin]
+tags: [begin, hardware]
 ---
 
 **I've never had much money, but I love computers, so I've gotten a bit of practice shopping for used computers online.**
