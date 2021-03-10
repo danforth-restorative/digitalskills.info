@@ -4,7 +4,7 @@ title: Make an Auto-Posting Social Media Quote-bot with Python and GitHub Action
 subtitle: Creating a social media quote-bot isn't very hard and can expand the reach of life serving messages
 share-description: First, I gathered quotes from transcripts of Marshall Rosenberg. Then I made a bot to automatically post those quotes to Twitter (and Facebook) using GitHub Actions and Python.
 cover-img: 
-thumbnail-img: 
+thumbnail-img: /assets/img/social-bot-3870185_geralt.webp
 share-img: /assets/img/making-social-media-quote-bot_python-twitter-API-github-actions.webp
 tags: [intermediate,python]
 ---
@@ -37,7 +37,7 @@ The process begins with gathering and preparing quotes. Then getting a developer
   - [Preparing the Quotes](#preparing-the-quotes)
     - [Introduction to VSCode](#introduction-to-vscode)
     - [Our quotes are going to be structured like this](#our-quotes-are-going-to-be-structured-like-this)
-    - [Transforming a plain list of quotes into a YAML list of quotes](#transforming-a-plain-list-of-quotes-into-a-yaml-list-of-quotes)
+    - [Using RegEx to transform a list of quotes into a YAML list of quotes](#using-regex-to-transform-a-list-of-quotes-into-a-yaml-list-of-quotes)
     - [YAML Extension](#yaml-extension)
   - [Get a twitter developer account](#get-a-twitter-developer-account)
     - [Apply](#apply)
@@ -73,15 +73,15 @@ If you begin with audio, it's possible to auto-generate transcriptions for them.
 
 YouTube automatically transcribes its videos, but older videos may not have auto-generated transcripts. I've even uploaded content to youtube for its transcription services, before.
 
-![](https://i.imgur.com/zcfmPvd.png)
+![](/assets/img/twitter-quote-bot/youtube-transcripts.webp)
 
 Click Toggle Timestamps and you can copy the whole thing, and manually extract your favorite quotes.
 
-![](https://i.imgur.com/7YWYmxX.png)
+![](/assets/img/twitter-quote-bot/youtube-transcript-toggle-timestamps.webp)
 
 [Project Gutenberg](https://www.gutenberg.org/) has the largest collection of public domain books available online.
 
-[![](https://i.imgur.com/4JR6BFA.png)](https://www.gutenberg.org/ebooks/bookshelf/24)
+[![](/assets/img/twitter-quote-bot/project-gutenberg-quotes-from-classical-antiquity.webp)](https://www.gutenberg.org/ebooks/bookshelf/24)
 
 You could also take the easy route, and get quotes from [Goodreads](https://www.goodreads.com/quotes), or [other quotes sites online](http://www.quotationspage.com/collections.html).
 
@@ -103,7 +103,7 @@ If you don't care for VS Code, or its too resource intensive, you may prefer [No
 
 **Open VSCode and create a new file.**
 
-![](https://i.imgur.com/UXgiYLb.png)
+![](/assets/img/twitter-quote-bot/vscode-welcome.webp)
 
 Go to *File > Save as...* you can save it in your Documents directory, for now, and name it `quotes.yml`. 
 
@@ -133,11 +133,11 @@ Be careful if there are quotation-marks in your quote. You could also surround t
 
 I'm not 100% this is necessary, but its less ambiguous.
 
-#### Transforming a plain list of quotes into a YAML list of quotes
+#### Using RegEx to transform a list of quotes into a YAML list of quotes
 
 If you have a document with each quote on a new line, you can use search and replace in VSCode to make easy work of this:
 
-![](https://i.imgur.com/07bnXPS.png)
+![](/assets/img/twitter-quote-bot/regex-lines-to-yaml.webp)
 
 That example uses [regular expression](https://docs.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2019) (RegEx) which is a wildcard system allowing you to change many instances of text at the same time.
 
@@ -149,7 +149,7 @@ Then in the replace box `$1` provides the value captured in parentheses above, a
 
 Hopefully you get the idea that this expression will do most of the work turning a file with quotes on each line to a yaml file.
 
-![](https://i.imgur.com/shyqJj3.png)
+![](/assets/img/twitter-quote-bot/regex-lines-to-yaml-result.webp)
 
 You can see the results. Notice that there is a blank space between one of the lines and its closing parenthesis. 
 
@@ -171,7 +171,7 @@ Search for ` "` and replace with `"` to fix both at the same time.
 
 Click the extensions tab circled in red, and get the YAML Language Support by Red Hat.
 
-![](https://i.imgur.com/DzuKH9H.png)
+![](/assets/img/yaml-vscode-extension.webp)
 
 If you have a lot of quotes, this will especially come in handy.
 
@@ -183,7 +183,7 @@ I scrolled down the page until my scrollbar reached the red mark pointing out ou
 
 Once I clicked the line where the error occurs, that grey line jumped to the red mark on the scrollbar.
 
-![](https://i.imgur.com/mJgyrKk.png)
+![](/assets/img/twitter-quote-bot/using-yaml-extension.webp)
 
 ### Get a twitter developer account
 
@@ -201,11 +201,11 @@ You may want to try out that script first, to see how this works. All it will do
 
 It instructs us, login to [dev.twitter.com](https://dev.twitter.com/) with the account I want to auto-tweet from.
 
-![](https://i.imgur.com/ql3VyhW.png)
+![](/assets/img/twitter-quote-bot/twitter-developer-apply.webp)
 
 Click the Apply button to begin. On the next page you'll click "Apply for a twitter developers account". 
 
-![](https://i.imgur.com/GTZnKMw.png)
+![](/assets/img/twitter-quote-bot/hobbyist-twitter-developer.webp)
 
 On the next page, click "Hobbyist", "Making a Bot" and then "Get Started".
 
@@ -237,7 +237,7 @@ Yes, we agree to the developer agreement. Like I said, for a simple tweet bot, t
 
 Be sure to verify your e-mail address, and you will see this message:
 
-![](https://i.imgur.com/x5cabsn.png)
+![](/assets/img/twitter-quote-bot/twitter-developer-application-recieved.webp)
 
 #### Post application e-mail exchange
 
@@ -282,7 +282,7 @@ After a few tries, back and forth with the developer support, here's my final re
 
 Follow that link, name your app and get your **API Key**, **API Secret Key**, and **Bearer Token**.
 
-![](https://i.imgur.com/acbeWKo.png)
+![](/assets/img/twitter-quote-bot/twitter-api-keys.webp)
 
 I'd recommend using a password manager such as [keepassxc](https://keepassxc.org/) or [lastpass](https://www.lastpass.com/) for storing these keys (and all of your passwords).
 
@@ -298,13 +298,13 @@ I double check that the first and last 4 digits of each string matches, then pro
 
 First thing to do on the dashboard, is scroll down below your "App Details" to "App Permissions"
 
-![](https://i.imgur.com/mKu7kkk.png)
+![](/assets/img/twitter-quote-bot/twitter-app-permissions.webp)
 
 Be sure to give your app both read and write permissions.
 
 Next, click the "Keys and Tokens" tab of your settings, and generate your **Access Token** & **Access Secret**. 
 
-![](https://i.imgur.com/y66FjpI.png)
+![](/assets/img/twitter-quote-bot/generate-access-token-secrets.webp)
 
 The first keys we got let the Twitter API know who you are, these access keys determine what permissions the app has, according to the setting where you just enabled read and write permissions.
 
@@ -312,7 +312,7 @@ The first keys we got let the Twitter API know who you are, these access keys de
 
 Once you've saved the keys, the page you'll be brought back to should indicate that your access keys have both read and write permissions. Otherwise, you can go back to the Settings page, adjust the permissions, and then regenerate the access tokens.
 
-![](https://i.imgur.com/HamxUjP.png)
+![](/assets/img/twitter-quote-bot/verify-permissions-access-token-secret.webp)
 
 ## Making the quote bot
 
@@ -448,14 +448,14 @@ Creating a GitHub account is straight-forward. Use the e-mail you just configure
 [https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot](https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot)
 
 **Click 'Use this Template'**
-![](https://i.imgur.com/HHjg49n.png)
+![](/assets/img/twitter-quote-bot/using-github-template-repository.webp)
 
 **Choose a descriptive name for your repository**
-![](https://i.imgur.com/heZogsx.png)
+![](/assets/img/twitter-quote-bot/using-template-repository-name.webp)
 
 ### Create a local clone of your brand-new github repository
 
-![](https://i.imgur.com/QiHUljm.png)
+![](/assets/img/twitter-quote-bot/clone-repository.webp)
 
 Click the copy button in the smaller red circle. Notice you are getting the HTTPS version of the link.
 
@@ -490,15 +490,15 @@ If you don't care for VS Code, you might like to try [GitHub Desktop](https://de
 
 Otherwise, go ahead and open VSCode, then select "open folder"
 
-![](https://i.imgur.com/ZN9H9NE.png)
+![](/assets/img/twitter-quote-bot/vscode-open-folder.webp)
 
 Navigate to your project folder and then click open.
 
-![](https://i.imgur.com/Fv20W2y.png)
+![](/assets/img/twitter-quote-bot/vs-code-open-folder.webp)
 
 Now you should see the directory listing on your left and a window in your right that lets you view\edit most any file you select.
 
-![](https://i.imgur.com/go7wMiH.png)
+![](/assets/img/twitter-quote-bot/vscode-select-quotes.webp)
 
 Before we move forward, you should make your first commit, and sign Code into your GitHub account.
 
@@ -506,31 +506,31 @@ Click the tab on the left. This is how Code manages Git, and where you indicate 
 
 Click `+` and enter a message like "My first Commit". The plus lets Code know you want that file added to your project.
 
-![](https://i.imgur.com/GQGOpAg.png)
+![](/assets/img/twitter-quote-bot/commit-changes-vscode.webp)
 
 **Click the circle at the bottom** (this command syncs your local version with the version on GitHub. It first pulls any changes from your github version, and then "pushes" your commit)
 
 **The Extension 'GitHub' wants to sign in using GitHub**\
 Click allow, to sign into your GitHub account.
 
-![](https://i.imgur.com/aToRcJM.png)
+![](/assets/img/twitter-quote-bot/sync-github-authorize-vs-code.webp)
 
-**Make sure you are using the same browser where you are logged into github**\
-![](https://i.imgur.com/6YOf6iT.png)
+**Make sure you are using the same browser where you are logged into GitHub**\
+![](/assets/img/twitter-quote-bot/vscode-authorize-github.webp)
 
 Click continue:
 
-![](https://i.imgur.com/v1R6Pt1.png)
+![](/assets/img/twitter-quote-bot/authorize-github-for-vscode.webp)
 
 **If you see a message like this, you've succeeded in linking VSCode to GitHub**
 
-![](https://i.imgur.com/pb33RQt.png)
+![](/assets/img/twitter-quote-bot/success-authorized-code-with-github.webp)
 
 Otherwise, close code, then re-open your folder and try again. 
 
 If you've succeeded in authenticating with GitHub, your sync button shouldn't have any numbers next to it, and you will have added the quotes file you made earlier to your copy of this project on GitHub. Go see if your project has been updated, and if not, try again. :)
 
-![](https://i.imgur.com/w8WwUu2.png)
+![](/assets/img/twitter-quote-bot/sync-repository.webp)
 
 ### Save your twitter credentials as environment variables
 
@@ -587,7 +587,7 @@ Now we're getting ready to tie this experience together with a bow.
 
 Head over to your copy of this project on github, that you made earlier in this guide. Click settings, then click `secrets` on the side-bar, and then click `New Repository Secret` on the right.
 
-![](https://i.imgur.com/lerflZW.png)
+![](/assets/img/twitter-quote-bot/add-secrets-github-repository.webp)
 
 ```
 CONSUMER_KEY=XXXYourAPIKeyXXX
@@ -596,11 +596,13 @@ ACCESS_KEY=XXXYourAccessKeyXXX
 ACCESS_SECRET=XXXYourAccessSecretXXX
 ````
 
-![](https://i.imgur.com/X7c97HY.png)
+We're going to now add these secrets to our repository one at a time.
 
-You set these repository secrets for each of the above keys, just like we saved in our local environment earlier. 
+![](/assets/img/twitter-quote-bot/repository-secret.webp)
 
-![](https://i.imgur.com/1wbKhQa.png)
+Now you have your secrets saved with GitHub.
+
+![](/assets/img/twitter-quote-bot/repository-secrets.webp)
 
 #### Set up workflow file for GitHub Actions
 
@@ -608,7 +610,7 @@ Open your local version of this project in VS Code.
 
 The workflow files are in `.github/workflows.disabled`. If you don't see those files, they may be hidden, so check the settings of your directory. 
 
-![](https://i.imgur.com/wP3VpCZ.png)
+![](/assets/img/twitter-quote-bot/open-workflow-vscode.webp)
 
 #### The Workflow file
 
@@ -670,7 +672,7 @@ jobs:
 
 Now you can move quote.yml to the workflows directory.
 
-![](https://i.imgur.com/4cqqkwP.png)
+![](/assets/img/twitter-quote-bot/enable-workflow.webp)
 
 Go ahead and commit that change, then push that change to GitHub. If all goes well, it will run the action and post a quote when you do.
 
@@ -680,7 +682,7 @@ GitHub cron syntax is slightly different from [crontab.guru](https://crontab.gur
 
 In that editor, if you hover over the cron expression, a pop-up tells you exactly how its interpreted.
 
-![](https://i.imgur.com/CtICkLy.png)
+![](/assets/img/twitter-quote-bot/verify-cron-scheduling-github-editor.webp)
 
 Notice that I've made a backup of the `quotes.yaml` file called `quotes.bak`. To avoid duplicate tweets, we're removing the quote from `quotes.yaml` at the time its posted. Be sure to make a backup of your quotes file, although the nature of Git ensures that even if you don't, you can still retrieve the original.
 

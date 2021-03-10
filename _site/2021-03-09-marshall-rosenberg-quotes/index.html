@@ -281,7 +281,7 @@
         <ul>
           <li><a href="#introduction-to-vscode">Introduction to VSCode</a></li>
           <li><a href="#our-quotes-are-going-to-be-structured-like-this">Our quotes are going to be structured like this</a></li>
-          <li><a href="#transforming-a-plain-list-of-quotes-into-a-yaml-list-of-quotes">Transforming a plain list of quotes into a YAML list of quotes</a></li>
+          <li><a href="#using-regex-to-transform-a-list-of-quotes-into-a-yaml-list-of-quotes">Using RegEx to transform a list of quotes into a YAML list of quotes</a></li>
           <li><a href="#yaml-extension">YAML Extension</a></li>
         </ul>
       </li>
@@ -337,15 +337,15 @@
 
 <p>YouTube automatically transcribes its videos, but older videos may not have auto-generated transcripts. I’ve even uploaded content to youtube for its transcription services, before.</p>
 
-<p><img src="https://i.imgur.com/zcfmPvd.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/youtube-transcripts.webp" alt="" /></p>
 
 <p>Click Toggle Timestamps and you can copy the whole thing, and manually extract your favorite quotes.</p>
 
-<p><img src="https://i.imgur.com/7YWYmxX.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/youtube-transcript-toggle-timestamps.webp" alt="" /></p>
 
 <p><a href="https://www.gutenberg.org/">Project Gutenberg</a> has the largest collection of public domain books available online.</p>
 
-<p><a href="https://www.gutenberg.org/ebooks/bookshelf/24"><img src="https://i.imgur.com/4JR6BFA.png" alt="" /></a></p>
+<p><a href="https://www.gutenberg.org/ebooks/bookshelf/24"><img src="/assets/img/twitter-quote-bot/project-gutenberg-quotes-from-classical-antiquity.webp" alt="" /></a></p>
 
 <p>You could also take the easy route, and get quotes from <a href="https://www.goodreads.com/quotes">Goodreads</a>, or <a href="http://www.quotationspage.com/collections.html">other quotes sites online</a>.</p>
 
@@ -367,7 +367,7 @@
 
 <p><strong>Open VSCode and create a new file.</strong></p>
 
-<p><img src="https://i.imgur.com/UXgiYLb.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/vscode-welcome.webp" alt="" /></p>
 
 <p>Go to <em>File &gt; Save as…</em> you can save it in your Documents directory, for now, and name it <code class="language-plaintext highlighter-rouge">quotes.yml</code>.</p>
 
@@ -397,11 +397,11 @@
 
 <p>I’m not 100% this is necessary, but its less ambiguous.</p>
 
-<h4 id="transforming-a-plain-list-of-quotes-into-a-yaml-list-of-quotes">Transforming a plain list of quotes into a YAML list of quotes</h4>
+<h4 id="using-regex-to-transform-a-list-of-quotes-into-a-yaml-list-of-quotes">Using RegEx to transform a list of quotes into a YAML list of quotes</h4>
 
 <p>If you have a document with each quote on a new line, you can use search and replace in VSCode to make easy work of this:</p>
 
-<p><img src="https://i.imgur.com/07bnXPS.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/regex-lines-to-yaml.webp" alt="" /></p>
 
 <p>That example uses <a href="https://docs.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2019">regular expression</a> (RegEx) which is a wildcard system allowing you to change many instances of text at the same time.</p>
 
@@ -413,7 +413,7 @@
 
 <p>Hopefully you get the idea that this expression will do most of the work turning a file with quotes on each line to a yaml file.</p>
 
-<p><img src="https://i.imgur.com/shyqJj3.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/regex-lines-to-yaml-result.webp" alt="" /></p>
 
 <p>You can see the results. Notice that there is a blank space between one of the lines and its closing parenthesis.</p>
 
@@ -434,7 +434,7 @@
 
 <p>Click the extensions tab circled in red, and get the YAML Language Support by Red Hat.</p>
 
-<p><img src="https://i.imgur.com/DzuKH9H.png" alt="" /></p>
+<p><img src="/assets/img/yaml-vscode-extension.webp" alt="" /></p>
 
 <p>If you have a lot of quotes, this will especially come in handy.</p>
 
@@ -446,7 +446,7 @@
 
 <p>Once I clicked the line where the error occurs, that grey line jumped to the red mark on the scrollbar.</p>
 
-<p><img src="https://i.imgur.com/mJgyrKk.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/using-yaml-extension.webp" alt="" /></p>
 
 <h3 id="get-a-twitter-developer-account">Get a twitter developer account</h3>
 
@@ -466,11 +466,11 @@
 
 <p>It instructs us, login to <a href="https://dev.twitter.com/">dev.twitter.com</a> with the account I want to auto-tweet from.</p>
 
-<p><img src="https://i.imgur.com/ql3VyhW.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/twitter-developer-apply.webp" alt="" /></p>
 
 <p>Click the Apply button to begin. On the next page you’ll click “Apply for a twitter developers account”.</p>
 
-<p><img src="https://i.imgur.com/GTZnKMw.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/hobbyist-twitter-developer.webp" alt="" /></p>
 
 <p>On the next page, click “Hobbyist”, “Making a Bot” and then “Get Started”.</p>
 
@@ -506,7 +506,7 @@
 
 <p>Be sure to verify your e-mail address, and you will see this message:</p>
 
-<p><img src="https://i.imgur.com/x5cabsn.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/twitter-developer-application-recieved.webp" alt="" /></p>
 
 <h4 id="post-application-e-mail-exchange">Post application e-mail exchange</h4>
 
@@ -559,7 +559,7 @@
 
 <p>Follow that link, name your app and get your <strong>API Key</strong>, <strong>API Secret Key</strong>, and <strong>Bearer Token</strong>.</p>
 
-<p><img src="https://i.imgur.com/acbeWKo.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/twitter-api-keys.webp" alt="" /></p>
 
 <p>I’d recommend using a password manager such as <a href="https://keepassxc.org/">keepassxc</a> or <a href="https://www.lastpass.com/">lastpass</a> for storing these keys (and all of your passwords).</p>
 
@@ -575,13 +575,13 @@
 
 <p>First thing to do on the dashboard, is scroll down below your “App Details” to “App Permissions”</p>
 
-<p><img src="https://i.imgur.com/mKu7kkk.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/twitter-app-permissions.webp" alt="" /></p>
 
 <p>Be sure to give your app both read and write permissions.</p>
 
 <p>Next, click the “Keys and Tokens” tab of your settings, and generate your <strong>Access Token</strong> &amp; <strong>Access Secret</strong>.</p>
 
-<p><img src="https://i.imgur.com/y66FjpI.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/generate-access-token-secrets.webp" alt="" /></p>
 
 <p>The first keys we got let the Twitter API know who you are, these access keys determine what permissions the app has, according to the setting where you just enabled read and write permissions.</p>
 
@@ -591,7 +591,7 @@
 
 <p>Once you’ve saved the keys, the page you’ll be brought back to should indicate that your access keys have both read and write permissions. Otherwise, you can go back to the Settings page, adjust the permissions, and then regenerate the access tokens.</p>
 
-<p><img src="https://i.imgur.com/HamxUjP.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/verify-permissions-access-token-secret.webp" alt="" /></p>
 
 <h2 id="making-the-quote-bot">Making the quote bot</h2>
 
@@ -726,14 +726,14 @@
 <p><a href="https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot">https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot</a></p>
 
 <p><strong>Click ‘Use this Template’</strong>
-<img src="https://i.imgur.com/HHjg49n.png" alt="" /></p>
+<img src="/assets/img/twitter-quote-bot/using-github-template-repository.webp" alt="" /></p>
 
 <p><strong>Choose a descriptive name for your repository</strong>
-<img src="https://i.imgur.com/heZogsx.png" alt="" /></p>
+<img src="/assets/img/twitter-quote-bot/using-template-repository-name.webp" alt="" /></p>
 
 <h3 id="create-a-local-clone-of-your-brand-new-github-repository">Create a local clone of your brand-new github repository</h3>
 
-<p><img src="https://i.imgur.com/QiHUljm.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/clone-repository.webp" alt="" /></p>
 
 <p>Click the copy button in the smaller red circle. Notice you are getting the HTTPS version of the link.</p>
 
@@ -768,15 +768,15 @@
 
 <p>Otherwise, go ahead and open VSCode, then select “open folder”</p>
 
-<p><img src="https://i.imgur.com/ZN9H9NE.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/vscode-open-folder.webp" alt="" /></p>
 
 <p>Navigate to your project folder and then click open.</p>
 
-<p><img src="https://i.imgur.com/Fv20W2y.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/vs-code-open-folder.webp" alt="" /></p>
 
 <p>Now you should see the directory listing on your left and a window in your right that lets you view\edit most any file you select.</p>
 
-<p><img src="https://i.imgur.com/go7wMiH.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/vscode-select-quotes.webp" alt="" /></p>
 
 <p>Before we move forward, you should make your first commit, and sign Code into your GitHub account.</p>
 
@@ -784,31 +784,31 @@
 
 <p>Click <code class="language-plaintext highlighter-rouge">+</code> and enter a message like “My first Commit”. The plus lets Code know you want that file added to your project.</p>
 
-<p><img src="https://i.imgur.com/GQGOpAg.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/commit-changes-vscode.webp" alt="" /></p>
 
 <p><strong>Click the circle at the bottom</strong> (this command syncs your local version with the version on GitHub. It first pulls any changes from your github version, and then “pushes” your commit)</p>
 
 <p><strong>The Extension ‘GitHub’ wants to sign in using GitHub</strong><br />
 Click allow, to sign into your GitHub account.</p>
 
-<p><img src="https://i.imgur.com/aToRcJM.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/sync-github-authorize-vs-code.webp" alt="" /></p>
 
-<p><strong>Make sure you are using the same browser where you are logged into github</strong><br />
-<img src="https://i.imgur.com/6YOf6iT.png" alt="" /></p>
+<p><strong>Make sure you are using the same browser where you are logged into GitHub</strong><br />
+<img src="/assets/img/twitter-quote-bot/vscode-authorize-github.webp" alt="" /></p>
 
 <p>Click continue:</p>
 
-<p><img src="https://i.imgur.com/v1R6Pt1.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/authorize-github-for-vscode.webp" alt="" /></p>
 
 <p><strong>If you see a message like this, you’ve succeeded in linking VSCode to GitHub</strong></p>
 
-<p><img src="https://i.imgur.com/pb33RQt.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/success-authorized-code-with-github.webp" alt="" /></p>
 
 <p>Otherwise, close code, then re-open your folder and try again.</p>
 
 <p>If you’ve succeeded in authenticating with GitHub, your sync button shouldn’t have any numbers next to it, and you will have added the quotes file you made earlier to your copy of this project on GitHub. Go see if your project has been updated, and if not, try again. :)</p>
 
-<p><img src="https://i.imgur.com/w8WwUu2.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/sync-repository.webp" alt="" /></p>
 
 <h3 id="save-your-twitter-credentials-as-environment-variables">Save your twitter credentials as environment variables</h3>
 
@@ -864,7 +864,7 @@ export ACCESS_SECRET=XXXYourAccessSecretXXX
 
 <p>Head over to your copy of this project on github, that you made earlier in this guide. Click settings, then click <code class="language-plaintext highlighter-rouge">secrets</code> on the side-bar, and then click <code class="language-plaintext highlighter-rouge">New Repository Secret</code> on the right.</p>
 
-<p><img src="https://i.imgur.com/lerflZW.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/add-secrets-github-repository.webp" alt="" /></p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CONSUMER_KEY=XXXYourAPIKeyXXX
 CONSUMER_SECRET=XXXYourAPISecretXXX
@@ -872,11 +872,13 @@ ACCESS_KEY=XXXYourAccessKeyXXX
 ACCESS_SECRET=XXXYourAccessSecretXXX
 </code></pre></div></div>
 
-<p><img src="https://i.imgur.com/X7c97HY.png" alt="" /></p>
+<p>We’re going to now add these secrets to our repository one at a time.</p>
 
-<p>You set these repository secrets for each of the above keys, just like we saved in our local environment earlier.</p>
+<p><img src="/assets/img/twitter-quote-bot/repository-secret.webp" alt="" /></p>
 
-<p><img src="https://i.imgur.com/1wbKhQa.png" alt="" /></p>
+<p>Now you have your secrets saved with GitHub.</p>
+
+<p><img src="/assets/img/twitter-quote-bot/repository-secrets.webp" alt="" /></p>
 
 <h4 id="set-up-workflow-file-for-github-actions">Set up workflow file for GitHub Actions</h4>
 
@@ -884,7 +886,7 @@ ACCESS_SECRET=XXXYourAccessSecretXXX
 
 <p>The workflow files are in <code class="language-plaintext highlighter-rouge">.github/workflows.disabled</code>. If you don’t see those files, they may be hidden, so check the settings of your directory.</p>
 
-<p><img src="https://i.imgur.com/wP3VpCZ.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/open-workflow-vscode.webp" alt="" /></p>
 
 <h4 id="the-workflow-file">The Workflow file</h4>
 
@@ -945,7 +947,7 @@ ACCESS_SECRET=XXXYourAccessSecretXXX
 
 <p>Now you can move quote.yml to the workflows directory.</p>
 
-<p><img src="https://i.imgur.com/4cqqkwP.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/enable-workflow.webp" alt="" /></p>
 
 <p>Go ahead and commit that change, then push that change to GitHub. If all goes well, it will run the action and post a quote when you do.</p>
 
@@ -955,7 +957,7 @@ ACCESS_SECRET=XXXYourAccessSecretXXX
 
 <p>In that editor, if you hover over the cron expression, a pop-up tells you exactly how its interpreted.</p>
 
-<p><img src="https://i.imgur.com/CtICkLy.png" alt="" /></p>
+<p><img src="/assets/img/twitter-quote-bot/verify-cron-scheduling-github-editor.webp" alt="" /></p>
 
 <p>Notice that I’ve made a backup of the <code class="language-plaintext highlighter-rouge">quotes.yaml</code> file called <code class="language-plaintext highlighter-rouge">quotes.bak</code>. To avoid duplicate tweets, we’re removing the quote from <code class="language-plaintext highlighter-rouge">quotes.yaml</code> at the time its posted. Be sure to make a backup of your quotes file, although the nature of Git ensures that even if you don’t, you can still retrieve the original.</p>
 
