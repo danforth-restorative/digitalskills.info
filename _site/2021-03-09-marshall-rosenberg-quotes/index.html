@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Beautiful Jekyll 5.0.0 | Copyright Dean Attali 2020 -->
+<head>
+  <meta charset="utf-8">
+  
+
+  
+
+  <title>Make an Auto-Posting Social Media Quote-bot with Python and GitHub Actions. Part 1 Text-Quotes</title>
+
+  
+  <meta name="author" content="David Danforth">
+  
+
+  <meta name="description" content="First, I gathered quotes from transcripts of Marshall Rosenberg. Then I made a bot to automatically post those quotes to Twitter (and Facebook) using GitHub Actions and Python.">
+
+  
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="DigitalSkills" href="/feed.xml">
+
+  
+
+  
+
+  
+
+
+  
+    
+      
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+
+    
+      
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+
+
+    
+      
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/assets/css/bootstrap-social.css">
+    
+      <link rel="stylesheet" href="/assets/css/beautifuljekyll.css">
+    
+  
+
+  
+
+  
+  
+  
+
+  
+
+  
+  <meta property="og:site_name" content="DigitalSkills">
+  <meta property="og:title" content="Make an Auto-Posting Social Media Quote-bot with Python and GitHub Actions. Part 1 Text-Quotes">
+  <meta property="og:description" content="First, I gathered quotes from transcripts of Marshall Rosenberg. Then I made a bot to automatically post those quotes to Twitter (and Facebook) using GitHub Actions and Python.">
+
+  
+  <meta property="og:image" content="https://digitalskills.info/assets/img/making-social-media-quote-bot_python-twitter-API-github-actions.webp">
+  
+
+  
+  <meta property="og:type" content="article">
+  <meta property="og:article:author" content="David Danforth">
+  <meta property="og:article:published_time" content="2021-03-09T00:00:00-05:00">
+  <meta property="og:url" content="/2021-03-09-marshall-rosenberg-quotes/">
+  <link rel="canonical" href="/2021-03-09-marshall-rosenberg-quotes/">
+  
+
+  
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <meta name="twitter:site" content="@DavidDanforth12">
+  <meta name="twitter:creator" content="@DavidDanforth12">
+
+  <meta property="twitter:title" content="Make an Auto-Posting Social Media Quote-bot with Python and GitHub Actions. Part 1 Text-Quotes">
+  <meta property="twitter:description" content="First, I gathered quotes from transcripts of Marshall Rosenberg. Then I made a bot to automatically post those quotes to Twitter (and Facebook) using GitHub Actions and Python.">
+
+  
+  <meta name="twitter:image" content="https://digitalskills.info/assets/img/making-social-media-quote-bot_python-twitter-API-github-actions.webp">
+  
+
+  
+
+
+  
+  <link rel="stylesheet" href="/assets/css/staticman.css">
+  
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icon/favicon-16x16.png">
+  <link rel="manifest" href="/assets/icon/manifest.json">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="/assets/icon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#FFFFFF">
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window,document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+   fbq('init', '385969252816849'); 
+  fbq('track', 'PageView');
+</script>
+<noscript>
+   <img height="1" width="1" 
+  src="https://www.facebook.com/tr?id=385969252816849&ev=PageView
+  &noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
+
+</head>
+
+
+<body>
+
+  
+
+
+  <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand" href="https://digitalskills.info">DigitalSkills</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="main-navbar">
+    <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/aboutme">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://danforth-restorative.com">Danforth Restorative</a>
+          </li></ul>
+  </div>
+
+  
+
+  
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        <a href="">
+          <img alt="Navigation bar avatar" class="avatar-img" src="/assets/img/digital-tools-digital-transformation.webp" />
+        </a>
+      </div>
+    </div>
+  
+
+</nav>
+
+
+  <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+        <div class="post-heading">
+          <h1>Make an Auto-Posting Social Media Quote-bot with Python and GitHub Actions. Part 1 Text-Quotes</h1>
+          
+            
+              <h2 class="post-subheading">Creating a social media quote-bot isn't very hard and can expand the reach of life serving messages</h2>
+            
+          
+
+          
+            <span class="post-meta">Posted on March 9, 2021</span>
+            
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+
+<div class=" container-md ">
+  <div class="row">
+    <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
+
+      
+        
+        
+        
+
+        <div id="header-gh-btns">
+          
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=danforth-restorative&repo=digitalskills-info&type=star&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=danforth-restorative&repo=digitalskills-info&type=fork&count=true" frameborder="0" scrolling="0" width="120px" height="20px"></iframe>
+                
+            
+              
+                  <iframe src="https://ghbtns.com/github-btn.html?user=danforth-restorative&type=follow&count=true" frameborder="0" scrolling="0" width="220px" height="20px"></iframe>
+              
+            
+          
+        </div>
+      
+
+      
+
+      <article role="main" class="blog-post">
+        <p>This post will describe my process for creating a twitter quote-bot, including step-by-step instructions, complete with the code I’m currently using to run <a href="https://twitter.com/MBR_Quotes">@MBR_Quotes</a>.</p>
+
+<hr />
+
+<p>I’ve become a Marshall Rosenberg enthusiast over the past year, and have become convinced that the world can greatly benefit from becoming familiar with <a href="https://danforth-restorative.com/2020/07/22/nonviolent-communication.html">his teaching</a>.</p>
+
+<p>I was inspired to make a twitter quote-bot, to share his message with others who find it meeting their needs, while becoming much more intimate with it myself, and developing my technical skills.</p>
+
+<p>During my studies, I found a <a href="https://anchor.fm/nvc-archive">podcast with nonviolent communication trainings and interviews with Marshall Rosenberg</a>, which directed me to <a href="https://github.com/cognitivetech/Marshall-Rosenberg-NVC">transcripts for some of them</a> that made a perfect foundation for this project.</p>
+
+<p>Of course, the ability to create a social media quote-bot is also marketable skill, that could be useful for a variety of purposes, both personally and professionally.</p>
+
+<p>This walk-through strings together a handful of fundamental skills, so that once you’ve completed each step, you’ll be able to apply this knowledge towards a variety of domains and have come a long way toward being a coder.</p>
+
+<p>I had to learn each skill individually just figuring things out on my own, over a couple years, so you should feel very lucky to get this all on a single page! 🤣</p>
+
+<h2 id="how-to-create-a-social-media-quote-bot">How to create a social media quote-bot</h2>
+
+<p>This guide walks the reader through each step in my process, explaining what tools I use, and how I use them.</p>
+
+<p>The process begins with gathering and preparing quotes. Then getting a developer account on twitter, reviewing each line of the Python code used to publish these quotes, and the steps necessary to automate that on GitHub.</p>
+
+<ul>
+  <li><a href="#how-to-create-a-social-media-quote-bot">How to create a social media quote-bot</a></li>
+  <li><a href="#prep">Prep</a>
+    <ul>
+      <li><a href="#gathering-source-material">Gathering Source Material</a></li>
+      <li><a href="#preparing-the-quotes">Preparing the Quotes</a>
+        <ul>
+          <li><a href="#introduction-to-vscode">Introduction to VSCode</a></li>
+          <li><a href="#our-quotes-are-going-to-be-structured-like-this">Our quotes are going to be structured like this</a></li>
+          <li><a href="#transforming-a-plain-list-of-quotes-into-a-yaml-list-of-quotes">Transforming a plain list of quotes into a YAML list of quotes</a></li>
+          <li><a href="#yaml-extension">YAML Extension</a></li>
+        </ul>
+      </li>
+      <li><a href="#get-a-twitter-developer-account">Get a twitter developer account</a>
+        <ul>
+          <li><a href="#apply">Apply</a></li>
+          <li><a href="#how-are-you-planning-to-use-the-twitter-api">How are you planning to use the Twitter API?</a></li>
+          <li><a href="#will-your-app-use-tweet-retweet-like-follow-or-direct-message-functionality">Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?</a></li>
+          <li><a href="#developer-agreement">Developer agreement</a></li>
+          <li><a href="#post-application-e-mail-exchange">Post application e-mail exchange</a></li>
+          <li><a href="#get-your-api-keys">Get your API keys</a></li>
+          <li><a href="#generate-access-tokens">Generate access tokens</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#making-the-quote-bot">Making the quote bot</a>
+    <ul>
+      <li><a href="#python-script-for-publishing-text-quotes-to-twitter">Python Script for Publishing Text Quotes to Twitter</a></li>
+      <li><a href="#dependencies">Dependencies</a>
+        <ul>
+          <li><a href="#install-python">Install Python</a></li>
+          <li><a href="#install-git">Install Git</a></li>
+          <li><a href="#set-git-useremail">Set Git User\Email</a></li>
+        </ul>
+      </li>
+      <li><a href="#make-a-copy-of-this-project-on-github">Make a copy of this project on GitHub</a></li>
+      <li><a href="#create-a-local-clone-of-your-brand-new-github-repository">Create a local clone of your brand-new github repository</a></li>
+    </ul>
+  </li>
+  <li><a href="#using-vscode-to-manage-your-project">Using VSCode to manage your project</a>
+    <ul>
+      <li><a href="#save-your-twitter-credentials-as-environment-variables">Save your twitter credentials as environment variables</a>
+        <ul>
+          <li><a href="#on-your-computer">On your computer</a></li>
+          <li><a href="#set-up-workflow-file-for-github-actions">Set up workflow file for GitHub Actions</a></li>
+          <li><a href="#the-workflow-file">The Workflow file</a></li>
+          <li><a href="#customizations">Customizations</a></li>
+        </ul>
+      </li>
+      <li><a href="#have-fun">Have Fun!</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="prep">Prep</h2>
+
+<h3 id="gathering-source-material">Gathering Source Material</h3>
+
+<p>There are many resources online that could be used as the raw materials for a quote-bot. You could use the lyrics of your favorite band, transcripts of podcasts, or videos online.</p>
+
+<p>If you begin with audio, it’s possible to auto-generate transcriptions for them. They’ll still require some manual editing, but you can quickly create plenty of fodder for your quotebot. <a href="https://www.freetranscriptions.com/">FreeTranscriptions.com</a> offers 300 minutes of free auto-transcriptions, each month.</p>
+
+<p>YouTube automatically transcribes its videos, but older videos may not have auto-generated transcripts. I’ve even uploaded content to youtube for its transcription services, before.</p>
+
+<p><img src="https://i.imgur.com/zcfmPvd.png" alt="" /></p>
+
+<p>Click Toggle Timestamps and you can copy the whole thing, and manually extract your favorite quotes.</p>
+
+<p><img src="https://i.imgur.com/7YWYmxX.png" alt="" /></p>
+
+<p><a href="https://www.gutenberg.org/">Project Gutenberg</a> has the largest collection of public domain books available online.</p>
+
+<p><a href="https://www.gutenberg.org/ebooks/bookshelf/24"><img src="https://i.imgur.com/4JR6BFA.png" alt="" /></a></p>
+
+<p>You could also take the easy route, and get quotes from <a href="https://www.goodreads.com/quotes">Goodreads</a>, or <a href="http://www.quotationspage.com/collections.html">other quotes sites online</a>.</p>
+
+<p>If you’re wondering how many quotes you want, just think about how often you’d like to tweet. I wanted to publish 4 tweets a day, and have enough quotes to get me through a year without needing to repeat. I don’t think I got that many, maybe I only got enough for 6 months. But I wanted to gather enough tweet sized quotes so I wouldn’t have to worry about getting more for a while.</p>
+
+<h3 id="preparing-the-quotes">Preparing the Quotes</h3>
+
+<p>For this exercise, we’re going to use <a href="https://yaml.org/spec/1.2/spec.html">YAML</a>, a simple data structure that makes it easy for a programming language to read your quotes.</p>
+
+<h4 id="introduction-to-vscode">Introduction to VSCode</h4>
+
+<p>I use <a href="https://code.visualstudio.com/">VSCode</a> all of the time for editing large documents, and working on projects with multiple directories of files I may need to edit. It’s easy to use, but also has tons of advanced features that would take a long time to learn all of.</p>
+
+<p>VSCode or Code allows you to search\replace text within files of entire directories, and there are extensions for different languages and data-types that help you avoid errors.</p>
+
+<p>VSCode also integrates very nicely with GitHub, which will save you from having to use <code class="language-plaintext highlighter-rouge">git</code> manually. If you aren’t familiar with <code class="language-plaintext highlighter-rouge">git</code> already, VSCode will prove invaluable.</p>
+
+<p>If you don’t care for VS Code, or its too resource intensive, you may prefer <a href="https://notepad-plus-plus.org">Notepad++</a>, which is a little less resource intensive, but offers comparable features.</p>
+
+<p><strong>Open VSCode and create a new file.</strong></p>
+
+<p><img src="https://i.imgur.com/UXgiYLb.png" alt="" /></p>
+
+<p>Go to <em>File &gt; Save as…</em> you can save it in your Documents directory, for now, and name it <code class="language-plaintext highlighter-rouge">quotes.yml</code>.</p>
+
+<h4 id="our-quotes-are-going-to-be-structured-like-this">Our quotes are going to be structured like this</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="pi">-</span> <span class="s2">"</span><span class="s">Always</span><span class="nv"> </span><span class="s">hear</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">'Yes'</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">'No'.</span><span class="se">\n\n</span><span class="s">#NVC</span><span class="nv"> </span><span class="s">#NonviolentCommunication"</span>
+<span class="pi">-</span> <span class="s2">"</span><span class="s">Never</span><span class="nv"> </span><span class="s">do</span><span class="nv"> </span><span class="s">anything</span><span class="nv"> </span><span class="s">that</span><span class="nv"> </span><span class="s">isn't</span><span class="nv"> </span><span class="s">play.</span><span class="se">\n\n</span><span class="s">#NVC</span><span class="nv"> </span><span class="s">#NonviolentCommunication"</span>
+<span class="pi">-</span> <span class="s2">"</span><span class="s">Avoid</span><span class="nv"> </span><span class="s">'shoulding'</span><span class="nv"> </span><span class="s">on</span><span class="nv"> </span><span class="s">others</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">yourself!</span><span class="se">\n\n</span><span class="s">#NVC</span><span class="nv"> </span><span class="s">#NonviolentCommunication"</span>
+<span class="pi">-</span> <span class="s2">"</span><span class="s">Ask</span><span class="nv"> </span><span class="s">before</span><span class="nv"> </span><span class="s">offering</span><span class="nv"> </span><span class="s">advice</span><span class="nv"> </span><span class="s">or</span><span class="nv"> </span><span class="s">reassurance.</span><span class="se">\n\n</span><span class="s">#NVC</span><span class="nv"> </span><span class="s">#NonviolentCommunication"</span>
+</code></pre></div></div>
+
+<p>YAML is pretty straightforward.</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">---</code> begins the file.</li>
+  <li>Each line begins with a dash <code class="language-plaintext highlighter-rouge">-</code></li>
+  <li>The text is surrounded by “Double Quotes”</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">\n</code> is a newline character, which is automatically turned into an actual new-line by the python interpreter.</p>
+
+<p>Be careful if there are quotation-marks in your quote. You could also surround text with a single quote if there are double quotes inside, like so:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="s1">'</span><span class="s">Single</span><span class="nv"> </span><span class="s">Quote</span><span class="nv"> </span><span class="s">can</span><span class="nv"> </span><span class="s">"contain"</span><span class="nv"> </span><span class="s">double</span><span class="nv"> </span><span class="s">quotes.'</span>
+</code></pre></div></div>
+
+<p>I’m not 100% this is necessary, but its less ambiguous.</p>
+
+<h4 id="transforming-a-plain-list-of-quotes-into-a-yaml-list-of-quotes">Transforming a plain list of quotes into a YAML list of quotes</h4>
+
+<p>If you have a document with each quote on a new line, you can use search and replace in VSCode to make easy work of this:</p>
+
+<p><img src="https://i.imgur.com/07bnXPS.png" alt="" /></p>
+
+<p>That example uses <a href="https://docs.microsoft.com/en-us/visualstudio/ide/using-regular-expressions-in-visual-studio?view=vs-2019">regular expression</a> (RegEx) which is a wildcard system allowing you to change many instances of text at the same time.</p>
+
+<p>The blue asterisk activates regular expression in your search query. In the top search box <code class="language-plaintext highlighter-rouge">\n</code> is a newline character. <code class="language-plaintext highlighter-rouge">.*</code> selects every character on a line, and surrounding it with parentheses <code class="language-plaintext highlighter-rouge">(.*)</code> saves it to be used in the replace.</p>
+
+<p>As you type your RegEx query, the matching selection is automatically highlighted on the page.</p>
+
+<p>Then in the replace box <code class="language-plaintext highlighter-rouge">$1</code> provides the value captured in parentheses above, and if you have multiple expressions surrounded with parentheses, in the same search query, you can reference them sequentially, left to right.</p>
+
+<p>Hopefully you get the idea that this expression will do most of the work turning a file with quotes on each line to a yaml file.</p>
+
+<p><img src="https://i.imgur.com/shyqJj3.png" alt="" /></p>
+
+<p>You can see the results. Notice that there is a blank space between one of the lines and its closing parenthesis.</p>
+
+<p>Now that search and replace took care of the hard work, its easy to do this manually, or even a regular search\replace in Code.</p>
+
+<p>Search for ` “<code class="language-plaintext highlighter-rouge"> and replace with </code>”` to fix both at the same time.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
+- "line 1"
+- "line 2"
+- "line 3"
+- "line 4"
+- "line 5"
+- "line 6"
+</code></pre></div></div>
+
+<h4 id="yaml-extension">YAML Extension</h4>
+
+<p>Click the extensions tab circled in red, and get the YAML Language Support by Red Hat.</p>
+
+<p><img src="https://i.imgur.com/DzuKH9H.png" alt="" /></p>
+
+<p>If you have a lot of quotes, this will especially come in handy.</p>
+
+<p>For an example, I removed the closing quotation mark from a line, circled in red. You’ll notice that the filename turns red on our side panel, and there is a red mark on the scrollbar, that lets me notice there is a formatting error.</p>
+
+<p>A grey line goes through the middle of the scrollbar, showing where your cursor is in context with the rest of the document.</p>
+
+<p>I scrolled down the page until my scrollbar reached the red mark pointing out our YAML error. (Note the bottom right of the picture below with a red arrow)</p>
+
+<p>Once I clicked the line where the error occurs, that grey line jumped to the red mark on the scrollbar.</p>
+
+<p><img src="https://i.imgur.com/mJgyrKk.png" alt="" /></p>
+
+<h3 id="get-a-twitter-developer-account">Get a twitter developer account</h3>
+
+<p>Now that you’ve collected and prepared quote material, go ahead and apply for a twitter developer account.</p>
+
+<p>If you have any questions about this process, have any trouble or questions about using your twitter developer account more generally, you can check out the <a href="https://twittercommunity.com/">Twitter Developer Forums</a>.</p>
+
+<h4 id="apply">Apply</h4>
+
+<p>Once I had some quotes formatted, I used this guide to get started with the code:</p>
+
+<ul>
+  <li><a href="https://dototot.com/how-to-write-a-twitter-bot-with-python-and-tweepy/">How to write a Twitter Bot with Python and Tweepy</a></li>
+</ul>
+
+<p>You may want to try out that script first, to see how this works. All it will do is post a single tweet, so it’s easier to proceed with the later parts of this guide if you’ve tried that first.</p>
+
+<p>It instructs us, login to <a href="https://dev.twitter.com/">dev.twitter.com</a> with the account I want to auto-tweet from.</p>
+
+<p><img src="https://i.imgur.com/ql3VyhW.png" alt="" /></p>
+
+<p>Click the Apply button to begin. On the next page you’ll click “Apply for a twitter developers account”.</p>
+
+<p><img src="https://i.imgur.com/GTZnKMw.png" alt="" /></p>
+
+<p>On the next page, click “Hobbyist”, “Making a Bot” and then “Get Started”.</p>
+
+<h4 id="how-are-you-planning-to-use-the-twitter-api">How are you planning to use the Twitter API?</h4>
+
+<p>After you fill out basic info, you will be asked “<strong>How are you planning to use the Twitter API or Twitter Data</strong>”. It suggests your application will be easier to approve the more descriptive you are, so try to make a few sentences about how you are using the API.</p>
+
+<p>I filled out something like this:</p>
+
+<blockquote>
+  <p>I want to schedule post from a collection of quotes and images with quotes printed onto them.</p>
+
+  <p>I’m making this bot as a learning experience with python and writing each step of the process.</p>
+</blockquote>
+
+<p>Next it asks if you are analyzing twitter data, in this case we are not.</p>
+
+<h4 id="will-your-app-use-tweet-retweet-like-follow-or-direct-message-functionality">Will your app use Tweet, Retweet, Like, Follow, or Direct Message functionality?</h4>
+
+<p>Yes it will, and so the next form we go into a little more detail what the app will do.</p>
+
+<blockquote>
+  <p>This script will tweet 4-6 times a day a different quote from a list of prepared material. When users re-tweet, my script will like their re-tweet.</p>
+
+  <p>I will not need use of re-tweet, follow, or direct messaging via API</p>
+</blockquote>
+
+<p>the rest of the questions I click “No” and go to the next page which reviews the information already submitted, so we can click next again.</p>
+
+<h4 id="developer-agreement">Developer agreement</h4>
+
+<p>Yes, we agree to the developer agreement. Like I said, for a simple tweet bot, this is not a concern. When you develop more complex bots for twitter, it’s important to really read the developers agreement and understand how you are expected to use it. Especially if you want to automate some of the use of your personal twitter account, not just a new account to try out some code.</p>
+
+<p>Be sure to verify your e-mail address, and you will see this message:</p>
+
+<p><img src="https://i.imgur.com/x5cabsn.png" alt="" /></p>
+
+<h4 id="post-application-e-mail-exchange">Post application e-mail exchange</h4>
+
+<p>After I filled out my application I got this message, the next day.</p>
+
+<blockquote>
+  <p>Before we can finish our review of your developer account application, we need some more details about your use case.</p>
+
+  <p>The types of information that are valuable for our review include:</p>
+
+  <ul>
+    <li>The core use case, intent, or business purpose for your use of the Twitter APIs.</li>
+    <li>If you intend to analyze Tweets, Twitter users, or their content, share details about the analyses you plan to conduct, and the methods or techniques.</li>
+    <li><strong>If your use involves Tweeting, Retweeting, or liking content, share how you’ll interact with Twitter accounts, or their content.</strong></li>
+    <li>If you’ll display Twitter content off of Twitter, explain how, and where, Tweets and Twitter content will be displayed with your product or service, including whether Tweets and Twitter content will be displayed at row level, or aggregated.</li>
+  </ul>
+
+  <p>Just reply to this email with these details. Once we’ve received your response, we’ll continue our review. We appreciate your help!</p>
+</blockquote>
+
+<p>I revised my answer a couple times before they accepted it. Each time, they patiently pointed me to the <a href="https://developer.twitter.com/en/developer-terms/agreement-and-policy.html">Developer Agreement and Policy</a>, <a href="https://help.twitter.com/en/rules-and-policies/twitter-automation">Automation Rules</a> &amp; <a href="https://help.twitter.com/en/rules-and-policies/twitter-rules">Twitter Rules</a>, requesting me to re-write your use-case in accordance with the policies.</p>
+
+<p>Notice the section in bold, above, about tweeting, retweeting, and liking content. I had to read the various policy links and figure out exactly what the rules are for each.</p>
+
+<p>After a few tries, back and forth with the developer support, here’s my final response that they accepted:</p>
+
+<blockquote>
+  <p><em>My core use-case for the Twitter API is to develop my tech skills, share valuable knowledge, and support community growth. I do not intent to make money with this project, but in the future I may apply these skills to profitable ventures.</em></p>
+
+  <p><em>This account is made to share quotes that help people understand whiteness as a social construct, and its role in shaping society throughout the history of the world, particularly the united states.</em></p>
+
+  <p><em>I do not intend to analyze tweets, twitter users, or their content. The greatest extent of analyzing twitter data would include keyword\hashtag search, to find other content related to this project.</em></p>
+
+  <p><em>The script I’m working on is only for tweeting quotes from a pre-defined list of content.</em></p>
+
+  <p><em>I may sometimes browse and manually like responses to my tweets or retweets. I will manually follow accounts I believe are sympathetic to the type of content I’m creating based on their tweets and who they follow. When I come across educational or otherwise informative content that that aligns with the quotes I’m sharing, I may like and retweet those using tweet-deck. I won’t message users unless they message me first.</em></p>
+
+  <p><em>If I display content outside of twitter, I would use publish.twitter.com</em></p>
+</blockquote>
+
+<h4 id="get-your-api-keys">Get your API keys</h4>
+
+<blockquote>
+  <p>Your Twitter developer account application has been approved!</p>
+
+  <p>Thanks for applying for access. We’ve completed our review of your application, and are excited to share that your request has been approved.</p>
+
+  <p>Sign in to your <a href="https://developer.twitter.com/en/portal/register/welcome">developer account</a> to get started.</p>
+</blockquote>
+
+<p>Follow that link, name your app and get your <strong>API Key</strong>, <strong>API Secret Key</strong>, and <strong>Bearer Token</strong>.</p>
+
+<p><img src="https://i.imgur.com/acbeWKo.png" alt="" /></p>
+
+<p>I’d recommend using a password manager such as <a href="https://keepassxc.org/">keepassxc</a> or <a href="https://www.lastpass.com/">lastpass</a> for storing these keys (and all of your passwords).</p>
+
+<p>However you decide to manage this, try to keep them safe.</p>
+
+<p>Now you can click “skip to dashboard”.</p>
+
+<p>It shows you your keys one last time, its a good time to double check the values you copied are correct.</p>
+
+<p>I double check that the first and last 4 digits of each string matches, then proceed to the dashboard.</p>
+
+<h4 id="generate-access-tokens">Generate access tokens</h4>
+
+<p>First thing to do on the dashboard, is scroll down below your “App Details” to “App Permissions”</p>
+
+<p><img src="https://i.imgur.com/mKu7kkk.png" alt="" /></p>
+
+<p>Be sure to give your app both read and write permissions.</p>
+
+<p>Next, click the “Keys and Tokens” tab of your settings, and generate your <strong>Access Token</strong> &amp; <strong>Access Secret</strong>.</p>
+
+<p><img src="https://i.imgur.com/y66FjpI.png" alt="" /></p>
+
+<p>The first keys we got let the Twitter API know who you are, these access keys determine what permissions the app has, according to the setting where you just enabled read and write permissions.</p>
+
+<blockquote>
+  <p>Click the “Create” button in the “Access token &amp; access token secret” section. – <a href="https://developer.twitter.com/en/docs/twitter-api/enterprise/account-activity-api/guides/authenticating-users#:~:text=User%20owns%20the%20app%20%2F%20Single,%26%20access%20token%20secret&quot;%20section.">Twitter Developers Documentation</a></p>
+</blockquote>
+
+<p>Once you’ve saved the keys, the page you’ll be brought back to should indicate that your access keys have both read and write permissions. Otherwise, you can go back to the Settings page, adjust the permissions, and then regenerate the access tokens.</p>
+
+<p><img src="https://i.imgur.com/HamxUjP.png" alt="" /></p>
+
+<h2 id="making-the-quote-bot">Making the quote bot</h2>
+
+<h3 id="python-script-for-publishing-text-quotes-to-twitter">Python Script for Publishing Text Quotes to Twitter</h3>
+
+<p>Without any further ado, lets check out the script!</p>
+
+<p>There it is, 23 lines of python (minus comments). I’ve tried to explain each line as thoroughly as possible. You should be able to copy this script, set a few variables, and be ready to roll.</p>
+
+<p>First read the script and its comments. All lines starting with <code class="language-plaintext highlighter-rouge">#</code> are comment lines that explain what each line does. After that, we’ll walk through the steps to test it out locally, and then deploy to github.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Tweet Quotes from Yaml
+</span>
+<span class="c1">### This next bit is python telling your computer how to interpret your code
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+</span>
+<span class="c1"># Import necessary packages
+</span><span class="kn">import</span> <span class="nn">tweepy</span><span class="p">,</span> <span class="n">yaml</span><span class="p">,</span> <span class="n">random</span><span class="p">,</span> <span class="n">os</span>
+<span class="c1">## Tweepy helps talk to twitter. 
+## Yaml helps process our YAML structured quotes. 
+## Random is a "random" number generator. 
+## OS lets the script access your shell environment where we'll be storing our keys, both for local deployment and on GitHub.
+</span>
+<span class="c1"># os.environ.get() requests the credentials stored in environment variables (we'll be setting in a moment) and saves them in a python variable.
+</span><span class="n">CONSUMER_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CONSUMER_KEY'</span><span class="p">)</span>
+<span class="n">CONSUMER_SECRET</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'CONSUMER_SECRET'</span><span class="p">)</span>
+<span class="n">ACCESS_KEY</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'ACCESS_KEY'</span><span class="p">)</span>  
+<span class="n">ACCESS_SECRET</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'ACCESS_SECRET'</span><span class="p">)</span>      
+
+<span class="c1">## Authorize your account with twitter.
+</span><span class="n">auth</span> <span class="o">=</span> <span class="n">tweepy</span><span class="p">.</span><span class="n">OAuthHandler</span><span class="p">(</span><span class="n">CONSUMER_KEY</span><span class="p">,</span> <span class="n">CONSUMER_SECRET</span><span class="p">)</span>
+<span class="n">auth</span><span class="p">.</span><span class="n">set_access_token</span><span class="p">(</span><span class="n">ACCESS_KEY</span><span class="p">,</span> <span class="n">ACCESS_SECRET</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">tweepy</span><span class="p">.</span><span class="n">API</span><span class="p">(</span><span class="n">auth</span><span class="p">)</span>
+
+<span class="c1">## Ideally this would be displayed as part of your tweet (not working yet).
+</span><span class="n">sourceLabel</span> <span class="o">=</span> <span class="s">"Marshall Rosenberg Quotes"</span>
+
+<span class="c1">## This reads your quotes file and saves it as the 'file' variable
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'quotes.yml'</span><span class="p">,</span><span class="s">'r'</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="c1"># The FullLoader converts from yaml to python dict
+</span>    <span class="c1"># your quotes are saved in the quotes variable
+</span>    <span class="n">quotes</span> <span class="o">=</span> <span class="n">yaml</span><span class="p">.</span><span class="n">load</span><span class="p">(</span><span class="nb">file</span><span class="p">,</span> <span class="n">Loader</span><span class="o">=</span><span class="n">yaml</span><span class="p">.</span><span class="n">FullLoader</span><span class="p">)</span>
+    <span class="c1"># Save a random quote to the item variable
+</span>    <span class="n">item</span> <span class="o">=</span> <span class="n">random</span><span class="p">.</span><span class="n">choice</span><span class="p">(</span><span class="n">quotes</span><span class="p">)</span>
+    <span class="c1"># Makes debugging easier by printing the item variable in the terminal
+</span>    <span class="k">print</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+    <span class="c1"># Post tweet (I've not figured out source label)
+</span>    <span class="n">api</span><span class="p">.</span><span class="n">update_status</span><span class="p">(</span><span class="n">status</span><span class="o">=</span><span class="n">item</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">sourceLabel</span><span class="p">)</span>
+    <span class="c1"># closes the file when you are done with it
+</span>    <span class="nb">file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="c1"># This next bit is a trick to avoid duplicates by removing the quote from your list after its been posted. 
+## Open quotes and a tmp file
+</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'quotes.yml'</span><span class="p">)</span> <span class="k">as</span> <span class="n">og</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s">"tmp"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">dest</span><span class="p">:</span>
+    <span class="c1">## Iterate over each line of the quotes file
+</span>    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">og</span><span class="p">:</span>
+        <span class="c1">## "de-code" the quote and check it against currently printed quote
+</span>        <span class="n">decoded_string</span> <span class="o">=</span> <span class="nb">bytes</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="s">"utf-8"</span><span class="p">).</span><span class="n">decode</span><span class="p">(</span><span class="s">"unicode_escape"</span><span class="p">)</span> 
+        <span class="c1">## Print each line into the tmp file except our current quote
+</span>        <span class="k">if</span> <span class="n">item</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">decoded_string</span><span class="p">:</span>
+            <span class="n">dest</span><span class="p">.</span><span class="n">write</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+            <span class="c1">## Replace quotes.yml with our tmp file
+</span><span class="n">os</span><span class="p">.</span><span class="n">rename</span><span class="p">(</span><span class="s">"tmp"</span><span class="p">,</span> <span class="s">"quotes.yml"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="dependencies">Dependencies</h3>
+
+<p>Now you know what the script looks like and how it works, lets set up our development environment.</p>
+
+<h4 id="install-python">Install Python</h4>
+
+<p>First check to see if you have it, and if so which version(s).</p>
+
+<p>Open a terminal\command-prompt, if you don’t have one open already.</p>
+
+<ul>
+  <li><em>Windows</em>: press <code class="language-plaintext highlighter-rouge">Ctrl + r</code> on your keyboard, and type “Command Prompt” or search from your start menu.</li>
+  <li><em>Mac</em>: press <code class="language-plaintext highlighter-rouge">Ctrl + space</code> on your keyboard and type “terminal”</li>
+  <li><em>Linux</em>: press <code class="language-plaintext highlighter-rouge">Ctrl + shift + t</code> on your keyboard to open a new terminal window.</li>
+</ul>
+
+<p>Type <code class="language-plaintext highlighter-rouge">python -V</code> or <code class="language-plaintext highlighter-rouge">python3 -V</code> and your terminal output should look something like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Python 3.7.0
+</code></pre></div></div>
+
+<p>If you don’t have it you can get the latest version of Python3 from <a href="https://www.python.org/downloads/">Python.org Downloads</a>.</p>
+
+<p>Once you’ve installed Python, type <code class="language-plaintext highlighter-rouge">python -V</code> or <code class="language-plaintext highlighter-rouge">python3 -V</code> to make sure you’ve got python3 and you know which command to use.</p>
+
+<p>Its possible your system could have a different version of python already installed that it uses for system packages.</p>
+
+<p>Python(2) and Python3 commonly live on the same machine, and the <code class="language-plaintext highlighter-rouge">python</code> command could be referring to either one of them.</p>
+
+<p>If you have any trouble. <a href="https://github.com/pyenv/pyenv">Pyenv</a> allows you to install multiple versions of python and define which one to use for different projects, and doesn’t disturb your system python.. but shouldn’t be necessary for most following this guide.</p>
+
+<h4 id="install-git">Install Git</h4>
+
+<p>Git is a version control system. It keeps track of changes in your project and lets you sync the changes in your project between your computer and GitHub. It is designed for collaborative software development, which you’re participating in by following this walk-through.</p>
+
+<p><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">Install Git</a>.</p>
+
+<p>Verify you can access git from your command line:</p>
+
+<p><code class="language-plaintext highlighter-rouge">git version</code> or <code class="language-plaintext highlighter-rouge">git --version</code></p>
+
+<p>and the output should look something like this.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git version 2.29.0
+</code></pre></div></div>
+
+<p>Git is a tough customer, and takes time to get used to and begin to understand, but since we’re using VSCode, we shouldn’t have to worry too much about that, once set up.</p>
+
+<p>The way Git works is it keeps a copy of the entire project directory, for every change you “commit” to the repository. (you’ll see how to do that momentarily). It gives people a system to manage changes across multiple versions of a project, in a distributed fashion. Whether that’s multiple people working on it or a single person working on it.</p>
+
+<p>It’s basically like a blockchain where nobody <em>has</em> to agree, but it helps them agree when they choose to. :-P</p>
+
+<h4 id="set-git-useremail">Set Git User\Email</h4>
+
+<p>If you don’t set your Git user name and e-mail, then VSCode won’t know how to talk to GitHub account you’re about to open (with the same email address you set here). The user name is not as critical but the email should be the same one you open your github account with.</p>
+
+<p><code class="language-plaintext highlighter-rouge">git config --local user.name "GitHub Actions Tester"</code><br />
+<code class="language-plaintext highlighter-rouge">git config --local user.email github-testing@danforth-restorative.com</code></p>
+
+<h3 id="make-a-copy-of-this-project-on-github">Make a copy of this project on GitHub</h3>
+
+<p>This project is stored as a GitHub Template Repository, making it easy for anyone make a copy of this project.</p>
+
+<p>Creating a GitHub account is straight-forward. Use the e-mail you just configured with git config and, once you are logged in, go to this address:</p>
+
+<p><a href="https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot">https://github.com/digitalskills-info/GitHub-Actions-Quote-Bot</a></p>
+
+<p><strong>Click ‘Use this Template’</strong>
+<img src="https://i.imgur.com/HHjg49n.png" alt="" /></p>
+
+<p><strong>Choose a descriptive name for your repository</strong>
+<img src="https://i.imgur.com/heZogsx.png" alt="" /></p>
+
+<h3 id="create-a-local-clone-of-your-brand-new-github-repository">Create a local clone of your brand-new github repository</h3>
+
+<p><img src="https://i.imgur.com/QiHUljm.png" alt="" /></p>
+
+<p>Click the copy button in the smaller red circle. Notice you are getting the HTTPS version of the link.</p>
+
+<p>Now you need to decide where to work on this project. Navigate to whatever folder you have quotes saved in or create a new space to work.</p>
+
+<p><strong>On Windows</strong>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd C:\%HOMEPATH%\Documents</code></p>
+
+<p><strong>On Mac\Linux</strong>:</p>
+
+<p><code class="language-plaintext highlighter-rouge">cd ~/Documents</code></p>
+
+<p><strong>Type ‘git clone’ plus the URL you just copied to clone (download) your copy of this Git repository</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">git clone https://github.com/trying-github-actions/quote-bot.git</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">cd quote-bot</code></p>
+
+<p>Now you can install two packages this script depends upon:</p>
+
+<p><code class="language-plaintext highlighter-rouge">pip3 install pyyaml</code> (or <code class="language-plaintext highlighter-rouge">pip install pyyaml</code>)<br />
+<code class="language-plaintext highlighter-rouge">pip3 install tweepy</code> (or <code class="language-plaintext highlighter-rouge">pip install tweepy</code>)</p>
+
+<p>I’m pretty sure you have to install these python packages on a project by project basis, that’s why we navigated to our working directory before installing.</p>
+
+<p>Now you can also move the quotes file, that you made earlier, to this directory.</p>
+
+<h2 id="using-vscode-to-manage-your-project">Using VSCode to manage your project</h2>
+
+<p>If you don’t care for VS Code, you might like to try <a href="https://desktop.github.com">GitHub Desktop</a>. It isn’t as powerful as VS Code, but it’s more user-friendly. You may also choose to <a href="https://dont-be-afraid-to-commit.readthedocs.io/en/latest/git/commandlinegit.html">sync the changes with Git manually</a>.</p>
+
+<p>Otherwise, go ahead and open VSCode, then select “open folder”</p>
+
+<p><img src="https://i.imgur.com/ZN9H9NE.png" alt="" /></p>
+
+<p>Navigate to your project folder and then click open.</p>
+
+<p><img src="https://i.imgur.com/Fv20W2y.png" alt="" /></p>
+
+<p>Now you should see the directory listing on your left and a window in your right that lets you view\edit most any file you select.</p>
+
+<p><img src="https://i.imgur.com/go7wMiH.png" alt="" /></p>
+
+<p>Before we move forward, you should make your first commit, and sign Code into your GitHub account.</p>
+
+<p>Click the tab on the left. This is how Code manages Git, and where you indicate which files should be synced with your project on GitHub.</p>
+
+<p>Click <code class="language-plaintext highlighter-rouge">+</code> and enter a message like “My first Commit”. The plus lets Code know you want that file added to your project.</p>
+
+<p><img src="https://i.imgur.com/GQGOpAg.png" alt="" /></p>
+
+<p><strong>Click the circle at the bottom</strong> (this command syncs your local version with the version on GitHub. It first pulls any changes from your github version, and then “pushes” your commit)</p>
+
+<p><strong>The Extension ‘GitHub’ wants to sign in using GitHub</strong><br />
+Click allow, to sign into your GitHub account.</p>
+
+<p><img src="https://i.imgur.com/aToRcJM.png" alt="" /></p>
+
+<p><strong>Make sure you are using the same browser where you are logged into github</strong><br />
+<img src="https://i.imgur.com/6YOf6iT.png" alt="" /></p>
+
+<p>Click continue:</p>
+
+<p><img src="https://i.imgur.com/v1R6Pt1.png" alt="" /></p>
+
+<p><strong>If you see a message like this, you’ve succeeded in linking VSCode to GitHub</strong></p>
+
+<p><img src="https://i.imgur.com/pb33RQt.png" alt="" /></p>
+
+<p>Otherwise, close code, then re-open your folder and try again.</p>
+
+<p>If you’ve succeeded in authenticating with GitHub, your sync button shouldn’t have any numbers next to it, and you will have added the quotes file you made earlier to your copy of this project on GitHub. Go see if your project has been updated, and if not, try again. :)</p>
+
+<p><img src="https://i.imgur.com/w8WwUu2.png" alt="" /></p>
+
+<h3 id="save-your-twitter-credentials-as-environment-variables">Save your twitter credentials as environment variables</h3>
+
+<p>An environment variable allows a program to access a value (in this case your developers credentials), without storing those values directly in the code.</p>
+
+<p>We’re going to set environment variables on your computer first, then on github, so the code can be run either place without a security risk or the trouble of making two versions of the same code, one for local testing and one for GitHub.</p>
+
+<h4 id="on-your-computer">On your computer</h4>
+
+<p><strong><a href="https://superuser.com/questions/79612/setting-and-getting-windows-environment-variables-from-the-command-prompt">Windows Instructions</a></strong></p>
+
+<blockquote>
+  <p>To make the environment variable accessible globally you need to set it in the registry. As you’ve realised by just using:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   set NEWVAR=SOMETHING
+</code></pre></div>  </div>
+
+  <p>you are just setting it in the current process space.</p>
+
+  <p>According to this page you can use the <a href="https://ss64.com/nt/">setx</a> command:</p>
+
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   setx NEWVAR SOMETHING
+</code></pre></div>  </div>
+
+  <p>setx is built into Windows 7, but for older versions may only be available if you install the Windows Resource Kit</p>
+</blockquote>
+
+<p>To be clear, that means <code class="language-plaintext highlighter-rouge">set</code> saves your variable only for this session, <code class="language-plaintext highlighter-rouge">setx</code> saves it ‘permanently’.</p>
+
+<p><strong>Mac \ Linux</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">export KEY=value</code> is the formula we’re following.</p>
+
+<p>You can use the following commands to save your keys in the shell environment.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export CONSUMER_KEY=XXXYourAPIKeyXXX
+export CONSUMER_SECRET=XXXYourAPISecretXXX
+export ACCESS_KEY=XXXYourAccessKeyXXX
+export ACCESS_SECRET=XXXYourAccessSecretXXX
+</code></pre></div></div>
+
+<p>To save them in a lasting fashion, add those lines to your <code class="language-plaintext highlighter-rouge">.bashrc</code> or <code class="language-plaintext highlighter-rouge">.zshrc</code> file (which may be a hidden file) in your home directory.</p>
+
+<p>Now type <code class="language-plaintext highlighter-rouge">source ~/.bashrc</code> to reload your shell with those settings, and then <code class="language-plaintext highlighter-rouge">echo $CONSUMER_KEY</code> to be sure you’ve succeeded.</p>
+
+<p>If you’re going to create multiple apps that have different keys, then your variables need to have different names. Or you could use a <a href="https://pypi.org/project/python-dotenv/"><code class="language-plaintext highlighter-rouge">.env</code></a> file, but then you would need a different copy of the script (with hardcoded keys) for local use, which defeats the purpose.</p>
+
+<p>Now you should be able to run <code class="language-plaintext highlighter-rouge">python quotes.py</code> and see a quote published to twitter.</p>
+
+<h4 id="set-same-environment-variables-on-github">Set same environment variables on GitHub</h4>
+
+<p>Now we’re getting ready to tie this experience together with a bow.</p>
+
+<p>Head over to your copy of this project on github, that you made earlier in this guide. Click settings, then click <code class="language-plaintext highlighter-rouge">secrets</code> on the side-bar, and then click <code class="language-plaintext highlighter-rouge">New Repository Secret</code> on the right.</p>
+
+<p><img src="https://i.imgur.com/lerflZW.png" alt="" /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CONSUMER_KEY=XXXYourAPIKeyXXX
+CONSUMER_SECRET=XXXYourAPISecretXXX
+ACCESS_KEY=XXXYourAccessKeyXXX
+ACCESS_SECRET=XXXYourAccessSecretXXX
+</code></pre></div></div>
+
+<p><img src="https://i.imgur.com/X7c97HY.png" alt="" /></p>
+
+<p>You set these repository secrets for each of the above keys, just like we saved in our local environment earlier.</p>
+
+<p><img src="https://i.imgur.com/1wbKhQa.png" alt="" /></p>
+
+<h4 id="set-up-workflow-file-for-github-actions">Set up workflow file for GitHub Actions</h4>
+
+<p>Open your local version of this project in VS Code.</p>
+
+<p>The workflow files are in <code class="language-plaintext highlighter-rouge">.github/workflows.disabled</code>. If you don’t see those files, they may be hidden, so check the settings of your directory.</p>
+
+<p><img src="https://i.imgur.com/wP3VpCZ.png" alt="" /></p>
+
+<h4 id="the-workflow-file">The Workflow file</h4>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1"># Name it whatever you like</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">quotebot</span>
+
+<span class="c1"># Triggers the workflow on push or pull request</span>
+<span class="c1"># https://crontab.guru/ helps to figure out this scheduling syntax works.</span>
+<span class="c1"># I scheduled two tweets a day for this workflow.</span>
+<span class="na">on</span><span class="pi">:</span>
+  <span class="na">schedule</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span>  <span class="s1">'</span><span class="s">11</span><span class="nv"> </span><span class="s">11</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*'</span>
+    <span class="pi">-</span> <span class="na">cron</span><span class="pi">:</span>  <span class="s1">'</span><span class="s">22</span><span class="nv"> </span><span class="s">19</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*'</span>
+  <span class="c1"># It also runs whenever the script or the workflow files are changed.</span>
+  <span class="na">push</span><span class="pi">:</span>
+    <span class="na">paths</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">quotes.py'</span>
+    <span class="pi">-</span> <span class="s1">'</span><span class="s">.github/workflows/quote.yml'</span>
+
+<span class="c1"># A workflow run is made of one or more jobs that can run sequentially or in parallel</span>
+<span class="na">jobs</span><span class="pi">:</span>
+  <span class="c1"># This workflow contains a single job called "build"</span>
+  <span class="na">build</span><span class="pi">:</span>
+    <span class="c1"># The type of operating system the job will run on</span>
+    <span class="na">runs-on</span><span class="pi">:</span> <span class="s">ubuntu-latest</span>
+
+    <span class="c1"># Steps represent a sequence of tasks that will be executed</span>
+    <span class="na">steps</span><span class="pi">:</span>
+      <span class="c1"># Checkout makes a local copy for the script</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/checkout@v2</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">actions/setup-python@v2</span>
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">python-version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.8.5'</span> <span class="c1"># Range or exact, using SemVer syntax</span>
+        <span class="c1"># Installs dependencies listed in requirements.txt</span>
+      <span class="pi">-</span> <span class="na">uses</span><span class="pi">:</span> <span class="s">py-actions/py-dependency-install@v2</span>   
+        <span class="na">with</span><span class="pi">:</span>
+          <span class="na">path</span><span class="pi">:</span> <span class="s">requirements.txt</span>
+      <span class="pi">-</span> <span class="na">shell</span><span class="pi">:</span> <span class="s">bash</span>
+        <span class="na">env</span><span class="pi">:</span> <span class="c1"># Saves our secrets where the script can access them</span>
+          <span class="na">CONSUMER_KEY</span><span class="pi">:</span> <span class="s">${{ secrets.CONSUMER_KEY }}</span>
+          <span class="na">CONSUMER_SECRET</span><span class="pi">:</span> <span class="s">${{ secrets.CONSUMER_SECRET }}</span>
+          <span class="na">ACCESS_KEY</span><span class="pi">:</span> <span class="s">${{ secrets.ACCESS_KEY }}</span>
+          <span class="na">ACCESS_SECRET</span><span class="pi">:</span> <span class="s">${{ secrets.ACCESS_SECRET }}</span>
+        <span class="c1"># Post random quote to twitter</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="s">python quotes.py</span>
+        <span class="c1"># remove quote from yaml as posted.</span>
+      <span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Save updated quotes.yml</span>
+        <span class="na">run</span><span class="pi">:</span> <span class="pi">|</span>
+          <span class="s">git remote add gh-token "https://github.com/danforth-restorative/MBR_Quotes.git"</span>
+          <span class="s">git config user.name "github-actions[bot]"</span>
+          <span class="s">git config user.email "41898282+github-actions[bot]@users.noreply.github.com"</span>
+          <span class="s">git pull --ff-only</span>
+          <span class="s">git commit -a -m "de-dupe"</span>
+          <span class="s">git push gh-token main</span>
+
+</code></pre></div></div>
+
+<p>Now you can move quote.yml to the workflows directory.</p>
+
+<p><img src="https://i.imgur.com/4cqqkwP.png" alt="" /></p>
+
+<p>Go ahead and commit that change, then push that change to GitHub. If all goes well, it will run the action and post a quote when you do.</p>
+
+<h4 id="customizations">Customizations</h4>
+
+<p>GitHub cron syntax is slightly different from <a href="https://crontab.guru">crontab.guru</a>, if you’re having any trouble, go to the workflows folder of your project on GitHub, and edit that file there.</p>
+
+<p>In that editor, if you hover over the cron expression, a pop-up tells you exactly how its interpreted.</p>
+
+<p><img src="https://i.imgur.com/CtICkLy.png" alt="" /></p>
+
+<p>Notice that I’ve made a backup of the <code class="language-plaintext highlighter-rouge">quotes.yaml</code> file called <code class="language-plaintext highlighter-rouge">quotes.bak</code>. To avoid duplicate tweets, we’re removing the quote from <code class="language-plaintext highlighter-rouge">quotes.yaml</code> at the time its posted. Be sure to make a backup of your quotes file, although the nature of Git ensures that even if you don’t, you can still retrieve the original.</p>
+
+<h3 id="have-fun">Have Fun!</h3>
+
+<p>You may notice <a href="https://github.com/danforth-restorative/MBR_Quotes/">this project’s repository on GitHub</a> contains scripts for posting image tweets, as well as facebook text\image tweets.</p>
+
+<p>It also has scripts for bulk cropping images, printing text onto images, and other associated tools.</p>
+
+<p>After a while, I’ll write about using the rest of it.</p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          <span>Tags:</span>
+          
+            <a href="/tags#intermediate">intermediate</a>
+          
+            <a href="/tags#python">python</a>
+          
+        </div>
+      
+
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+    <a href="https://twitter.com/intent/tweet?text=Make+an+Auto-Posting+Social+Media+Quote-bot+with+Python+and+GitHub+Actions.+Part+1+Text-Quotes&url=%2F2021-03-09-marshall-rosenberg-quotes%2F"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fab fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+    <a href="https://www.facebook.com/sharer/sharer.php?u=%2F2021-03-09-marshall-rosenberg-quotes%2F"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fab fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2F2021-03-09-marshall-rosenberg-quotes%2F"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fab fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+  
+
+
+  
+    <a href="https://www.reddit.com/submit?url=%2F2021-03-09-marshall-rosenberg-quotes%2F&title=Make+an+Auto-Posting+Social+Media+Quote-bot+with+Python+and+GitHub+Actions.+Part+1+Text-Quotes"
+      class="btn btn-social-icon btn-reddit" title="Share on VK">
+      <span class="fab fa-fw fa-reddit" aria-hidden="true"></span>
+      <span class="sr-only">Reddit</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pagination blog-pager">
+        
+        <li class="page-item previous">
+          <a class="page-link" href="/2020-12-18-buy-used-laptop-100-400-dollars/" data-toggle="tooltip" data-placement="top" title="How to buy second-hand laptops online, for cheap! $100-$400">&larr; Previous Post</a>
+        </li>
+        
+        
+      </ul>
+      
+  
+  
+  
+<div class="staticman-comments">
+  <div class="page__comments">
+    <!-- Start static comments -->
+    <div class="js-comments">
+      
+    </div>
+    <!-- End static comments -->
+    <!-- Start new comment form -->
+    <div class="page__comments-form">
+      <h3 class="page__comments-title">Leave a Comment</h3>
+      <p class="small">Your email address will not be published. Required fields are marked <span class="required">*</span></p>
+      <form id="new_comment" class="page__comments-form js-form form" method="post">
+        <div class="form-group">
+          <label for="comment-form-message">Comment <small class="required">*</small></label><br>
+          <textarea type="text" rows="12" cols="36" id="comment-form-message" name="fields[message]" tabindex="1"></textarea>
+          <div class="small form-text"><a href="https://daringfireball.net/projects/markdown/">Markdown is supported.</a></div>
+        </div>
+        <div class="form-group">
+          <label for="comment-form-name">Name <small class="required">*</small></label>
+          <input type="text" id="comment-form-name" name="fields[name]" tabindex="2" />
+        </div>
+        <div class="form-group">
+          <label for="comment-form-email">Email address <small class="required">*</small></label>
+          <input type="email" id="comment-form-email" name="fields[email]" tabindex="3" />
+        </div>
+        <div class="form-group hidden" style="display: none;">
+          <label for="comment-form-url">Website (optional)</label>
+          <input type="url" id="comment-form-url" name="fields[url]" tabindex="4"/>
+        </div>
+        <div class="form-group d-none" style="display: none;">
+          <input type="hidden" name="options[origin]" value="/2021-03-09-marshall-rosenberg-quotes/">
+          <input type="hidden" name="options[slug]" value="marshall-rosenberg-quotes">
+          <label for="comment-form-location">Not used. Leave blank if you are a human.</label>
+          <input type="text" id="comment-form-location" name="fields[hidden]" autocomplete="off"/>
+          <input type="hidden" name="options[reCaptcha][siteKey]" value="6LcfMNcZAAAAAAeI-Ex7EXPDTxPhCZ0AGtfVIvvj">
+          <input type="hidden" name="options[reCaptcha][secret]" value="rmaN37RkbS8P5Abp+mVYyUJAn3h/VLWDcPNLP/9aCGHf2LZwcvtQKMIPJQjz0sPesrpLVj/hH1f7CuHYGuOWxFcH17qoP1qRncgfR0sWexnzOrnAiaypiDoWxh/L46nmsx0pJu0sGiD9v7ctU1uvRl1e1RPz9j49Ls6KkFztuq18DsOYJZzlVLZ5T6Verxl5WvxePRZwi9qJR7fiQJe3naM577Dd7tLx1ZeWGxOLo2eOJMPgs9/hVrg/HGuFOeMYMV5s7ya5Zmv0sKtjCcQew9VohkvD4iIhMX2VQh4vPL8Hgb4D1I9ciZ2tMlg153kB/sv/svPJoF4uno8gpLIVPhZ/h0B9VMTxWIHEpjI2h/xLANp1XWxJkqYRJc1hWXR/HHLulaPw7TUdd/gj5iug1iuy0nDovuu0c8q2KjBkwtzr34xmzVWN9+KB+P4STxjTnUs2rrO2m9gr/0WmnFVfs2OwSaqUJpBFogmwJ3NgxBLBW22AnKgSS4T6aWXtr3VQRhReEw8eU+GFNtXW0dqdMdmEqSlk5HsbywPglVf4keIQmTMJj3mqeRGJ9QpQRv5O3BrJ8fdLKn/szUZmvqpR1uiXaUUtW6kZg6H4wO94akaXBfYDy629leM/h6508ngV3b2EQ218z8Zlyi7nzTPsj1LsMTG29oCha7z3/5f/FYo=">
+        </div>
+        <!-- Start comment form alert messaging -->
+        <p class="d-none js-notice alert">
+          <strong class="js-notice-text-success d-none">Thanks for your comment! It will show on the site once it has been approved.</strong>
+          <strong class="js-notice-text-failure d-none">Sorry, there was an error with your submission. Please make sure all required fields have been completed and try again.</strong>
+        </p>
+        <!-- End comment form alert messaging -->
+        
+          <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6LcfMNcZAAAAAAeI-Ex7EXPDTxPhCZ0AGtfVIvvj"></div>
+          </div>
+        
+        <div class="form-group">
+          <button type="submit" id="comment-form-submit" tabindex="5" class="btn btn-primary btn-lg">Submit Comment</button>
+          <button type="submit" id="comment-form-submitted" tabindex="5" class="btn btn-primary btn-lg d-none" disabled>Submitted</button>
+        </div>
+      </form>
+    </div>
+    <!-- End new comment form -->
+    <!-- Load reCaptcha if site key is set -->
+    
+      <script async src="https://www.google.com/recaptcha/api.js"></script>
+    
+  </div>
+
+  <!-- Load script to handle comment form submission -->
+  <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+  <script>
+    if (typeof jQuery == 'undefined') {
+      document.write('<script src="https://code.jquery.com/jquery-3.5.1.min.js"></scr' + 'ipt>');
+    }
+  </script>
+  <script src="/assets/js/staticman.js"></script>
+</div>
+
+
+  
+
+
+
+
+    </div>
+  </div>
+</div>
+
+
+  <footer>
+  <div class="container-md beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+      <ul class="list-inline text-center footer-links"><li class="list-inline-item">
+    <a href="/feed.xml" title="RSS">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">RSS</span>
+    </a>
+  </li><li class="list-inline-item">
+    <a href="mailto:mail@digitalskills.info" title="Email me">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Email me</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://www.facebook.com/digitalskills.info" title="Facebook">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-facebook fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Facebook</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://github.com/danforth-restorative/digitalskills.info" title="GitHub">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">GitHub</span>
+   </a>
+  </li><li class="list-inline-item">
+    <a href="https://twitter.com/DavidDanforth12" title="Twitter">
+      <span class="fa-stack fa-lg" aria-hidden="true">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="sr-only">Twitter</span>
+   </a>
+  </li></ul>
+
+      
+      <p class="copyright text-muted">
+      
+        David Danforth
+        &nbsp;&bull;&nbsp;
+      
+      2021
+
+      
+        &nbsp;&bull;&nbsp;
+        <span class="author-site">
+          <a href="https://digitalskills.info">DigitalSkills.Info</a>
+        </span>
+      
+
+      
+      </p>
+      <p class="theme-by text-muted">
+        Powered by
+        <a href="https://beautifuljekyll.com">Beautiful Jekyll</a>
+      </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  
+  
+    
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+
+  
+    
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+  
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script src="/assets/js/beautifuljekyll.js"></script>
+    
+  
+
+
+
+
+
+
+
+
+<script data-goatcounter="https://digitalskills.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
